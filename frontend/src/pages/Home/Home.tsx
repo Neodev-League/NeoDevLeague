@@ -1,6 +1,3 @@
-import React from "react";
-import "../../input.css"; // Assuming this file imports Tailwind CSS
-
 const Home: React.FC = () => {
   return (
     <div className="container mx-auto mt-8">
