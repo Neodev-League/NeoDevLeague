@@ -1,0 +1,94 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/mauve.css';
+
+/* reset */
+button {
+  all: unset;
+}
+
+.SelectTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-family: "Poppins";
+  font-size: 13px;
+  line-height: 1;
+  height: 25px;
+  gap: 5px;
+  background-color: #1CB955;
+  color: "#30A46C";
+}
+.SelectTrigger:hover {
+  background-color: rgb(22, 22, 22);
+}
+.SelectTrigger:focus {
+  box-shadow: 0 0 0 2px #1CB955;
+}
+.SelectTrigger[data-placeholder] {
+  color: #1CB955;
+}
+
+.SelectIcon {
+  color: white;
+}
+
+.SelectContent {
+  overflow: hidden;
+  background-color: rgb(22, 22, 22);
+  border-radius: 10px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+}
+
+.SelectViewport {
+  padding: 5px;
+}
+
+.SelectItem {
+  font-size: 13px;
+  line-height: 1;
+  color: #1CB955;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 35px 0 25px;
+  position: relative;
+  user-select: none;
+}
+.SelectItem[data-disabled] {
+  color: white;
+  pointer-events: none;
+}
+.SelectItem[data-highlighted] {
+  outline: none;
+  background-color: rgb(12, 12, 12);
+  color: white;
+}
+
+.SelectLabel {
+  padding: 0 25px;
+  font-size: 12px;
+  line-height: 25px;
+  color: white;
+}
+
+.SelectItemIndicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SelectScrollButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: white;
+  color: var(--violet-11);
+  cursor: default;
+}
