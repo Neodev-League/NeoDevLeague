@@ -18,7 +18,7 @@ section {
 }
 
 .hero {
-  font-size: clamp(40px, 10vw, 100px);
+  font-size: clamp(40px, 10vw, 160px);
   line-height: 1;
   display: inline-block;
   color: #fff;

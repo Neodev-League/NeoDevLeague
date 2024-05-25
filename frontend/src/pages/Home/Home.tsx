@@ -17,18 +17,32 @@ const Home: React.FC = () => {
         </h1>
         <br />
         <h1
-          className="text-6xl font-bold bg-gradient-to-r from-slate-50 via-slate-200 to-slate-100 inline-block text text-transparent bg-clip-text  pb-3"
-          data-text="League"
+          className="text-6xl font-extrabold text-white pb-3 relative"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
-          <span>League</span>
+          <span className="relative z-10">League</span>
+          <span className="absolute top-0 left-0 w-full h-full text-white z-0 opacity-50 text-shadow-md blur-lg">League</span>
         </h1>
+
         <br />
         <p
-          className="text-1xl font-bold bg-gradient-to-r from-slate-50 via-slate-200 to-slate-100 inline-block text text-transparent bg-clip-text pt-4"
+          className="text-2xl font-semibold bg-gradient-to-r from-slate-50 via-slate-100 to-slate-50 inline-block text text-transparent bg-clip-text pb-8  "
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           The Future of Competitive Programming
+        </p>
+        <br />
+        <p
+          className="text-1xl font-bold bg-gradient-to-r from-slate-50 via-slate-200 to-slate-100 inline-block text text-transparent bg-clip-text pt-3"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Contact Us: &nbsp; 
+        </p>
+        <p
+          className="text-1xl font-thin bg-gradient-to-r from-slate-50 via-slate-200 to-slate-100 inline-block text text-transparent bg-clip-text pt-2"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+           neodevleague@gmail.com 
         </p>
       </div>
     </div>
