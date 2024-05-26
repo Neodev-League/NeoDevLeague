@@ -4,10 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 body {
   font-family: 'Poppins', sans-serif;
-
+  background-image: url('/src/assets/neo.png'); /* Adjust path as needed */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-color: #cccccc; /* Fallback color */
 }

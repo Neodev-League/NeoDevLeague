@@ -1,0 +1,36 @@
+import React from "react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
+
+const Navbarr = () => {
+  return (
+    <Navbar className="bg-black bg-opacity-45 py-4"> 
+      <NavbarBrand className="flex items-center h-full">
+        <p className="font-bold text-white tracking-widest text-lg pl-9">NEO</p> 
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4 ml-auto items-center h-full">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Mission
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Our Team
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Contact
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex items-center h-full pr-4">
+          <Link href="#" className="text-white">Login</Link> 
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
+  );
+};
+
+export default Navbarr;
