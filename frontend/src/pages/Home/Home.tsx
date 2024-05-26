@@ -6,7 +6,7 @@ import "../../glitch.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden pb-96 scroll-pb-64">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbarr />
       </div>

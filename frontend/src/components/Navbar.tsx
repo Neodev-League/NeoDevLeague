@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-or
 
 const Navbarr = () => {
   return (
-    <Navbar className="bg-black bg-opacity-45 py-4"> 
+<Navbar className="bg-gradient-to-b from-transparent via-transparent to-transparent py-4 " style={{ backdropFilter: 'blur(10px)' }}>
       <NavbarBrand className="flex items-center h-full">
         <p className="font-bold text-white tracking-widest text-lg pl-9">NEO</p> 
       </NavbarBrand>
