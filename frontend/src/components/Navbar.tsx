@@ -7,7 +7,7 @@ const Navbarr = () => {
       <NavbarBrand className="flex items-center h-full">
         <p className="font-bold text-white tracking-widest text-lg pl-9">NEO</p> 
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4 ml-auto items-center h-full">
+      <NavbarContent className="text-white hidden sm:flex gap-4 ml-auto items-center h-full"style={{ fontFamily: 'Poppins, sans-serif' }}>
         <NavbarItem>
           <Link color="foreground" href="#">
             Mission
