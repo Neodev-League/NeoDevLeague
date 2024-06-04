@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "../../lib/utils";
-
 import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -14,12 +13,12 @@ interface WordRotateProps {
 
 export default function WordRotate({
   words,
-  duration = 2500,
+  duration = 1000, // Shortened duration
   framerProps = {
-    initial: { opacity: 0, y: -50 },
+    initial: { opacity: 0, y: -10 }, // Smaller y offset for smoother transition
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 50 },
-    transition: { duration: 0.25, ease: "easeOut" },
+    exit: { opacity: 0, y: 10 },
+    transition: { duration: 0.5, ease: "easeOut" }, // Duration for each transition
   },
   className,
 }: WordRotateProps) {
@@ -35,16 +34,20 @@ export default function WordRotate({
   }, [words, duration]);
 
   return (
-    <div className="overflow-hidden py-3">
-      <AnimatePresence mode="wait">
-        <motion.h1
-          key={words[index]}
-          className={cn(className)}
-          {...framerProps}
-        >
-          {words[index]}
-        </motion.h1>
-      </AnimatePresence>
+    <div className="overflow-hidden">
+      <div className="min-h-[1em]">
+        {" "}
+        {/* Maintain space for the rotating text */}
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={words[index]}
+            className={cn("gradient-text", className)} // Apply gradient-text class
+            {...framerProps}
+          >
+            {words[index]}
+          </motion.h1>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

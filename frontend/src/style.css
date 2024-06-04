@@ -17,3 +17,29 @@ body {
     height: auto;
 
 }
+
+
+/* Add this to your CSS file, e.g., style.css */
+.gradient-text {
+  background: linear-gradient(to right, #085A3C, #17f452);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add this to your CSS file */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent extra scroll */
+}
+
+.relative.min-h-screen {
+  box-sizing: border-box;
+}
+
+.relative.min-h-screen::after {
+  content: "";
+  display: block;
+  height: 100%;
+}
