@@ -1,5 +1,5 @@
 import React from "react";
-import TextReveal from "../components/textreveal";
+import TextReveal from "./textreveal";
 
 const Texttt = () => {
   return (

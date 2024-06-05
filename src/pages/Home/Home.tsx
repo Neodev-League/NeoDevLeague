@@ -1,9 +1,6 @@
 import Ripple from "../../components/Ripple";
-import Navbarr from "../../components/Navbar";
 import Texttt from "../../components/Texttt";
-import MNav from "../../components/mNavbar"; // THESE TWO NAVS ARE OUT OF USE WHILE THE UNDER ONE IS IN USE
 import Logo from "../../assets/logo";
-import { Dock, DockIcon } from "../../components/nDock";
 import "../../style.css";
 import "../../glitch.css";
 import WordRotate from "../../components/textreveal";
@@ -154,4 +151,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
- 
