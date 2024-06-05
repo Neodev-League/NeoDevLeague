@@ -1,4 +1,4 @@
-import * as React from 'react'
+
 import { useGesture } from '@use-gesture/react'
 
 import { useDock } from '../Dock/DockContext'

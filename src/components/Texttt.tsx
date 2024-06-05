@@ -1,5 +1,3 @@
-import React from "react";
-import TextReveal from "./textreveal";
 
 const Texttt = () => {
   return (
