@@ -6,6 +6,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/neo2.png'); /* Adjust path as needed */
+
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
@@ -21,7 +23,7 @@ body {
 
 /* Add this to your CSS file, e.g., style.css */
 .gradient-text {
-  background: linear-gradient(to right, #085A3C, #17f452);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
