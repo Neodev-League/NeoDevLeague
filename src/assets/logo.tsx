@@ -1,4 +1,3 @@
-import React from "react";
 import imageToAdd from "./logo2.png";
 import "../style.css" 
 
