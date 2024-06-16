@@ -23,7 +23,7 @@ body {
   background-image: url('/src/assets/neo2.png'); /* Adjust path as needed */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;  
   animation: fadeIn 1s ease-in-out;
 }
 
