@@ -1,4 +1,3 @@
-import React from "react";
 import Ripple from "../../components/Ripple";
 import Texttt from "../../components/Texttt";
 import Logo from "../../assets/logo";
@@ -9,8 +8,6 @@ import WordRotate from "../../components/textreveal";
 const Home: React.FC = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden overflow-hidden">
-      <div className="background-image"></div>
-
       <div className="fixed top-0 left-0 w-full z-50">
         <a
           href="https://neoleague.dev"
