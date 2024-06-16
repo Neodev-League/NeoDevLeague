@@ -1,0 +1,51 @@
+/* Preload background image */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #007754; /* Fallback color */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/neo2.png'); /* Adjust path as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.nnn {
+  width: 70px;
+  height: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent extra scroll */
+}
+
+.relative.min-h-screen {
+  box-sizing: border-box;
+}
+
+.relative.min-h-screen::after {
+  content: "";
+  display: block;
+  height: 100%;
+}
