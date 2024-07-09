@@ -5,8 +5,10 @@ import Logo from "../../assets/logo";
 import "../../style.css";
 import "../../glitch.css";
 import WordRotate from "../../components/textreveal";
+import MailchimpFormContainer from "../../components/MailchimpFormContainer";
 
 const Home: React.FC = () => {
+  const mailchimpUrl = (import.meta.env.VITE_MAILCHIMP_URL) || '';
   return (
     <div className="relative min-h-screen overflow-x-hidden overflow-hidden">
       <div className="background-image"></div>
@@ -46,11 +48,15 @@ const Home: React.FC = () => {
         </div>
         <Ripple />
       </div>
+
       <div className="!text-white pt-10 absolute bottom-10 w-full text-center text-xl font-bold">
         <span>
           Coming soon to the Waterloo Region
           <br /> . . .{" "}
         </span>
+      </div>
+      <div className="absolute w-full bottom-0 flex justify-center mb-20">
+        <MailchimpFormContainer postUrl={mailchimpUrl} />
       </div>
     </div>
   );
