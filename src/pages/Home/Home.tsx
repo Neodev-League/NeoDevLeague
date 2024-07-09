@@ -49,13 +49,7 @@ const Home: React.FC = () => {
         <Ripple />
       </div>
 
-      <div className="!text-white pt-10 absolute bottom-10 w-full text-center text-xl font-bold">
-        <span>
-          Coming soon to the Waterloo Region
-          <br /> . . .{" "}
-        </span>
-      </div>
-      <div className="absolute w-full bottom-0 flex justify-center mb-20">
+      <div className="mailchimp-wrapper">
         <MailchimpFormContainer postUrl={mailchimpUrl} />
       </div>
     </div>

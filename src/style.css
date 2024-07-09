@@ -58,3 +58,19 @@ html, body {
   display: block;
   height: 100%;
 }
+
+/* Add this to your CSS file */
+
+.mailchimp-wrapper {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-height: 700px) {
+  .mailchimp-wrapper {
+
+  }
+}
