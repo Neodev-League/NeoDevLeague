@@ -1,14 +1,13 @@
 import React from "react";
 import Ripple from "../../components/Ripple";
 import Texttt from "../../components/Texttt";
-import Logo from "../../assets/logo";
+import Logo from "../../../public/logo";
 import "../../style.css";
 import "../../glitch.css";
 import WordRotate from "../../components/textreveal";
 import MailchimpFormContainer from "../../components/MailchimpFormContainer";
 
 const Home: React.FC = () => {
-  const mailchimpUrl = (import.meta.env.VITE_MAILCHIMP_URL) || '';
   return (
     <div className="relative min-h-screen overflow-x-hidden overflow-hidden">
       <div className="background-image"></div>
@@ -40,7 +39,7 @@ const Home: React.FC = () => {
                   "Problem Solving",
                   "Teamwork",
                   "Software Development",
-                  "Innovative Thinking"
+                  "Innovative Thinking",
                 ]}
               />
             </span>
@@ -50,7 +49,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="mailchimp-wrapper">
-        <MailchimpFormContainer postUrl={mailchimpUrl} />
+        <MailchimpFormContainer />
       </div>
     </div>
   );
