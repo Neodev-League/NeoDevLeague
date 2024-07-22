@@ -35,9 +35,9 @@ const CustomForm: React.FC<CustomFormProps> = ({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-3 mb-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-shadow duration-300"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="p-3 mb-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-shadow duration-300"
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: -20 }}
           transition={{ duration: 0.5 }}
         />
       </div>
@@ -49,7 +49,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
           buttonTextColor="#ffffff"
           subscribeStatus={false}
           initialText={
-            <span className="group inline-flex items-center">
+            <span className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-green-700 text-white p-3 shadow-lg">
               Subscribe{" "}
               <ChevronRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
             </span>

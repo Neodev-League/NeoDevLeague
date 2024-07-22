@@ -1,77 +1,69 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: "",
+export default {
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      mini: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+
+    // From shadCN
     container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+        center: true,
+        padding: "2rem",
+        screens: {
+          "2xl": "1400px",
       },
     },
+
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        // Original Green Shades
+        darkerGreen: "#065f46", // green-800
+        lighterGreen: "#34D399", // green-400
+        veryLightGreen: "#D1FAE5", // green-100
+
+        accent: "#34D399", // Same as lighterGreen
+        dark1: "#044f3b", // Darker than darkerGreen
+        dark2: "#065f46", // Same as darkerGreen (deep green)
+        dark3: "#0b8065", // Slightly lighter than dark2
+        blurred: "rgba(6, 95, 70, 0.5)", // DarkerGreen with 50% opacity
+        transparent: "rgba(6, 95, 70, 0.01)", //transparent 
+
+        textlight: "#83c5af", // Light version for text, lighter than lighterGreen
+        light1: "#E6FAF2", // Very Light Green
+        light2: "#C4EDE0", // Between veryLightGreen and light1
       },
+
+      fontSize: {
+        title: "2rem",
+        lg: "1.5rem",
+        md: "1rem",
+        ms: "0.75rem",
+        sm: "0.5rem",
+        xs: "0.25rem"
+      },
+  
+      //border radius ... TRY to use one of these values (easy to change)
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: `20px`,
+        md: `10px`,
+        sm: "5px",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+
+      boxShadow: {
+        'button-green': '2px 3px 5px #0b8065'
+      }
+
+    },
+    transitionDuration: {
+      DEFAULT: "300ms",
     },
   },
   plugins: [],
-}
+};
