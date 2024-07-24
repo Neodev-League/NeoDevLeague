@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { EmailFormFields } from "react-mailchimp-subscribe";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
  
 import { AnimatedSubscribeButton } from "../../@/components/magicui/animated-subscribe-button.tsx";
 interface CustomFormProps {
@@ -35,7 +35,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-3 mb-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-shadow duration-300"
+          className="p-3 mb-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-shadow duration-default bg-opacity-90"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: -20 }}
           transition={{ duration: 0.5 }}
@@ -49,15 +49,15 @@ const CustomForm: React.FC<CustomFormProps> = ({
           buttonTextColor="#ffffff"
           subscribeStatus={false}
           initialText={
-            <span className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-green-700 text-white p-3 shadow-lg">
+            <span className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-blurred text-white p-3 shadow-lg bg-opacity-60">
               Subscribe{" "}
-              <ChevronRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
+              <ChevronRightIcon className="transition-transform duration-default group-hover:translate-x-1" />
             </span>
           }
           changeText={
             <span className="group inline-flex items-center">
               Subscribed{" "}
-              <ChevronRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
+              <ChevronRightIcon className="transition-transform duration-default group-hover:translate-x-1" />
             </span>
           }
           />
@@ -76,7 +76,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
         )}
         {isSubscribed && status === "success" && (
           <motion.button
-          className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-green-500 text-white p-3 shadow-lg"
+          className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-lighterGreen text-white p-3 shadow-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
