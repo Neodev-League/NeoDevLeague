@@ -34,6 +34,7 @@ export default {
         dark3: "#0b8065", // Slightly lighter than dark2
         blurred: "rgba(6, 95, 70, 0.5)", // DarkerGreen with 50% opacity
         transparent: "rgba(6, 95, 70, 0.01)", //transparent 
+        gray: "#E0E0E0", //Gray-300
 
         textlight: "#83c5af", // Light version for text, lighter than lighterGreen
         light1: "#E6FAF2", // Very Light Green
