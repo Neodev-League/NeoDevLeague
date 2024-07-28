@@ -3,31 +3,33 @@ import { EmailFormFields } from "react-mailchimp-subscribe";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 
-import { AnimatedSubscribeButton } from "../../@/components/magicui/animated-subscribe-button.tsx";
 interface CustomFormProps {
-  status: string | null;
   message: string | Error | null;
   onValidated: (formData: EmailFormFields) => void;
 }
 
 const CustomForm: React.FC<CustomFormProps> = ({
-  status,
-  message,
   onValidated,
 }) => {
   const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email && email.indexOf("@") > -1) {
+
+    if (email==="") {
+      setStatus("error");
+    } else if (email && email.indexOf("@") > -1) {
+      setStatus("sending");
       onValidated({ EMAIL: email });
-      setIsSubscribed(true);
+      setStatus("success");
+    } else {
+      setStatus("error");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">
+    <form className="w-full flex flex-col items-center">
       <div className="bg-light2 bg-opacity-60 rounded-md">
         <div className="p-3 text-darkerGreen text-center">
           <h4>Signup to Learn More</h4>
@@ -46,38 +48,24 @@ const CustomForm: React.FC<CustomFormProps> = ({
           />
         </div>
 
-        <AnimatePresence mode="wait">
-          {!isSubscribed && !status && (
-            <AnimatedSubscribeButton
-              buttonColor="green"
-              buttonTextColor="#ffffff"
-              subscribeStatus={false}
-              initialText={
-                <span className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-blurred text-white p-3 shadow-button-green">
+        <AnimatePresence mode="sync">
+          {status === "idle" && (
+              <div onClick={handleSubmit} className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-darkerGreen text-white p-3 shadow-button-darkerGreen">
                   Subscribe{" "}
-                  <ChevronRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              }
-              changeText={
-                <span className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-blurred text-white p-3 shadow-button-green">
-                  Subscribed{" "}
-                  <ChevronRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              }
-            />
+                  <ChevronRightIcon  className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
           )}
-          {isSubscribed && status === "sending" && (
-            <div className="p-2 pl-3 pr-3 bg-gray border-e-orange-950 mt-2 rounded-md text-gray font-bold text-lg">
+          {status === "sending" && (
+            <div className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-blurred text-white p-3 shadow-button-gray">
               Sending...
             </div>
           )}
-          {isSubscribed && status === "error" && (
-            <div
-              className="mt-2 text-red-500"
-              dangerouslySetInnerHTML={{ __html: message as string }}
-            />
+          {status === "error" && (
+            <div onClick={handleSubmit} className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-red-500 text-white p-3 shadow-button-gray">
+              Please enter a valid email address.
+            </div>
           )}
-          {isSubscribed && status === "success" && (
+          {status === "success" && (
             <motion.button
               className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-lighterGreen text-white p-3 shadow-button-green"
               initial={{ opacity: 0, y: -20 }}
