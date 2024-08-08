@@ -14,10 +14,10 @@ export default {
 
     // From shadCN
     container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+        center: true,
+        padding: "2rem",
+        screens: {
+          "2xl": "1400px",
       },
     },
 
@@ -78,6 +78,21 @@ export default {
           },
         },
       },
+  
+      //border radius ... TRY to use one of these values (easy to change)
+      borderRadius: {
+        lg: `20px`,
+        md: `10px`,
+        sm: "5px",
+      },
+
+      boxShadow: {
+        'button-green': '2px 3px 5px #0b8065'
+      }
+
+    },
+    transitionDuration: {
+      DEFAULT: "300ms",
     },
 
     transitionDuration: {
@@ -86,3 +101,4 @@ export default {
   },
   plugins: [],
 };
+
