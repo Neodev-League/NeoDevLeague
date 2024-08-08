@@ -1,5 +1,3 @@
-// components/MailchimpFormContainer.tsx
-
 import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import CustomForm from "../components/customForm.tsx";
@@ -12,9 +10,8 @@ const MailchimpFormContainer: React.FC = () => {
     <div className="flex flex-col items-center rounded shadow-lg md:p-2">
       <MailchimpSubscribe
         url={postUrl}
-        render={({ subscribe, status, message }) => (
+        render={({ subscribe, message }) => (
           <CustomForm
-            status={status}
             message={message}
             onValidated={(formData) => subscribe(formData)}
           />
