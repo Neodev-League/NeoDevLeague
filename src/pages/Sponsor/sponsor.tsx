@@ -7,6 +7,7 @@ import { WavyBackground } from "./components/wavyb";
 import { VelocityScroll } from "./components/vstext";
 import { FadeText } from "./components/fitext";
 import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ShinyButton from "./components/coolbutton";
 import { Link } from "react-router-dom";
 
