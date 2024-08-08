@@ -1,5 +1,5 @@
 import imageToAdd from "./logo2.png";
-import "../src/style.css" 
+import "../style.css" 
 
 function Logo() {
    return <img className="nnn" src={imageToAdd} alt="Image" />;
