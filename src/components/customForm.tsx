@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { EmailFormFields } from "react-mailchimp-subscribe";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
+import Logo from "../../public/logo2.png";
 
 interface CustomFormProps {
   message: string | Error | null;
@@ -29,47 +30,56 @@ const CustomForm: React.FC<CustomFormProps> = ({
   };
 
   return (
-    <form className="w-full flex flex-col items-center">
-      <div className="bg-light2 bg-opacity-60 rounded-md">
-        <div className="p-3 text-darkerGreen text-center">
-          <h4>Signup to Learn More</h4>
+  <form className="w-full flex flex-col items-center">
+    <div className="bg-light2 bg-opacity-60 bg-white/50 rounded-md p-5 w-full max-w-md">
+      <div className="flex p-3 text-black bg-white/50 rounded-md text-left items-center">
+        <div className="mr-3 flex-grow">
+          <h4 className="text-lg font-bold">Sign up for our newsletter!</h4>
+          <p className="text-ms">Stay caught up on all news related to the NeoDev League!</p>
         </div>
-        <div>
-          <motion.input
-            type="email"
-            placeholder="Enter your email..."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="p-3 mb-1 border border-gray rounded-md focus:outline-none focus:ring-4 focus:ring-darkerGreen transition-shadow duration-300 bg-opacity-90"
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: -5 }}
-            transition={{ duration: 1 }}
-          />
-        </div>
-
+        <img src={Logo} className="h-10 w-10" alt="Logo"></img>
+      </div>
+      <div className="relative flex items-center pt-3 w-full">
+        <motion.input
+          type="email"
+          placeholder="Your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="p-3 pr-32 border border-gray rounded-md focus:outline-none focus:ring-4 focus:ring-darkerGreen transition-shadow duration-300 bg-opacity-90 w-full"
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: -5 }}
+          transition={{ duration: 1 }}
+        />
         <AnimatePresence mode="sync">
           {status === "idle" && (
-              <div onClick={handleSubmit} className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-darkerGreen text-white p-3 shadow-button-darkerGreen">
-                  Subscribe{" "}
-                  <ChevronRightIcon  className="transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
+            <button
+              onClick={handleSubmit}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-darkerGreen text-white px-6 py-2 cursor-pointer"
+            >
+              Subscribe
+            </button>
           )}
           {status === "sending" && (
-            <div className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-blurred text-white p-3 shadow-button-gray">
+            <div
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-blurred text-white px-6 py-2"
+            >
               Sending...
             </div>
           )}
           {status === "error" && (
-            <div onClick={handleSubmit} className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-red-500 text-white p-3 shadow-button-gray">
+            <div
+              onClick={handleSubmit}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-red-500 text-white px-6 py-2 text-sm leading-snug text-center cursor-pointer"
+            >
               Please enter a valid email address.
             </div>
           )}
           {status === "success" && (
             <motion.button
-              className="relative flex w-48 items-center justify-center overflow-hidden rounded-md bg-lighterGreen text-white p-3 shadow-button-green"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-lighterGreen text-white px-6 py-2"
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: -19 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
             >
@@ -86,7 +96,8 @@ const CustomForm: React.FC<CustomFormProps> = ({
           )}
         </AnimatePresence>
       </div>
-    </form>
+    </div>
+  </form>
   );
 };
 

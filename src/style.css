@@ -24,7 +24,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../public/neo2.png"); /* Adjust path as needed */
+  background-image: url("../public/neo.jpg"); /* Adjust path as needed */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -70,9 +70,4 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-@media (min-height: 700px) {
-  .mailchimp-wrapper {
-  }
 }

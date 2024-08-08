@@ -7,9 +7,10 @@ import "../../glitch.css";
 import WordRotate from "../../components/textreveal";
 import MailchimpFormContainer from "../../components/MailchimpFormContainer";
 
+
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-x-hidden overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       <div className="background-image"></div>
 
       <div className="fixed top-0 left-0 w-full z-50">
@@ -48,7 +49,7 @@ const Home: React.FC = () => {
         <Ripple />
       </div>
 
-      <div className="mailchimp-wrapper">
+      <div className="m-0 mailchimp-wrapper">
         <MailchimpFormContainer />
       </div>
     </div>
