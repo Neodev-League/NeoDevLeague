@@ -89,8 +89,6 @@ const SponsorPage: React.FC = () => {
           </div>
         </div>
       </WavyBackground>
-      <MNav></MNav>
-
       <div className="text-center p-8 relative z-10 bg-black">
         <NumberTicker className="!text-9xl font-bold" value={160} />
         <span className="text-neutral-300 font-extrabold">
@@ -181,6 +179,7 @@ const SponsorPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <MNav></MNav>
     </div>
   );
 };
