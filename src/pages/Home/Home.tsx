@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="relative flex items-center justify-center min-h-screen">
-        <div className="text-center relative z-10 mt-24">
+        <div className="text-center relative z-10 mt-24 mb-6">
           <Texttt />
           <div className="mt-10">
             <span className="!text-2xl md:text-6xl font-bold">

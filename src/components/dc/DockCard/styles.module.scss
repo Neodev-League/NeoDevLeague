@@ -15,8 +15,7 @@
   position: relative;
 
   &:hover {
-    transform: scaleX(1.5); /* Enlarge horizontally on hover */
-    transform-origin: right; /* Scale to the left */
+    transform: translateX(20px) scaleX(1.2); /* Move right and enlarge on hover */
     filter: saturate(1) brightness(1.12); /* Brighten item on hover */
     z-index: 1; /* Bring the hovered item to the front */
   }
@@ -27,4 +26,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  margin: 0 auto; /* Center the container horizontally */
+  padding-left: 20px; /* Optional: Add padding to the left */
+  max-width: calc(100% - 40px); /* Prevent overflow and ensure padding on both sides */
 }

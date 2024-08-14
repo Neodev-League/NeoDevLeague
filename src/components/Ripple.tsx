@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 
-const MAIN_CIRCLE_SIZE = 10;
-const MAIN_CIRCLE_OPACITY = 0.50  ;
+const MAIN_CIRCLE_SIZE = 5;
+const MAIN_CIRCLE_OPACITY = 0.30  ;
 const NUM_CIRCLES = 8;
 const CIRCLE_INCREMENT = 80;
 
