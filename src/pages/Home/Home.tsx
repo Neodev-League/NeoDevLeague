@@ -6,6 +6,7 @@ import "../../style.css";
 import "../../glitch.css";
 import WordRotate from "../../components/textreveal";
 import MailchimpFormContainer from "../../components/MailchimpFormContainer";
+import MNav from "../../components/mNavbar"; 
 
 const Home: React.FC = () => {
   return (
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
           <MailchimpFormContainer />
         </div>
       </div>
-
+      <MNav/>
     </div>
   );
 };

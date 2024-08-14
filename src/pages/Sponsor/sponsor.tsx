@@ -10,6 +10,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ShinyButton from "./components/coolbutton";
 import { Link } from "react-router-dom";
+import MNav from "../../components/mNavbar";
+
 
 const ScrollFadeText: React.FC<{
   text: string;
@@ -87,6 +89,7 @@ const SponsorPage: React.FC = () => {
           </div>
         </div>
       </WavyBackground>
+      <MNav></MNav>
 
       <div className="text-center p-8 relative z-10 bg-black">
         <NumberTicker className="!text-9xl font-bold" value={160} />
