@@ -1,15 +1,15 @@
 .dock {
   position: fixed;
   top: 50%;
-  left: 34px; /* Position dock on the right side */
-  transform: translateY(-50%); /* Center dock vertically */
+  left: 34px; 
+  transform: translateY(-50%); 
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align items to the right side */
+  flex-direction: column; 
+  align-items: flex-end;
   padding: 10px;
   gap: 12px;
   background-color: rgba(42, 42, 42, 0.676);
   box-sizing: content-box;
   border-radius: 12px;
-  z-index: 100; /* Ensure the dock is above other content */
+  z-index: 100; 
 }

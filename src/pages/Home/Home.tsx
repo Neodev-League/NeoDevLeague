@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
       <div className="fixed top-0 left-0 w-full z-50">
         <a
-          href="https://neoleague.dev"
+          href="https://neoleague.dev/home"
           target="_blank"
           rel="noopener noreferrer"
         >
