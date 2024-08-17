@@ -73,44 +73,12 @@ export const DockCard = ({ children }: DockCardProps) => {
     setElCenterX(x + INITIAL_WIDTH / 2)
   })
 
-  const timesLooped = React.useRef(0)
-  const timeoutRef = React.useRef<number>()
-  const isAnimating = React.useRef(false)
 
   const handleClick = () => {
-    if (!isAnimating.current) {
-      isAnimating.current = true
-      opacity.start(0.5)
-
-      timesLooped.current = 0
-
-      y.start(-INITIAL_WIDTH / 2, {
-        loop: () => {
-          if (3 === timesLooped.current++) {
-            timeoutRef.current = setTimeout(() => {
-              opacity.start(0)
-              y.set(0)
-              isAnimating.current = false
-              timeoutRef.current = undefined
-            }, 2000)
-            y.stop()
-          }
-          return { reverse: true }
-        },
-      })
-    } else {
-      /**
-       * Allow premature exit of animation
-       * on a second click if we're currently animating
-       */
-      clearTimeout(timeoutRef.current)
-      opacity.start(0)
-      y.start(0)
-      isAnimating.current = false
-    }
+    opacity.start(0)
+    y.start(0)
   }
 
-  React.useEffect(() => () => clearTimeout(timeoutRef.current), [])
 
   return (
     <div className={styles['dock-card-container']}>
