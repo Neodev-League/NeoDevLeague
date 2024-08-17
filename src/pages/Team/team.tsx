@@ -1,8 +1,8 @@
 import React from "react";
 import "../../style.css";
 import logo from "../../assets/logo2.png";
-import gmail from "../../assets/gmail.png";
-import linkedin from "../../assets/linkedin.png";
+import gmail from "../../assets/Png/gmail.png";
+import linkedin from "../../assets/Png/linkedin.png";
 // import neoBG from "/assets/neo.jpg"
 import VantaBackground from "../../components/vantaBg.tsx";
 import Matthew from "../../assets/Headshots/Matthew.jpg"
@@ -14,13 +14,13 @@ import Hamza from "../../assets/Headshots/Hamza.jpg"
 import Thomas from "../../assets/Headshots/Thomas.jpg"
 import Alex from "../../assets/Headshots/Alex.jpeg"
 import Jerry from "../../assets/Headshots/Jerry.png"
-import MNav from "../../components/mNavbar.tsx";
+import MacNavbar from "../../components/macNavbar.tsx";
 
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "../../../@/components/ui/hover-card.tsx";
+} from "../../components/Magic/hover-card.tsx";
 
 const leads = [
   {
@@ -95,8 +95,8 @@ const FinMark = [
 ];
 
 const Team: React.FC = () => {
-  const renderTeamMembers = (members) => (
-    members.map((item, index) => (
+  const renderTeamMembers = (members:any) => (
+    members.map((item:any, index:any) => (
       <div className="flex flex-col items-center p-4" key={index}>
         <div className="rounded-full w-24 h-24 mb-4 overflow-hidden">
           <img src={item.imgUrl} alt={item.name} className="w-full h-full object-cover" />
@@ -128,7 +128,7 @@ const Team: React.FC = () => {
       <div className="absolute inset-0 w-full h-full -z-10">
         <VantaBackground />
       </div>
-      <MNav/>
+      <MacNavbar/>
       <div className="relative z-10">
         <div className="fixed top-0 left-0 w-full z-50 p-4">
           <a

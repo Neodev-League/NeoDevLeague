@@ -1,12 +1,12 @@
 import React from "react";
 import Ripple from "../../components/Ripple";
-import Texttt from "../../components/Texttt";
+import TextGlitch from "../../components/text-glitch";
 import Logo from "../../assets/logo";
 import "../../style.css";
-import "../../glitch.css";
-import WordRotate from "../../components/textreveal";
+import "./glitch.css";
+import WordRotate from "../../components/text-reveal";
 import MailchimpFormContainer from "../../components/MailchimpFormContainer";
-import MNav from "../../components/mNavbar"; 
+import MacNavbar from "../../components/macNavbar"; 
 
 const Home: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
       <div className="relative flex items-center justify-center min-h-screen">
         <div className="text-center relative z-10 mt-24 mb-6">
-          <Texttt />
+          <TextGlitch />
           <div className="mt-10">
             <span className="!text-2xl md:text-6xl font-bold">
               The Future of
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
           <MailchimpFormContainer />
         </div>
       </div>
-      <MNav/>
+      <MacNavbar/>
     </div>
   );
 };

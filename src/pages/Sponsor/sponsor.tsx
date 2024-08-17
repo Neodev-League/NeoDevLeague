@@ -1,5 +1,5 @@
 import React from "react";
-import "../../sponsorstyle.css"; // Import custom styles for specific background settings
+import "./sponsor.css"; // Import custom styles for specific background settings
 import NumberTicker from "./components/tick";
 import TextReveal from "./components/scrolltxt";
 import BlurIn from "./components/blurtext";
@@ -10,7 +10,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ShinyButton from "./components/coolbutton";
 import { Link } from "react-router-dom";
-import MNav from "../../components/mNavbar";
+import MacNavbar from "../../components/macNavbar";
 
 
 const ScrollFadeText: React.FC<{
@@ -62,7 +62,7 @@ const SponsorPage: React.FC = () => {
       <WavyBackground className=" pb-40" colors={["#117045", "#278250"]}>
         <div className="absolute inset-0 overflow-hidden flex justify-center items-center">
           <img
-            src="src/assets/faa.gif"
+            src="src/assets/Spinning-Logo.gif"
             alt="Background"
             className="w-full h-auto object-cover" // Change this class to increase the size
           />
@@ -179,7 +179,7 @@ const SponsorPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <MNav></MNav>
+      <MacNavbar/>
     </div>
   );
 };
