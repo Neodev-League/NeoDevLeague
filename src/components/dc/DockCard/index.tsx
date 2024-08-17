@@ -12,7 +12,7 @@ interface DockCardProps {
   children: React.ReactNode
 }
 
-const INITIAL_WIDTH = 48
+const INITIAL_WIDTH = 60
 
 export const DockCard = ({ children }: DockCardProps) => {
   const cardRef = React.useRef<HTMLButtonElement>(null!)
@@ -50,7 +50,7 @@ export const DockCard = ({ children }: DockCardProps) => {
 
         if (dock.width > 0) {
           const transformedValue =
-            INITIAL_WIDTH + 36 * Math.cos((((mouseX - elCenterX) / dock.width) * Math.PI) / 2) ** 12
+            INITIAL_WIDTH + 3 * Math.cos((((mouseX - elCenterX) / dock.width) * Math.PI) / 2) ** 12
 
           if (dock.hovered) {
             size.start(transformedValue)
