@@ -3,18 +3,9 @@ import "../../style.css";
 import logo from "../../assets/logo2.png";
 import gmail from "../../assets/Png/gmail.png";
 import linkedin from "../../assets/Png/linkedin.png";
-// import neoBG from "/assets/neo.jpg"
-import VantaBackground from "../../components/vantaBg.tsx";
-import Matthew from "../../assets/Headshots/Matthew.jpg"
-import James from "../../assets/Headshots/Jamatt.jpg"
-import Andy from "../../assets/Headshots/Andy.jpg"
-import Brian from "../../assets/Headshots/Brian.jpg"
-import George from "../../assets/Headshots/George.jpg"
-import Hamza from "../../assets/Headshots/Hamza.jpg"
-import Thomas from "../../assets/Headshots/Thomas.jpg"
-import Alex from "../../assets/Headshots/Alex.jpeg"
-import Jerry from "../../assets/Headshots/Jerry.png"
+// import VantaBackground from "../../components/vantaBg.tsx";
 import MacNavbar from "../../components/macNavbar.tsx";
+import { leads, Row2, Row3 } from "./members.ts";
 
 import {
   HoverCard,
@@ -22,89 +13,23 @@ import {
   HoverCardTrigger,
 } from "../../components/Magic/hover-card.tsx";
 
-const leads = [
-  {
-    imgUrl: Matthew,
-    name: "Matthew Singer",
-    position: "#Head",
-    email: "matthewsxnger@gmail.com",
-    linkedin: "https://www.linkedin.com/in/matthewsingerr/",
-  },
-  {
-    imgUrl: James,
-    name: "James Li",
-    position: "#Head",
-    email: "lijames9532@gmail.com",
-    linkedin: "https://www.linkedin.com/in/james-li-a81004275/",
-  },
-];
-
-const techLogs = [
-  {
-    imgUrl: Hamza,
-    name: "Hamza Ammar",
-    position: "#Tech",
-    email: "hamza.k.ammar@gmail.com",
-    linkedin: "https://www.linkedin.com/in/hamza-ammar-341531240/",
-  },
-  {
-    imgUrl: Alex,
-    name: "Alex Rusu",
-    position: "#Tech",
-    email: "alex.rusu0720@gmail.com",
-    linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
-  },
-  {
-    imgUrl: Jerry,
-    name: "Jerry Liu",
-    position: "#Logistics",
-    email: "jerryliu2678@gmail.com",
-    linkedin: "https://www.linkedin.com/in/jerry-liu-28464b268/",
-  },
-  {
-    imgUrl: Brian,
-    name: "Brian Tram",
-    position: "#Logistics",
-    email: "brian.q.tram@gmail.com",
-    linkedin: "https://www.linkedin.com/in/brian-tram-bb8312276/",
-  },
-];
-
-const FinMark = [
-  {
-    imgUrl: Andy,
-    name: "Andy Duong",
-    position: "#Finance",
-    email: "theandelope16@gmail.com",
-    linkedin: "https://www.linkedin.com/in/andy-duong-380521300/",
-  },
-  {
-    imgUrl: Thomas,
-    name: "Thomas Lenh",
-    position: "#Finance",
-    email: "thomaslenh@gmail.com",
-    linkedin: "https://www.linkedin.com/in/thomas-lenh-38216a248/",
-  },
-  {
-    imgUrl: George,
-    name: "George Woo",
-    position: "#Design",
-    email: "g.woo1187@gmail.com",
-    linkedin: "https://www.linkedin.com/in/george-woo-a72bb62b2/",
-  }
-];
-
 const Team: React.FC = () => {
-  const renderTeamMembers = (members:any) => (
-    members.map((item:any, index:any) => (
+  const renderTeamMembers = (members: any) =>
+    members.map((item: any, index: any) => (
       <div className="flex flex-col items-center p-4" key={index}>
         <div className="rounded-full w-24 h-24 mb-4 overflow-hidden">
-          <img src={item.imgUrl} alt={item.name} className="w-full h-full object-cover" />
+          <img
+            src={item.imgUrl}
+            alt={item.name}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="text-center">
           <HoverCard>
             <HoverCardTrigger>
-              <h4 className="text-primary text-xl font-medium mb-2">{item.name}</h4>
+              <h4 className="text-primary text-xl font-medium mb-2">
+                {item.name}
+              </h4>
             </HoverCardTrigger>
             <HoverCardContent className="rounded-lg bg-black/10">
               <p className="text-md">{item.position}</p>
@@ -120,15 +45,14 @@ const Team: React.FC = () => {
           </HoverCard>
         </div>
       </div>
-    ))
-  );
+    ));
 
   return (
-    <div className="text-black relative overflow-hidden min-h-screen">
-      <div className="absolute inset-0 w-full h-full -z-10">
+    <div className="text-black relative overflow-hidden min-h-screen bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center">
+      {/* <div className="absolute inset-0 w-full h-full -z-10">
         <VantaBackground />
-      </div>
-      <MacNavbar/>
+      </div> */}
+      <MacNavbar />
       <div className="relative z-10">
         <div className="fixed top-0 left-0 w-full z-50 p-4">
           <a
@@ -150,17 +74,17 @@ const Team: React.FC = () => {
           </div>
         </div>
       </section>
-      <section id="finMark" className="pt-12">
+      <section className="pt-12">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-3  gap-8 justify-center">
-            {renderTeamMembers(FinMark)}
+            {renderTeamMembers(Row2)}
           </div>
         </div>
       </section>
-      <section id="techLogs" className="pt-16 pb-8 mb-20">
+      <section className="pt-16 pb-8 mb-20">
         <div className="container mx-auto margin-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
-            {renderTeamMembers(techLogs)}
+            {renderTeamMembers(Row3)}
           </div>
         </div>
       </section>

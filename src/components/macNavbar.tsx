@@ -18,7 +18,7 @@ const macNavbar: React.FC = () => {
         {GRADIENTS.map((path) => (
           <DockCard key={path}>
             <Link to={path}>
-              <Card src={`src/assets${path}.png`} />
+              <Card src={`src/assets/png/${path}.png`} />
             </Link>
           </DockCard>
         ))}

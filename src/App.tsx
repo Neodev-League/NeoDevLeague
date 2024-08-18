@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Sponsor from "./pages/Sponsor/sponsor";
-import Team from "./pages/Team/team";
+import Sponsor from "./pages/Sponsor/Sponsor";
+import Team from "./pages/Team/Team";
 
 
 const App: React.FC = () => {
