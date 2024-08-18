@@ -21,6 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "public/logo.tsx"],
+  "include": ["src", "public/logo.tsx", "app"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
