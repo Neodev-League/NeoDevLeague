@@ -1,7 +1,6 @@
 "use client";
 import { type AnimationProps, motion } from "framer-motion";
 
-// Define animation properties
 const animationProps = {
   initial: { "--x": "100%", scale: 3 },
   animate: { "--x": "-100%", scale: 2.3 },

@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { Card } from "./dc/Card";
-import { Dock } from "./dc/Dock";
-import { DockCard } from "./dc/DockCard";
-import styles from "./dc/styles.module.scss";
+import { Card } from "./MacNav/Card";
+import { Dock } from "./MacNav/Dock";
+import { DockCard } from "./MacNav/DockCard";
+import styles from "./MacNav/styles.module.scss";
 
 const GRADIENTS: string[] = [
   "/home",

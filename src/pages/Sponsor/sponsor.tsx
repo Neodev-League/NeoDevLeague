@@ -1,17 +1,18 @@
 import React from "react";
-import "./sponsor.css"; // Import custom styles for specific background settings
-import NumberTicker from "./components/tick";
-import TextReveal from "./components/scrolltxt";
-import BlurIn from "./components/blurtext";
-import { WavyBackground } from "./components/wavyb";
-import { VelocityScroll } from "./components/vstext";
-import { FadeText } from "./components/fitext";
-import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ShinyButton from "./components/coolbutton";
+import { motion, useAnimation } from "framer-motion";
+import NumberTicker from "./components/number-tick";
+import TextReveal from "./components/scroll-effect";
+import BlurIn from "./components/blur-text";
+import { WavyBackground } from "./components/wavy-bg";
+import { VelocityScroll } from "./components/vs-text";
+import { FadeText } from "./components/fade-text";
+import ShinyButton from "./components/shiny-button";
 import { Link } from "react-router-dom";
 import MacNavbar from "../../components/macNavbar";
+import BuildingRender from "../../assets/Renders/building_two_render.gif";
 
+import "./sponsor.css";
 
 const ScrollFadeText: React.FC<{
   text: string;
@@ -62,9 +63,9 @@ const SponsorPage: React.FC = () => {
       <WavyBackground className=" pb-40" colors={["#117045", "#278250"]}>
         <div className="absolute inset-0 overflow-hidden flex justify-center items-center">
           <img
-            src="src/assets/Spinning-Logo.gif"
+            src="src/assets/renders/logo_final.gif"
             alt="Background"
-            className="w-full h-auto object-cover" // Change this class to increase the size
+            className="w-full h-auto object-cover"
           />
           <div className="absolute inset-0"></div>
         </div>
@@ -97,10 +98,9 @@ const SponsorPage: React.FC = () => {
         <br />
         <VelocityScroll
           text="16 Expected Schools |"
-          default_velocity={7}
-          className="text-neutral-300 text-4xl font-bold  bg-clip-text bg-gradient-to-r from-gray-400 to-grey-800"
+          className="text-neutral-300 text-4xl font-bold  bg-clip-text bg-gradient-to-r from-gray-400 to-grey-800 pb-5"
         />
-
+        <img src={BuildingRender} alt="neodev building" />
         <div>
           <TextReveal
             className="text-center"
@@ -119,7 +119,7 @@ const SponsorPage: React.FC = () => {
                 className="text-4xl font-bold text-white"
                 direction="left"
                 delay={0.3}
-                text="NeoDev’s Mission"
+                text="NeoDev League's Mission"
               />
               <ScrollFadeText
                 className="text-white mt-2"
@@ -179,7 +179,7 @@ const SponsorPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <MacNavbar/>
+      <MacNavbar />
     </div>
   );
 };
