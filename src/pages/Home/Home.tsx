@@ -1,12 +1,13 @@
 import React from "react";
-import Ripple from "../../components/Ripple";
-import TextGlitch from "../../components/text-glitch";
+import Ripple from "../../components/Home/Ripple";
+import TextGlitch from "../../components/Home/text-glitch";
 import Logo from "../../assets/logo";
+import WordRotate from "../../components/Home/text-reveal";
+import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
+import MacNavbar from "../../components/macNavbar"; 
+
 import "../../style.css";
 import "./glitch.css";
-import WordRotate from "../../components/text-reveal";
-import MailchimpFormContainer from "../../components/MailchimpFormContainer";
-import MacNavbar from "../../components/macNavbar"; 
 
 const Home: React.FC = () => {
   return (

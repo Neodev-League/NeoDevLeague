@@ -23,7 +23,6 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Add this to your CSS file, e.g., style.css */
 .gradient-text {
   background: linear-gradient(to right, #ffffff, #ffffff);
   -webkit-background-clip: text;

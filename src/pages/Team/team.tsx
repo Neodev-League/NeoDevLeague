@@ -16,7 +16,7 @@ import {
 const Team: React.FC = () => {
   const renderTeamMembers = (members: any) =>
     members.map((item: any, index: any) => (
-      <div className="flex flex-col items-center p-4" key={index}>
+      <div className="flex flex-col items-center p-4 bg-light2 bg-opacity-70 rounded-md" key={index}>
         <div className="rounded-full w-24 h-24 mb-4 overflow-hidden">
           <img
             src={item.imgUrl}

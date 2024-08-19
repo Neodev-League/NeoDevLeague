@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { EmailFormFields } from "react-mailchimp-subscribe";
 import { AnimatePresence, motion } from "framer-motion";
-import Logo from "../assets/logo2.png";
+import Logo from "../../assets/logo2.png";
 
 interface CustomFormProps {
   message: string | Error | null;

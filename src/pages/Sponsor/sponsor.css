@@ -11,8 +11,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #FFF; /* Fallback color */
-  
+  background-color: #FFF;
 }
 
 ::-webkit-scrollbar {
