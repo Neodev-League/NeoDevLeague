@@ -11,6 +11,7 @@ import ShinyButton from "./components/shiny-button";
 import { Link } from "react-router-dom";
 import MacNavbar from "../../components/macNavbar";
 import BuildingRender from "../../assets/Renders/building_two_render.gif";
+import BuildingRender2 from "../../assets/Renders/building_three_render.gif";
 
 import "./sponsor.css";
 
@@ -60,14 +61,13 @@ const ScrollFadeText: React.FC<{
 const SponsorPage: React.FC = () => {
   return (
     <div className="relative h-screen">
-      <WavyBackground className=" pb-40" colors={["#117045", "#278250"]}>
+      <WavyBackground colors={["#117045", "#278250"]}>
         <div className="absolute inset-0 overflow-hidden flex justify-center items-center">
           <img
             src="src/assets/renders/logo_final.gif"
             alt="Background"
             className="w-full h-auto object-cover"
           />
-          <div className="absolute inset-0"></div>
         </div>
         <div className="relative flex items-center justify-center h-full">
           <div className="text-center">
@@ -106,11 +106,6 @@ const SponsorPage: React.FC = () => {
             className="text-center"
             text="The Neo Developer League will change competitive programming forever"
           />
-        </div>
-        <div className="flex justify-center cursor-pointer text-2xl pb-24">
-          <Link to="https://drive.google.com/file/d/1fk0d_UCA_kxGigZp1gjld_SQalErZyJ4/view?usp=sharing">
-            <ShinyButton text="FULL PACKAGE" />
-          </Link>
         </div>
         <div className="p-8 space-y-8 overflow-hidden">
           <div className="flex justify-start">
@@ -177,6 +172,15 @@ const SponsorPage: React.FC = () => {
               />
             </div>
           </div>
+
+          <img src={BuildingRender2} alt="neodev building" />
+
+          <div className="flex justify-center cursor-pointer text-2xl pt-24">
+            <Link to="https://drive.google.com/file/d/1fk0d_UCA_kxGigZp1gjld_SQalErZyJ4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <ShinyButton text="Package PDF" />
+            </Link>
+          </div>
+
         </div>
       </div>
       <MacNavbar />

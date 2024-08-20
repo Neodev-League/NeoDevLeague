@@ -40,16 +40,15 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
               Stay caught up on all news related to the NeoDev League!
             </p>
           </div>
-          <img src={Logo} className="h-10 w-10" alt="Logo"></img>
         </div>
         <div className="relative flex items-center pt-3 w-full">
           <motion.input
             type="email"
-            placeholder="Your email"
+            placeholder="neodevleague@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="lg:p-3 p-1 lg:pr-32 pr-24 font-bold lg:text-ms text-ms border border-gray rounded-md focus:outline-none focus:ring-4 focus:ring-darkerGreen transition-shadow duration-300 bg-opacity-90 w-full"
+            className="lg:p-3 p-1 lg:pr-32 pr-24 font-bold lg:text-ms text-ms border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-dark3 transition-shadow duration-300 bg-opacity-90 w-full"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: -6 }}
             transition={{ duration: 1 }}

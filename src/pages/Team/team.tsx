@@ -17,7 +17,7 @@ const Team: React.FC = () => {
   const renderTeamMembers = (members: any) =>
     members.map((item: any, index: any) => (
       // bg-white/60 ?
-      <div className="flex flex-col items-center p-4 bg-light2 bg-opacity-55 rounded-md" key={index}>
+      <div className="flex flex-col items-center p-4 bg-light2 bg-opacity-55 bg-white/80 rounded-md" key={index}>
         <div className="rounded-full w-24 h-24 mb-4 overflow-hidden">
           <img
             src={item.imgUrl}
@@ -50,9 +50,6 @@ const Team: React.FC = () => {
 
   return (
     <div className="text-black relative overflow-hidden min-h-screen bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center">
-      {/* <div className="absolute inset-0 w-full h-full -z-10">
-        <VantaBackground />
-      </div> */}
       <MacNavbar />
       <div className="relative z-10">
         <div className="fixed top-0 left-0 w-full z-50 p-4">

@@ -27,17 +27,14 @@ const ShinyButton = ({ text = "shiny-button" }) => {
   return (
     <motion.button
       {...animationProps}
-      // Add className for styling
       className="relative rounded-lg px-6 py-3 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow"
-      // Set button gradient background and border color
       style={{
-        background: "linear-gradient(90deg, #34D399, #065f46)", // Using the green gradient
-        border: "2px solid #044f3b", // Darker outline color
+        background: "linear-gradient(90deg, #34D399, #065f46)",
+        border: "1px solid #044f3b",
       }}
     >
       <span
-        // Style text color to white
-        className="relative block h-full w-full text-md uppercase font-semibold tracking-wide text-white"
+        className="relative block h-full w-full text-md font-semibold tracking-wide text-white"
       >
         {text}
       </span>
@@ -46,7 +43,6 @@ const ShinyButton = ({ text = "shiny-button" }) => {
           mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
           maskComposite: "exclude",
         }}
-        // Style outline color to black
         className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
       ></span>
     </motion.button>
