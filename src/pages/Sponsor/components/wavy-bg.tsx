@@ -107,7 +107,7 @@ export const WavyBackground = ({
   return (
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center overflow-hidden", // added overflow-hidden
+        "h-[150vh] flex flex-col items-center justify-center overflow-hidden z-1", // added overflow-hidden
         containerClassName
       )}
     >

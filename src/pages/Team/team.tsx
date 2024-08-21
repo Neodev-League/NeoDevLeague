@@ -1,11 +1,11 @@
 import React from "react";
-import "../../style.css";
 import logo from "../../assets/logo2.png";
 import gmail from "../../assets/Png/gmail.png";
 import linkedin from "../../assets/Png/linkedin.png";
-// import VantaBackground from "../../components/vantaBg.tsx";
 import MacNavbar from "../../components/macNavbar.tsx";
 import { leads, Row2, Row3 } from "./members.ts";
+
+import "../../style.css";
 
 import {
   HoverCard,
@@ -18,17 +18,17 @@ const Team: React.FC = () => {
     members.map((item: any, index: any) => (
       // bg-white/60 ?
       <div className="flex flex-col items-center p-4 bg-light2 bg-opacity-55 bg-white/80 rounded-md" key={index}>
-        <div className="rounded-full w-24 h-24 mb-4 overflow-hidden">
+        <div className="rounded-full w-24 h-24 mb-4">
           <img
             src={item.imgUrl}
             alt={item.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
         <div className="text-center">
           <HoverCard>
             <HoverCardTrigger>
-              <h4 className="text-primary text-xl font-medium mb-2">
+              <h4 className="text-primary text-xl font-medium mb-2 pointer">
                 {item.name}
               </h4>
             </HoverCardTrigger>
@@ -49,7 +49,7 @@ const Team: React.FC = () => {
     ));
 
   return (
-    <div className="text-black relative overflow-hidden min-h-screen bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center">
+    <div className="text-black relative overflow-hidden min-h-screen bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center h-screen">
       <MacNavbar />
       <div className="relative z-10">
         <div className="fixed top-0 left-0 w-full z-50 p-4">

@@ -29,7 +29,6 @@ const ShinyButton = ({ text = "shiny-button" }) => {
       {...animationProps}
       className="relative rounded-lg px-6 py-3 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow"
       style={{
-        background: "linear-gradient(90deg, #34D399, #065f46)",
         border: "1px solid #044f3b",
       }}
     >

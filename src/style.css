@@ -9,6 +9,10 @@
   to { opacity: 1; }
 }
 
+*{
+  border: 1px solid red;
+}
+
 .background-image {
   position: absolute;
   z-index: -1;
@@ -23,8 +27,31 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+
 .gradient-text {
   background: linear-gradient(to right, #ffffff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* these get overwritten */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #aec1ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #065f46;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b8065;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(255, 255, 255, 0.5);
 }
