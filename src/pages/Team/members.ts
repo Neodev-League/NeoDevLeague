@@ -14,6 +14,8 @@ interface Member {
   position: string;
   email: string;
   linkedin: string;
+  row: number;
+  alignment: string;
 }
 
 export const leads: Member[] = [
@@ -23,6 +25,8 @@ export const leads: Member[] = [
     position: "#Head",
     email: "matthewsxnger@gmail.com",
     linkedin: "https://www.linkedin.com/in/matthewsingerr/",
+    row: 1,
+    alignment: "left"
   },
   {
     imgUrl: James,
@@ -30,6 +34,8 @@ export const leads: Member[] = [
     position: "#Head",
     email: "lijames9532@gmail.com",
     linkedin: "https://www.linkedin.com/in/james-li-a81004275/",
+    row: 1,
+    alignment: "right",
   },
 ];
 
@@ -40,6 +46,8 @@ export const Row2: Member[] = [
     position: "#Finance",
     email: "theandelope16@gmail.com",
     linkedin: "https://www.linkedin.com/in/andy-duong-380521300/",
+    row: 2,
+    alignment: "left",
   },
   {
     imgUrl: Thomas,
@@ -47,6 +55,8 @@ export const Row2: Member[] = [
     position: "#Finance",
     email: "thomaslenh@gmail.com",
     linkedin: "https://www.linkedin.com/in/thomas-lenh-38216a248/",
+    row: 2,
+    alignment: "center",
   },
   {
     imgUrl: George,
@@ -54,6 +64,8 @@ export const Row2: Member[] = [
     position: "#Design",
     email: "g.woo1187@gmail.com",
     linkedin: "https://www.linkedin.com/in/george-woo-a72bb62b2/",
+    row: 2,
+    alignment: "right",
   },
 ];
 
@@ -64,6 +76,8 @@ export const Row3: Member[] = [
       position: "#Tech",
       email: "hamza.k.ammar@gmail.com",
       linkedin: "https://www.linkedin.com/in/hamza-ammar-341531240/",
+      row: 3,
+      alignment: "left",
     },
     {
       imgUrl: Alex,
@@ -71,6 +85,8 @@ export const Row3: Member[] = [
       position: "#Tech",
       email: "alex.rusu0720@gmail.com",
       linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
+      row: 3,
+      alignment: "center",
     },
     {
       imgUrl: Jerry,
@@ -78,6 +94,8 @@ export const Row3: Member[] = [
       position: "#Logistics",
       email: "jerryliu2678@gmail.com",
       linkedin: "https://www.linkedin.com/in/jerry-liu-28464b268/",
+      row: 3,
+      alignment: "center",
     },
     {
       imgUrl: Brian,
@@ -85,5 +103,7 @@ export const Row3: Member[] = [
       position: "#Logistics",
       email: "brian.q.tram@gmail.com",
       linkedin: "https://www.linkedin.com/in/brian-tram-bb8312276/",
+      row: 3,
+      alignment: "right",
     },
   ];
