@@ -1,4 +1,4 @@
-# Neodev
+# The Official Neodev League Repo
 
 ## Who are we?
 We're a new organization, committed to igniting the engineering passions of high school students through competitive events. Our first event is planned to be hosted this year in October. We are projecting 100-200 passionate participants. 

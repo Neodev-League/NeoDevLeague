@@ -57,7 +57,7 @@ const Team: React.FC = () => {
         {member.row == 1 && (
           <>
             <img
-              src={Neo1}
+              src={Neo3}
               className={`flex h-[100%] absolute bottom-0 ${
                 member.alignment === "right" ? "left-0" : "right-0"
               }`}
@@ -75,7 +75,7 @@ const Team: React.FC = () => {
               }`}
             />
             <img
-              src={Neo2}
+              src={Neo1}
               className={`flex h-[90%] absolute bottom-0 ${
                 member.alignment === "right" ? "left-60" : "right-60"
               }`}
