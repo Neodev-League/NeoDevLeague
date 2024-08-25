@@ -40,6 +40,17 @@ const Team: React.FC = () => {
             alt={member.name}
             className="w-24 h-24 object-cover rounded-md shadow-lg border border-lighterGreen"
           />
+          <div className="flex justify-center gap-4 m-2 p-5 rounded-lg bg-white/80 border border-lighterGreen backdrop-blur-sm ">
+            <p className="block sm:hidden text-lg signature">
+              {member.position}
+            </p>
+            {/* <a href={`mailto:${member.email}`}>
+                  <img src={gmail} alt="Email" className="w-8 h-8" />
+                </a> */}
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+              <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
+            </a>
+          </div>
         </div>
 
         {/* row 1 images */}
@@ -153,9 +164,7 @@ const Team: React.FC = () => {
               </h4>
             </div>
             <HoverCardContent className="rounded-lg bg-white/80 w-[full] backdrop-blur-sm flex flex-col items-center text-center">
-              <p className="text-lg signature">
-                {member.position}
-              </p>
+              <p className="text-lg signature">{member.position}</p>
               <div className="flex justify-center gap-4 mt-2">
                 {/* <a href={`mailto:${member.email}`}>
                   <img src={gmail} alt="Email" className="w-8 h-8" />
