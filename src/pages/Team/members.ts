@@ -22,7 +22,7 @@ export const leads: Member[] = [
   {
     imgUrl: Matthew,
     name: "Matthew Singer",
-    position: "#Head",
+    position: "Head",
     email: "matthewsxnger@gmail.com",
     linkedin: "https://www.linkedin.com/in/matthewsingerr/",
     row: 1,
@@ -31,7 +31,7 @@ export const leads: Member[] = [
   {
     imgUrl: James,
     name: "James Li",
-    position: "#Head",
+    position: "Head",
     email: "lijames9532@gmail.com",
     linkedin: "https://www.linkedin.com/in/james-li-a81004275/",
     row: 1,
@@ -43,7 +43,7 @@ export const Row2: Member[] = [
   {
     imgUrl: Andy,
     name: "Andy Duong",
-    position: "#Finance",
+    position: "Finance",
     email: "theandelope16@gmail.com",
     linkedin: "https://www.linkedin.com/in/andy-duong-380521300/",
     row: 2,
@@ -52,7 +52,7 @@ export const Row2: Member[] = [
   {
     imgUrl: Thomas,
     name: "Thomas Lenh",
-    position: "#Finance",
+    position: "Finance",
     email: "thomaslenh@gmail.com",
     linkedin: "https://www.linkedin.com/in/thomas-lenh-38216a248/",
     row: 2,
@@ -61,7 +61,7 @@ export const Row2: Member[] = [
   {
     imgUrl: George,
     name: "George Woo",
-    position: "#Design",
+    position: "Design",
     email: "g.woo1187@gmail.com",
     linkedin: "https://www.linkedin.com/in/george-woo-a72bb62b2/",
     row: 2,
@@ -73,7 +73,7 @@ export const Row3: Member[] = [
     {
       imgUrl: Hamza,
       name: "Hamza Ammar",
-      position: "#Tech",
+      position: "Tech",
       email: "hamza.k.ammar@gmail.com",
       linkedin: "https://www.linkedin.com/in/hamza-ammar-341531240/",
       row: 3,
@@ -82,7 +82,7 @@ export const Row3: Member[] = [
     {
       imgUrl: Alex,
       name: "Alex Rusu",
-      position: "#Tech",
+      position: "Tech",
       email: "alex.rusu0720@gmail.com",
       linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
       row: 3,
@@ -91,7 +91,7 @@ export const Row3: Member[] = [
     {
       imgUrl: Jerry,
       name: "Jerry Liu",
-      position: "#Logistics",
+      position: "Logistics",
       email: "jerryliu2678@gmail.com",
       linkedin: "https://www.linkedin.com/in/jerry-liu-28464b268/",
       row: 3,
@@ -100,7 +100,7 @@ export const Row3: Member[] = [
     {
       imgUrl: Brian,
       name: "Brian Tram",
-      position: "#Logistics",
+      position: "Logistics",
       email: "brian.q.tram@gmail.com",
       linkedin: "https://www.linkedin.com/in/brian-tram-bb8312276/",
       row: 3,
