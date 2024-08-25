@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { animated, useIsomorphicLayoutEffect, useSpringValue } from '@react-spring/web'
+import { animated, useSpringValue } from '@react-spring/web'
 
-import { useMousePosition } from '../hooks/useMousePosition'
-import { useWindowResize } from '../hooks/useWindowResize'
+// import { useMousePosition } from '../hooks/useMousePosition'
+// import { useWindowResize } from '../hooks/useWindowResize'
 
-import { useDock } from '../Dock/DockContext'
+// import { useDock } from '../Dock/DockContext'
 
 import styles from './styles.module.scss'
 
@@ -20,7 +20,7 @@ export const DockCard = ({ children }: DockCardProps) => {
    * This doesn't need to be real time, think of it as a static
    * value of where the card should go to at the end.
    */
-  const [elCenterX, setElCenterX] = React.useState<number>(0)
+  // const [setElCenterX] = React.useState<number>(0)
 
   const size = useSpringValue(INITIAL_WIDTH, {
     config: {
@@ -37,41 +37,41 @@ export const DockCard = ({ children }: DockCardProps) => {
     },
   })
 
-  const dock = useDock()
+  // const dock = useDock()
 
   /**
    * This is just an abstraction around a `useSpring` hook, if you wanted you could do this
    * in the hook above, but these abstractions are useful to demonstrate!
    */
-  useMousePosition(
-    {
-      onChange: ({ value }) => {
-        const mouseX = value.x
+  // useMousePosition(
+  //   {
+  //     onChange: ({ value }) => {
+  //       const mouseX = value.x
 
-        if (dock.width > 0) {
-          const transformedValue =
-            INITIAL_WIDTH + 3 * Math.cos((((mouseX - elCenterX) / dock.width) * Math.PI) / 2) ** 12
+  //       if (dock.width > 0) {
+  //         const transformedValue =
+  //           INITIAL_WIDTH + 3 * Math.cos((((mouseX - elCenterX) / dock.width) * Math.PI) / 2) ** 12
 
-          if (dock.hovered) {
-            size.start(transformedValue)
-          }
-        }
-      },
-    },
-    [elCenterX, dock]
-  )
+  //         if (dock.hovered) {
+  //           size.start(transformedValue)
+  //         }
+  //       }
+  //     },
+  //   },
+  //   [elCenterX, dock]
+  // )
 
-  useIsomorphicLayoutEffect(() => {
-    if (!dock.hovered) {
-      size.start(INITIAL_WIDTH)
-    }
-  }, [dock.hovered])
+  // useIsomorphicLayoutEffect(() => {
+  //   if (!dock.hovered) {
+  //     size.start(INITIAL_WIDTH)
+  //   }
+  // }, [dock.hovered])
 
-  useWindowResize(() => {
-    const { x } = cardRef.current.getBoundingClientRect()
+  // useWindowResize(() => {
+  //   const { x } = cardRef.current.getBoundingClientRect()
 
-    setElCenterX(x + INITIAL_WIDTH / 2)
-  })
+  //   setElCenterX(x + INITIAL_WIDTH / 2)
+  // })
 
 
   const handleClick = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets/Neo-logo.png";
 import Neo1 from "../../assets/neobuilding1.png";
 import Neo2 from "../../assets/neobuilding2.png";
 import Neo3 from "../../assets/neobuilding3.png";

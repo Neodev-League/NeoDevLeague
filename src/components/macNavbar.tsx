@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Card } from "./MacNav/Card";
 import { Dock } from "./MacNav/Dock";
 import { DockCard } from "./MacNav/DockCard";
-import styles from "./MacNav/styles.module.scss";
 
 const GRADIENTS: string[] = [
   "/home",
@@ -13,7 +12,7 @@ const GRADIENTS: string[] = [
 
 const macNavbar: React.FC = () => {
   return (
-    <div className={styles.body}>
+    <div>
       <Dock>
         {GRADIENTS.map((path) => (
           <DockCard key={path}>
