@@ -1,11 +1,13 @@
 import React from "react";
-import Ripple from "../../components/Ripple";
-import Texttt from "../../components/Texttt";
+import Ripple from "../../components/Home/Ripple";
+import TextGlitch from "../../components/Home/text-glitch";
 import Logo from "../../assets/logo";
+import WordRotate from "../../components/Home/text-reveal";
+import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
+import MacNavbar from "../../components/macNavbar"; 
+
 import "../../style.css";
-import "../../glitch.css";
-import WordRotate from "../../components/textreveal";
-import MailchimpFormContainer from "../../components/MailchimpFormContainer";
+import "./glitch.css";
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +16,7 @@ const Home: React.FC = () => {
 
       <div className="fixed top-0 left-0 w-full z-50">
         <a
-          href="https://neoleague.dev"
+          href="https://neoleague.dev/home"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,8 +25,8 @@ const Home: React.FC = () => {
       </div>
 
       <div className="relative flex items-center justify-center min-h-screen">
-        <div className="text-center relative z-10 mt-24">
-          <Texttt />
+        <div className="text-center relative z-10 mt-24 mb-6">
+          <TextGlitch />
           <div className="mt-10">
             <span className="!text-2xl md:text-6xl font-bold">
               The Future of
@@ -52,7 +54,7 @@ const Home: React.FC = () => {
           <MailchimpFormContainer />
         </div>
       </div>
-
+      <MacNavbar/>
     </div>
   );
 };

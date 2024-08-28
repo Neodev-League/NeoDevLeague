@@ -1,30 +1,10 @@
-# React + TypeScript + Vite
+# The Official Neodev League Repo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Who are we?
+We're a new organization, committed to igniting the engineering passions of high school students through competitive events. Our first event is planned to be hosted this year in October. We are projecting 100-200 passionate participants. 
+Our organization is focused on sparking collaboration and innovation in high schoolers. Events will allow teams of 8-10 students from various schools in the region to collaborate and create projects.
 
-Currently, two official plugins are available:
+# More Information to be released soon!
+We are gathering contacts from schools all over the WRDSB region. If you are interested in taking your school to Neodev League, shoot us a DM on our instagram - @neodevleague
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## https://neoleague.dev/
