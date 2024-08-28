@@ -3,7 +3,7 @@ const Texttt = () => {
   return (
     <div className="relative">
       <h1
-        className="text-8xl font-bold hero glitch layers"
+        className="md:text-8xl text-7xl font-bold hero glitch layers"
         data-text="NeoDev"
         style={{
           fontFamily: "Poppins, sans-serif",

@@ -39,7 +39,8 @@ export default {
         textlight: "#83c5af", // Light version for text, lighter than lighterGreen
         light1: "#E6FAF2", // Very Light Green
         light2: "#C4EDE0", // Between veryLightGreen and light1
-        light3: 'rgba(196, 237, 224, 0.25)' //light2 but opacity change
+        light3: 'rgba(196, 237, 224, 0.25)', //light2 but opacity change
+        light4: "#e8fef9", //The light color of the logos George made
       },
 
       fontSize: {
@@ -47,7 +48,9 @@ export default {
         lg: "1.5rem",
         ml: "1.25rem",
         md: "1rem",
+        msd: "0.80rem",
         ms: "0.75rem",
+        mms: "0.6rem",
         sm: "0.5rem",
         xs: "0.25rem"
       },

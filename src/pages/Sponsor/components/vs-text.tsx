@@ -75,7 +75,8 @@ export function VelocityScroll({
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
     const directionFactor = React.useRef<number>(1);
-    useAnimationFrame((delta) => {
+    useAnimationFrame((t, delta) => {
+      console.log(t)
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -106,7 +107,7 @@ export function VelocityScroll({
   }
 
   return (
-    <section className="relative w-full pr-0 pl-0">
+    <section className="relative w-full">
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text}
       </ParallaxText>

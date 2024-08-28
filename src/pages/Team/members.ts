@@ -82,7 +82,7 @@ export const Row3: Member[] = [
     {
       imgUrl: Alex,
       name: "Alex Rusu",
-      position: "Tech",
+      position: "Logistics",
       email: "alex.rusu0720@gmail.com",
       linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
       row: 3,

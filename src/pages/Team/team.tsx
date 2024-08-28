@@ -1,3 +1,4 @@
+// why does this file have to be lower case for build to work... lol
 import React from "react";
 import logo from "../../assets/Neo-logo.png";
 import Neo1 from "../../assets/neobuilding1.png";
@@ -105,15 +106,15 @@ const Team: React.FC = () => {
             />
             <img
               src={Neo2}
-              className={`flex h-[100%] absolute ${
-                member.alignment === "right" ? "left-40" : "right-40"
-              } bottom-0`}
+              className={`flex h-[100%] absolute bottom-0 ${
+                member.alignment === "right" ? "left-40" : member.alignment === "left" ? "right-40" : "left-0"
+              }`}
             />
             <img
               src={Neo3}
-              className={`flex h-[100%] absolute ${
-                member.alignment === "right" ? "left-60" : "right-60"
-              } bottom-0`}
+              className={`flex h-[100%] absolute bottom-0 ${
+                member.alignment === "right" ? "left-60" : member.alignment === "left" ? "right-60" : "right-0"
+              }`}
             />
             {member.alignment === "center" && (
               <img
@@ -158,7 +159,7 @@ const Team: React.FC = () => {
         )}
         <HoverCard>
           <HoverCardTrigger>
-            <div className="text-center items-center border border-lighterGreen backdrop-blur-sm rounded-md shadow-lg cursor-crosshair">
+            <div className="text-center items-center border border-lighterGreen backdrop-blur-sm rounded-md shadow-lg cursor-pointer">
               <h4 className="text-primary text-xl font-medium mb-1 mt-1">
                 {member.name}
               </h4>

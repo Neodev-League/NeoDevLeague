@@ -28,26 +28,26 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
   };
 
   return (
-    <form className="w-full flex flex-col items-center" onSubmit={handleSubmit}>
-      <div className="bg-light2 bg-opacity-60 bg-white/50 rounded-md lg:p-5 md:p-2 max-w-md">
+    <form className="w-full flex flex-col items-center pb-10 md:pb-3" onSubmit={handleSubmit}>
+      <div className="bg-light2 bg-opacity-60 bg-white/50 rounded-md lg:p-5 p-3 max-w-md">
         <div className="flex p-3 text-black bg-white/50 rounded-md text-left items-center">
           <div className="mr-3 flex-grow">
-            <h4 className="lg:text-lg text-md font-bold">
-              Sign up for our newsletter!
+            <h4 className="lg:text-lg text-ml font-bold">
+              Sign up for our Newsletter
             </h4>
             <p className="lg:text-ms text-sm">
               Stay caught up on all news related to the NeoDev League!
             </p>
           </div>
         </div>
-        <div className="relative flex items-center pt-3 w-full">
+        <div className="relative flex items-center pt-4 pb-1 w-full">
           <motion.input
             type="email"
             placeholder="neodevleague@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="lg:p-3 p-1 lg:pr-32 pr-24 font-bold lg:text-ms text-ms border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-dark3 transition-shadow duration-300 bg-opacity-90 w-full"
+            className="w-full lg:pr-32 p-3 lg:pr-30 pr-24 lg:text-msd text-ms border border-lighterGreen rounded-md focus:outline-none focus:ring-1 focus:ring-lighterGreen transition-shadow duration-300 bg-opacity-90 placeholder-black text-lighterGreen"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: -6 }}
             transition={{ duration: 1 }}
@@ -56,7 +56,7 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
             {status === "idle" && (
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-dark3 text-white lg:text-md text-ms lg:px-6 px-3 lg:py-2 py-1 cursor-pointer"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center justify-center overflow-hidden rounded-md bg-dark3 text-light4 lg:text-md text-ms px-5 py-2 cursor-pointer hover:scale-[0.99]"
               >
                 Subscribe
               </button>
