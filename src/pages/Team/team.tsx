@@ -41,7 +41,7 @@ const Team: React.FC = () => {
             alt={member.name}
             className="w-24 h-24 object-cover rounded-md shadow-lg border border-lighterGreen"
           />
-          <div className="block sm:hidden flex justify-center gap-4 m-2 p-5 rounded-lg bg-white/80 border border-lighterGreen backdrop-blur-sm ">
+          <div className="block sm:hidden flex justify-center ml-2 gap-1 py-5 px-2 rounded-lg bg-white/80 border border-lighterGreen backdrop-blur-sm ">
             <p className="text-lg signature">
               {member.position}
             </p>
