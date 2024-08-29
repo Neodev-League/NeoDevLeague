@@ -203,7 +203,7 @@ const Team: React.FC = () => {
       <section id="leads" className="pt-12">
         <div className="container mx-auto margin-10">
           <div className="text-center mb-12 bg-white/90 rounded-md border border-lighterGreen pb-5 pt-5">
-            <h6 className="text-2xl font-bold"> - Meet the NeoDev Team - </h6>
+            <h6 className="text-2xl font-bold"> Meet the NeoDev Team </h6>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center overflow-hidden">
             {renderTeamMembers(leads)}
