@@ -22,7 +22,7 @@ export const leads: Member[] = [
   {
     imgUrl: Matthew,
     name: "Matthew Singer",
-    position: "Head",
+    position: "Head |Tech",
     email: "matthewsxnger@gmail.com",
     linkedin: "https://www.linkedin.com/in/matthewsingerr/",
     row: 1,
@@ -31,7 +31,7 @@ export const leads: Member[] = [
   {
     imgUrl: James,
     name: "James Li",
-    position: "Head",
+    position: "Head |Tech",
     email: "lijames9532@gmail.com",
     linkedin: "https://www.linkedin.com/in/james-li-a81004275/",
     row: 1,
