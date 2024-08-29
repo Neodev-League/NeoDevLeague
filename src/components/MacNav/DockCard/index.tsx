@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { animated, useSpringValue } from '@react-spring/web'
+import * as React from "react";
+import { animated, useSpringValue } from "@react-spring/web";
 
 // import { useMousePosition } from '../hooks/useMousePosition'
 // import { useWindowResize } from '../hooks/useWindowResize'
 
 // import { useDock } from '../Dock/DockContext'
 
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 interface DockCardProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const INITIAL_WIDTH = 60
+const INITIAL_WIDTH = 60;
 
 export const DockCard = ({ children }: DockCardProps) => {
-  const cardRef = React.useRef<HTMLButtonElement>(null!)
+  const cardRef = React.useRef<HTMLButtonElement>(null!);
   /**
    * This doesn't need to be real time, think of it as a static
    * value of where the card should go to at the end.
@@ -27,15 +27,15 @@ export const DockCard = ({ children }: DockCardProps) => {
       mass: 0.1,
       tension: 320,
     },
-  })
+  });
 
-  const opacity = useSpringValue(0)
+  const opacity = useSpringValue(0);
   const y = useSpringValue(0, {
     config: {
       friction: 29,
       tension: 238,
     },
-  })
+  });
 
   // const dock = useDock()
 
@@ -73,27 +73,26 @@ export const DockCard = ({ children }: DockCardProps) => {
   //   setElCenterX(x + INITIAL_WIDTH / 2)
   // })
 
-
   const handleClick = () => {
-    opacity.start(0)
-    y.start(0)
-  }
-
+    opacity.start(0);
+    y.start(0);
+  };
 
   return (
-    <div className={styles['dock-card-container']}>
+    <div className={styles["dock-card-container"]}>
       <animated.button
         ref={cardRef}
-        className={styles['dock-card']}
+        className={styles["dock-card"]}
         onClick={handleClick}
         style={{
           width: size,
           height: size,
           y,
-        }}>
+        }}
+      >
         {children}
       </animated.button>
-      <animated.div className={styles['dock-dot']} style={{ opacity }} />
+      <animated.div className={styles["dock-dot"]} style={{ opacity }} />
     </div>
-  )
-}
+  );
+};

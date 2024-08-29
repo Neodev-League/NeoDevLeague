@@ -14,6 +14,7 @@ import MacNavbar from "../../components/macNavbar";
 import BuildingRender from "../../assets/Renders/building_two_render.gif";
 // import BuildingRender2 from "../../assets/Renders/building_three_render.gif";
 import BuildingRender3 from "../../assets/Renders/building_one_render.gif";
+import LogoRender from "../../assets/Renders/logo_final.gif"
 
 import "./sponsor.css";
 
@@ -67,7 +68,7 @@ const SponsorPage: React.FC = () => {
         <WavyBackground colors={["#117045", "#278250"]}>
           <div className="md:absolute md:top-0 relative top-20 md:w-full">
             <img
-              src="src/assets/renders/logo_final.gif"
+              src={LogoRender}
               alt="Background"
               className="md:w-auto h-screen object-cover"
             />

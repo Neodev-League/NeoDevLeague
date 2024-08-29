@@ -4,25 +4,59 @@ import { Link } from "react-router-dom";
 import { Card } from "./MacNav/Card";
 import { Dock } from "./MacNav/Dock";
 import { DockCard } from "./MacNav/DockCard";
-import arrow from "../assets/Png/arrow-green.png";
+import { LoadingAnimation } from "./MacNav/Loading/loading";
+import Arrow from "../assets/Png/arrow-green.png";
+import Home from "../assets/Png/home.png";
+import Team from "../assets/Png/team.png";
+import Sponsor from "../assets/Png/sponsor.png";
 
-const GRADIENTS: string[] = ["/home", "/team", "/sponsor"];
+interface Paths {
+  ImgUrl: string;
+  Path: string;
+}
+
+const Pages: Paths[] = [
+  {
+    ImgUrl: Home,
+    Path: "/home",
+  },
+  {
+    ImgUrl: Team,
+    Path: "/team",
+  },
+  {
+    ImgUrl: Sponsor,
+    Path: "/sponsor",
+  },
+];
 
 const MacNavbar: React.FC = () => {
   const [visible, setVisibility] = useState(false);
+  const [loading, setLoading] = useState("");
 
   const handleArrowClick = () => {
     setVisibility(!visible);
+  };
+  const handleCardClick = (imgUrl: any) => {
+    setLoading(imgUrl);
+
+    setTimeout(() => {
+      setLoading("");
+    }, 1000);
   };
 
   return (
     <div className="relative sm:top-0 mini:top-0">
       <div className="invisible md:visible">
         <Dock>
-          {GRADIENTS.map((path) => (
-            <DockCard key={path}>
-              <Link to={path}>
-                <Card src={`src/assets/png/${path}.png`} />
+          {Pages.map((path) => (
+            <DockCard key={path.ImgUrl}>
+              <Link to={path.Path} onClick={() => handleCardClick(path.ImgUrl)}>
+                {loading === path.ImgUrl ? (
+                  <LoadingAnimation />
+                ) : (
+                  <Card src={path.ImgUrl} />
+                )}
               </Link>
             </DockCard>
           ))}
@@ -32,10 +66,17 @@ const MacNavbar: React.FC = () => {
       <div className="visible md:hidden z-100 h-auto relative">
         <Dock>
           {visible &&
-            GRADIENTS.map((path) => (
-              <DockCard key={path}>
-                <Link to={path}>
-                  <Card src={`src/assets/png/${path}.png`} />
+            Pages.map((path) => (
+              <DockCard key={path.ImgUrl}>
+                <Link
+                  to={path.Path}
+                  onClick={() => handleCardClick(path.ImgUrl)}
+                >
+                  {loading === path.ImgUrl ? (
+                    <LoadingAnimation />
+                  ) : (
+                    <Card src={path.ImgUrl} />
+                  )}
                 </Link>
               </DockCard>
             ))}
@@ -51,8 +92,8 @@ const MacNavbar: React.FC = () => {
               className={`h-5 transition-transform duration-300 ${
                 visible ? "rotate-180" : "rotate-0"
               }`}
-              src={arrow}
-              alt="arrow"
+              src={Arrow}
+              alt="Resize-Arrow"
             />
           </div>
         </Dock>
