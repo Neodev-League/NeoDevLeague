@@ -84,7 +84,7 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
                   className="relative block h-full w-full font-semibold"
                   initial={{ y: -50 }}
                   animate={{ y: 0 }}
-                  style={{ color: "green", opacity: 0.6 }}
+                  style={{ color: "light4", opacity: 0.6 }}
                 >
                   Subscribed!
                 </motion.span>
