@@ -185,7 +185,7 @@ const SponsorPage: React.FC = () => {
               <div className="flex justify-center items-center cursor-pointer text-2xl">
                 {/* <img className="relative" src={BuildingRender2} alt="neodev building"/> */}
                 <Link
-                  to="https://drive.google.com/file/d/1fk0d_UCA_kxGigZp1gjld_SQalErZyJ4/view?usp=sharing"
+                  to="https://drive.google.com/file/d/1wO0ZbBYQF-s3sTLeMoUUMrILnSJSUukb/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
