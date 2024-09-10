@@ -43,7 +43,7 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
         <div className="relative flex items-center pt-4 pb-1 w-full">
           <motion.input
             type="email"
-            placeholder="neodevleague@gmail.com"
+            placeholder="info@neoleague.dev"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
