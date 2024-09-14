@@ -14,7 +14,7 @@ import MacNavbar from "../../components/macNavbar";
 import BuildingRender from "../../assets/Renders/building_two_render.gif";
 // import BuildingRender2 from "../../assets/Renders/building_three_render.gif";
 import BuildingRender3 from "../../assets/Renders/building_one_render.gif";
-import LogoRender from "../../assets/Renders/logo_final.gif"
+import LogoRender from "../../assets/Renders/logo_final.gif";
 
 import "./sponsor.css";
 
@@ -93,9 +93,8 @@ const SponsorPage: React.FC = () => {
               />
             </div>
           </div>
-
         </WavyBackground>
-        
+
         <div className="text-center relative p-0">
           <NumberTicker className="!text-9xl font-bold" value={160} />
           <span className="text-neutral-300 font-extrabold">
@@ -114,87 +113,128 @@ const SponsorPage: React.FC = () => {
               text="The Neo Developer League will change competitive programming forever"
             />
           </div>
-          <div className="p-3 space-y-8 overflow-hidden">
-            <div className="flex justify-start">
-              <div className="w-3/5 text-left">
-                <ScrollFadeText
-                  className="md:text-4xl text-2xl font-bold text-dark2"
-                  direction="left"
-                  delay={0.3}
-                  text="The NeoDev League Mission"
-                />
-                <ScrollFadeText
-                  className="text-white mt-2 md:text-md text-mms"
-                  direction="left"
-                  delay={0.6}
-                  text="At NeoDev League, our mission is to create an inclusive environment where programmers can learn and develop in a fun and engaging way. By offering unique challenges, we power the next generation of tech innovators to leave a long-lasting impact on the world."
-                />
-              </div>
+          <div className="p-3 space-y-16 overflow-hidden">
+            <div className="flex flex-col items-center text-center">
+              <h2 className="text-5xl font-bold text-green-400 mb-6">
+                The NeoDev League Mission
+              </h2>
+              <p className="text-white text-xl max-w-2xl">
+                We're creating an inclusive playground for programmers to learn,
+                grow, and innovate. Through unique challenges, we're powering the
+                next wave of tech visionaries.
+              </p>
             </div>
-            <div className="flex justify-end">
-              <div className="w-3/5 text-right">
-                <ScrollFadeText
-                  className="md:text-4xl text-2xl font-bold text-dark2"
-                  direction="right"
-                  delay={0.3}
-                  text="Why Sponsor NeoDev?"
-                />
-                <ScrollFadeText
-                  className="text-white mt-2 md:text-md text-mms"
-                  direction="right"
-                  delay={0.6}
-                  text="Sponsoring NeoDev offers a unique opportunity to engage with the next generation of tech talent. Our events redefine the traditional hackathon experience, making your brand a part of the new tech wave."
-                />
+
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <h3 className="text-4xl font-bold text-green-300 mb-4">
+                  Why Sponsor NeoDev?
+                </h3>
+                <p className="text-white text-lg">
+                  Connect with tomorrow's tech leaders. Be part of redefining the
+                  hackathon experience and ride the new tech wave with us.
+                </p>
               </div>
-            </div>
-            <div className="flex justify-start">
-              <div className="w-3/5 text-left">
-                <ScrollFadeText
-                  className="md:text-4xl text-2xl font-bold text-dark2"
-                  direction="left"
-                  delay={0.4}
-                  text="Reach and Expansion"
-                />
-                <ScrollFadeText
-                  className="text-white mt-2 md:text-md text-mms"
-                  direction="left"
-                  delay={0.7}
-                  text="For our initial event, NeoDev aims to establish a strong opening across the Waterloo District School Board, with plans to expand throughout Ontario, including major cities like Toronto and London. This expansion will increase your brand’s visibility through a growing network of programmers."
-                />
-              </div>
-            </div>
-            <div className="flex justify-end h-[50vh]">
-              <div className="w-3/5 text-right">
-                <ScrollFadeText
-                  className="md:text-4xl text-2xl font-bold text-dark2"
-                  direction="right"
-                  delay={0.4}
-                  text="Sponsorship Opportunities"
-                />
-                <ScrollFadeText
-                  className="text-white mt-2 md:text-md text-mms"
-                  direction="right"
-                  delay={0.7}
-                  text="NeoDev offers various sponsorship tiers, ranging from Pathfinder at $250 to Visionary at $1000+. Sponsors benefit from logo placements on websites, banners, and t-shirts, as well as social media promotion and opportunities to engage directly with participants through speaking opportunities and event involvement."
+              <div className="md:w-1/2 flex justify-center">
+                <img
+                  src={BuildingRender3}
+                  alt="NeoDev Innovation"
+                  className="rounded-lg shadow-2xl"
+                  style={{ maxWidth: "80%" }}
                 />
               </div>
             </div>
 
-            <div className="flex justify-center space-x-1">
-              <img src={BuildingRender3} alt="neodev building"/>
-              <div className="flex justify-center items-center cursor-pointer text-2xl">
-                {/* <img className="relative" src={BuildingRender2} alt="neodev building"/> */}
-                <Link
-                  to="https://drive.google.com/file/d/1wO0ZbBYQF-s3sTLeMoUUMrILnSJSUukb/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ShinyButton text="Full Package"/>
-                </Link>
+            <div className="bg-gradient-to-r from-green-900 to-green-700 rounded-xl p-8 shadow-2xl">
+              <h3 className="text-4xl font-bold text-white mb-6">
+                Reach & Expansion
+              </h3>
+              <p className="text-green-100 text-lg">
+                Starting strong in Waterloo, we're set to conquer Ontario.
+                Toronto, London, and beyond – your brand visibility grows with our
+                network.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-4xl font-bold text-green-400 mb-6">
+                Sponsorship Tiers
+              </h3>
+              <div className="flex flex-wrap justify-center gap-8">
+                {[
+                  {
+                    name: "Pathfinder",
+                    price: "$250",
+                    color: "from-green-400 to-green-600",
+                  },
+                  {
+                    name: "Catalyst",
+                    price: "$500",
+                    color: "from-blue-400 to-blue-600",
+                  },
+                  {
+                    name: "Luminary",
+                    price: "$750",
+                    color: "from-purple-400 to-purple-600",
+                  },
+                  {
+                    name: "Visionary",
+                    price: "$1000+",
+                    color: "from-yellow-400 to-yellow-600",
+                  },
+                ].map((tier) => (
+                  <div
+                    key={tier.name}
+                    className={`w-64 p-6 rounded-lg shadow-xl bg-gradient-to-br ${tier.color}`}
+                  >
+                    <h4 className="text-2xl font-bold text-white mb-2">
+                      {tier.name}
+                    </h4>
+                    <p className="text-3xl font-bold text-white">{tier.price}</p>
+                  </div>
+                ))}
               </div>
-              <img src={BuildingRender3} alt="neodev building" />
             </div>
           </div>
+
+          <section className="relative py-20">
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-green-900 opacity-50"></div>
+            <div className="relative z-10 flex flex-col items-center justify-center text-center">
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Ready to Make an Impact?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl text-white">
+                Join us in shaping the future of tech. Your sponsorship can make a
+                difference in the lives of young programmers and innovators.
+              </p>
+              <Link
+                to="https://drive.google.com/file/d/1wO0ZbBYQF-s3sTLeMoUUMrILnSJSUukb/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center overflow-hidden rounded bg-green-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-green-500"
+              >
+                <span className="absolute -end-full transition-all group-hover:end-4">
+                  <svg
+                    className="h-5 w-5 rtl:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+                <span className="text-md font-medium transition-all group-hover:me-4">
+                  View Full Sponsorship Package
+                </span>
+              </Link>
+            </div>
+          </section>
         </div>
         <MacNavbar />
       </div>
