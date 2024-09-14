@@ -1,14 +1,12 @@
 // why does this file have to be lower case for build to work... lol
 import React from "react";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import NumberTicker from "./components/number-tick";
 import TextReveal from "./components/scroll-effect";
 import BlurIn from "./components/blur-text";
 import { WavyBackground } from "./components/wavy-bg";
 import { VelocityScroll } from "./components/vs-text";
 import { FadeText } from "./components/fade-text";
-import ShinyButton from "./components/shiny-button";
 import { Link } from "react-router-dom";
 import MacNavbar from "../../components/macNavbar";
 import BuildingRender from "../../assets/Renders/building_two_render.gif";
@@ -17,48 +15,7 @@ import LogoRender from "../../assets/Renders/logo_final.gif";
 
 import "./sponsor.css";
 
-const ScrollFadeText: React.FC<{
-  text: string;
-  className: string;
-  direction: "left" | "right";
-  delay: number;
-}> = ({ text, className, direction, delay }) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-      x: direction === "left" ? -100 : 100,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { delay, duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-      className={className}
-    >
-      {text}
-    </motion.div>
-  );
-};
 
 const SponsorPage: React.FC = () => {
   const containerVariants = {
