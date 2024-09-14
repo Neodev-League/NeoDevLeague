@@ -38,7 +38,12 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             const start = i / words.length;
             const end = start + 1 / words.length;
             return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+              <Word 
+                key={i} 
+                progress={scrollYProgress} 
+                range={[start, end]}
+                isLastWord={i === words.length - 1}
+              >
                 {word}
               </Word>
             );
@@ -53,16 +58,17 @@ interface WordProps {
   children: ReactNode;
   progress: any;
   range: [number, number];
+  isLastWord: boolean;
 }
 
-const Word: FC<WordProps> = ({ children, progress, range }) => {
+const Word: FC<WordProps> = ({ children, progress, range, isLastWord }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
       <span className={"absolute opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-white"}
+        className={isLastWord ? "text-[#41CF77]" : "text-white"}
       >
         {children}
       </motion.span>
