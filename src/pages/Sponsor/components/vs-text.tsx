@@ -90,6 +90,9 @@ export function VelocityScroll({
       baseX.set(baseX.get() + moveBy);
     });
 
+    const words = children.split(' ');
+    const lastWord = words.pop();
+
     return (
       <div
         className="w-full overflow-hidden whitespace-nowrap"
@@ -98,7 +101,7 @@ export function VelocityScroll({
         <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
             <span key={i} ref={i === 0 ? textRef : null}>
-              {children}{" "}
+              {words.join(' ')} <span style={{ color: '#41CF77' }}>{lastWord}</span>{" "}
             </span>
           ))}
         </motion.div>
