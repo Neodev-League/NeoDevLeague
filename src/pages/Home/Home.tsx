@@ -11,9 +11,9 @@ import "./glitch.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <div className="background-image"></div>
-
+    <div className="relative min-h-screen overflow-x-hidden">
+      <div className="absolute w-full h-[300vh] bg-[url('../../assets/Neo-city.jpg')] bg-cover animate-fadeIn z-[-1]"/>
+      <MacNavbar/>
       <div className="fixed top-0 left-0 w-full z-50">
         <a
           href="https://neoleague.dev/home"
@@ -54,7 +54,6 @@ const Home: React.FC = () => {
           <MailchimpFormContainer />
         </div>
       </div>
-      <MacNavbar/>
     </div>
   );
 };

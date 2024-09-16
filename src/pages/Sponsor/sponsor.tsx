@@ -15,8 +15,6 @@ import LogoRender from "../../assets/Renders/logo_final.gif";
 
 import "./sponsor.css";
 
-
-
 const SponsorPage: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },

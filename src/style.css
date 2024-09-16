@@ -10,25 +10,6 @@
   to { opacity: 1; }
 }
 
-*{
-  border: 1px solid red;
-}
-
-.background-image {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/src/assets/Neo-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;  
-  animation: fadeIn 1s ease-in-out;
-}
-
-
 .gradient-text {
   background: linear-gradient(to right, #ffffff, #ffffff);
   -webkit-background-clip: text;
