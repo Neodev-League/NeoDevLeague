@@ -1,10 +1,11 @@
 import React from "react";
 import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
+import { TextHoverEffect } from "../../components/Home/text-hover";
 import Logo from "../../assets/logo";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
-import MacNavbar from "../../components/macNavbar"; 
+import MacNavbar from "../../components/macNavbar";
 
 import "../../style.css";
 import "./glitch.css";
@@ -12,8 +13,8 @@ import "./glitch.css";
 const Home: React.FC = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <div className="absolute w-full h-[300vh] bg-[url('../../assets/Neo-city.jpg')] bg-cover animate-fadeIn z-[-1]"/>
-      <MacNavbar/>
+      <div className="absolute w-full h-[300vh] bg-[url('../../assets/Neo-city.jpg')] bg-cover animate-fadeIn z-[-1]" />
+      <MacNavbar />
       <div className="fixed top-0 left-0 w-full z-50">
         <a
           href="https://neoleague.dev/home"
@@ -52,6 +53,19 @@ const Home: React.FC = () => {
       <div className="absolute bottom-0 w-full text-center">
         <div className="m-0 mailchimp-wrapper">
           <MailchimpFormContainer />
+        </div>
+      </div>
+
+      <div>
+        <div className="absolute h-[50vh] mt-[60vh] flex items-center justify-center flex-col">
+          <h1 className="text-7xl font-bold text-lighterGreen text-shadow">October 26</h1>
+          <TextHoverEffect text="@Google" />
+        </div>
+      </div>
+
+      <div>
+        <div className="absolute h-[50vh] w-screen mt-[100vh] flex items-center justify-center flex-col">
+          <h1 className="text-7xl font-bold text-white text-shadow">SPONSORS</h1>
         </div>
       </div>
     </div>

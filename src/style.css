@@ -20,6 +20,14 @@
   font-family: "Style Script", cursive;
 }
 
+.text-shadow{
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow2{
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
 /* these get overwritten */
 ::-webkit-scrollbar {
   width: 5px;
