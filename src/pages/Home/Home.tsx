@@ -2,18 +2,22 @@ import React from "react";
 import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
 import { TextHoverEffect } from "../../components/Home/text-hover";
+import MinimalSocialsFooter from "../../components/Home/footer";
 import Logo from "../../assets/logo";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
+import AccordionUsage from "../../components/Home/accordion";
+import google from "../../assets/Sponsors/google.png";
+import googlelcn from "../../assets/Misc/GoogleLcn.png";
 
 import "../../style.css";
 import "./glitch.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
-      <div className="absolute w-full h-[300vh] bg-[url('../../assets/Neo-city.jpg')] bg-cover animate-fadeIn z-[-1]" />
+    <div className="relative h-[500vh] min-h-screen overflow-x-hidden border">
+      <div className="absolute w-full h-full bg-[url('../../assets/neo-citys.jpg')] bg-cover animate-fadeIn z-[-1]" />
       <MacNavbar />
       <div className="fixed top-0 left-0 w-full z-50">
         <a
@@ -50,23 +54,39 @@ const Home: React.FC = () => {
         </div>
         <Ripple />
       </div>
-      <div className="absolute bottom-0 w-full text-center">
+      <div className="absolute top-0 mt-[80vh] w-full text-center">
         <div className="m-0 mailchimp-wrapper">
           <MailchimpFormContainer />
         </div>
       </div>
 
       <div>
-        <div className="absolute h-[50vh] mt-[60vh] flex items-center justify-center flex-col">
-          <h1 className="text-7xl font-bold text-lighterGreen text-shadow">October 26</h1>
-          <TextHoverEffect text="@Google" />
+        <div className="absolute h-[50vh] w-[100%] mt-[70vh] flex items-center justify-center flex-col">
+          <div className="text-shadow absolute top-0 flex flex-row">
+            <TextHoverEffect text="Oct 26" />
+            <TextHoverEffect text="@" />
+          </div>
+          <img src={google} alt="Google" className="w-[90%] mt-[10vh]" />
+        </div>
+      </div>
+
+      <div className="absolute h-[50vh] w-screen mt-[140vh] flex flex-col">
+        <img src={googlelcn} alt="Google" className="absolute w-[50%] left-[5%]" />
+        <div className="flex w-[30%] absolute right-[5%]">
+          <AccordionUsage/>
         </div>
       </div>
 
       <div>
-        <div className="absolute h-[50vh] w-screen mt-[100vh] flex items-center justify-center flex-col">
-          <h1 className="text-7xl font-bold text-white text-shadow">SPONSORS</h1>
+        <div className="absolute h-[50vh] w-screen mt-[200vh] flex items-center justify-center flex-col">
+          <h1 className="text-7xl font-bold text-white text-shadow">
+            SPONSORS
+          </h1>
         </div>
+      </div>
+
+      <div className="absolute w-full bottom-0 flex items-center justify-center">
+        <MinimalSocialsFooter />
       </div>
     </div>
   );
