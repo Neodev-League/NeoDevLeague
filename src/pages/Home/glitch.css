@@ -48,13 +48,13 @@ section {
 .layers::before {
   top: 10px;
   left: 15px;
-  color: #e0287d;
+  color: #D1FAE5;
 }
 
 .layers::after {
   top: 5px;
   left: -10px;
-  color: #1bc7fb;
+  color: #065f46;
 }
 
 .single-path {
@@ -446,31 +446,31 @@ section {
 @keyframes font {
   0% {
     font-weight: 100;
-    color: #e0287d;
+    color: #00ff7b;
     filter: blur(3px);
   }
 
   20% {
     font-weight: 500;
-    color: #fff;
+    color: #00a637;
     filter: blur(0);
   }
 
   50% {
     font-weight: 300;
-    color: #1bc7fb;
+    color: #065f46;
     filter: blur(2px);
   }
 
   60% {
     font-weight: 700;
-    color: #fff;
+    color: #00a637;
     filter: blur(0);
   }
 
   90% {
     font-weight: 500;
-    color: #e0287d;
+    color: #00ff7b;
     filter: blur(6px);
   }
 }
