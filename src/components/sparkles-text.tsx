@@ -113,7 +113,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {
           "--sparkles-first-color": `${colors.first}`,
           "--sparkles-second-color": `${colors.second}`,
-          "--text-color": "#34D399",
+          "--text-color": "#FFFFFF", // Changed text color to white
         } as CSSProperties
       }
     >
@@ -121,8 +121,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong style={{ color: "#34D399" }}>{text}</strong>{" "}
-        {/* Changed text color to #34D399 */}
+        <strong style={{ color: "#FFFFFF" }}>{text}</strong> {/* Changed text color to white */}
       </span>
     </div>
   );
