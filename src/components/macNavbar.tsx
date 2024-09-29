@@ -9,6 +9,7 @@ import Arrow from "../assets/Png/arrow-green.png";
 import Home from "../assets/Png/home.png";
 import Team from "../assets/Png/team.png";
 import Sponsor from "../assets/Png/sponsor.png";
+import Login from "../assets/Png/login.png";
 
 interface Paths {
   ImgUrl: string;
@@ -27,6 +28,10 @@ const Pages: Paths[] = [
   {
     ImgUrl: Sponsor,
     Path: "/sponsor",
+  },
+  {
+    ImgUrl: Login,
+    Path: "/login",
   },
 ];
 
