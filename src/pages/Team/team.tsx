@@ -1,12 +1,11 @@
 // why does this file have to be lower case for build to work... lol
 import React from "react";
 import logo from "../../assets/Neo-logo.png";
-import Neo1 from "../../assets/neobuilding1.png";
-import Neo2 from "../../assets/neobuilding2.png";
-import Neo3 from "../../assets/neobuilding3.png";
-import Vine1 from "../../assets/vines.png";
-import Vine2 from "../../assets/vines2.png";
-// import gmail from "../../assets/Png/gmail.png";
+import Neo1 from "../../assets/Design/neobuilding1.png";
+import Neo2 from "../../assets/Design/neobuilding2.png";
+import Neo3 from "../../assets/Design/neobuilding3.png";
+import Vine1 from "../../assets/Design/vines.png";
+import Vine2 from "../../assets/Design/vines2.png";
 import linkedin from "../../assets/Png/linkedin.png";
 import MacNavbar from "../../components/macNavbar.tsx";
 import { leads, Row2, Row3 } from "./members.ts";
