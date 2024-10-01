@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/AuthProvider";
 import SlideAnimation from "../../components/Login/Animation/slide-animation";
 import Modal from "../../components/Login/Modal/Modal";
 import { MagicCard } from "../../components/Login/magicCard";
-import { Button } from "../../components/Login/button";
+import Button from "../../components/Login/button";
 import ClientTweetCard from "../../components/Login/tweet";
 import logo from "../../assets/blackLogo.png";
 import logo180 from "../../assets/blackLogo180.png";
