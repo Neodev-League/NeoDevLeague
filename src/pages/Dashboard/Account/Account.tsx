@@ -170,7 +170,7 @@ const DashboardAccount: React.FC = () => {
                   ) : null
                 )}
                 <button
-                  className="text-darkerGreen font-bold underline mt-10"
+                  className="text-lighterGreen font-bold underline mt-10"
                   onClick={() => {
                     if (editing) {
                       for (const row of profileProps) {
