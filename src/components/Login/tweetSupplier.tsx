@@ -7,7 +7,7 @@ import {
 } from "react-tweet";
 import { getTweet, type Tweet } from "react-tweet/api";
 
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
 interface TwitterIconProps {
   className?: string;

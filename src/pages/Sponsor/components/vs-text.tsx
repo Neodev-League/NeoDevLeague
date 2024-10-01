@@ -11,7 +11,7 @@ import {
   useVelocity,
 } from "framer-motion";
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface VelocityScrollProps {
   text: string;
