@@ -11,7 +11,7 @@
 }
 
 *{
-  border: 1px solid red;
+  box-sizing: border-box;
 }
 
 .background-image {
@@ -67,4 +67,66 @@
   --color-3: 210 100% 63%;
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
+}
+
+/* tailwind does not support clipping */
+#login-container h1{
+  font-weight: bold;
+  background: linear-gradient(
+    50deg,
+    rgb(4, 83, 33) 30%,
+    rgb(4, 123, 54) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+#login-body{
+  border-width: 4px;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0),
+      rgb(209, 250, 229, 0.8),
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.gradient2{
+  font-weight: bold;
+  background: linear-gradient(
+    50deg,
+    rgb(52, 211, 153) 30%,
+    rgb(39, 177, 126) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gradient{
+  background: linear-gradient(
+    40deg,
+    rgb(4, 123, 54) 50%,
+    rgb(4, 83, 33) 80%
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#email:focus,
+#password:focus,
+#otpCode:focus{
+  outline: none; 
+}
+
+#submit:hover,
+#otpCode:hover{
+  transform: scale(1.005);
+}
+
+.text-shadow{
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }

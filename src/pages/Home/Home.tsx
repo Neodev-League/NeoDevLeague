@@ -5,7 +5,7 @@ import Logo from "../../assets/logo";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
-import { RainbowButton } from "../../components/rainbowbtn";
+import { RainbowButton } from "../../components/Home/rainbowbtn";
 
 import "../../style.css";
 import "./glitch.css";
