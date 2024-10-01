@@ -5,7 +5,7 @@ import { LockKeyhole, ArrowUp, ArrowDown } from "lucide-react";
 
 const BottomBar: React.FC = () => {
   const location = useLocation();
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(true);
   const toggleNav = () => {
     setNavOpen((prev) => !prev);
   };
