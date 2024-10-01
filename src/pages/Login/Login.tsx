@@ -22,8 +22,7 @@ const helpModalFAQ = [
   },
   {
     question: "How do I reset my password if I forget it?",
-    answer:
-      "Just message James on our discord and he will update it manually",
+    answer: "Just message James on our discord and he will update it manually",
   },
   {
     question: "Where can I receive further assistance?",
@@ -51,7 +50,7 @@ function Login() {
   const [pageState, setPageState] = useState("Login");
 
   useEffect(() => {
-    window.handleSignInWithGoogle = async (response:any) => {
+    window.handleSignInWithGoogle = async (response: any) => {
       const { data, error } = await signInWithIdToken({
         provider: "google",
         token: response.credential,

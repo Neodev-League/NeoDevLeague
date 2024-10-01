@@ -95,7 +95,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
           } else {
             return { ...star, lifespan: star.lifespan - 0.1 };
           }
-        })
+        }),
       );
     };
 
@@ -107,7 +107,10 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 
   return (
     <div
-      className={cn("lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold", className)} // Increased text size
+      className={cn(
+        "lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold",
+        className,
+      )} // Increased text size
       {...props}
       style={
         {
@@ -121,7 +124,8 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong style={{ color: "#FFFFFF" }}>{text}</strong> {/* Changed text color to white */}
+        <strong style={{ color: "#FFFFFF" }}>{text}</strong>{" "}
+        {/* Changed text color to white */}
       </span>
     </div>
   );

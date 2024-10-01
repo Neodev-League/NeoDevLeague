@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "../../../../lib/utils";
-import {useRef, useEffect, useState} from "react";
-import {createNoise3D} from "simplex-noise";
+import { useRef, useEffect, useState } from "react";
+import { createNoise3D } from "simplex-noise";
 
 export const WavyBackground = ({
   children,
@@ -100,7 +100,7 @@ export const WavyBackground = ({
     setIsSafari(
       typeof window !== "undefined" &&
         navigator.userAgent.includes("Safari") &&
-        !navigator.userAgent.includes("Chrome")
+        !navigator.userAgent.includes("Chrome"),
     );
   }, []);
 
@@ -108,7 +108,7 @@ export const WavyBackground = ({
     <div
       className={cn(
         "h-[150vh] flex flex-col items-center justify-center overflow-hidden z-1", // added overflow-hidden
-        containerClassName
+        containerClassName,
       )}
     >
       <canvas

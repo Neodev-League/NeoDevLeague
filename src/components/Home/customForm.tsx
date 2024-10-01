@@ -28,7 +28,10 @@ const CustomForm: React.FC<CustomFormProps> = ({ onValidated }) => {
   };
 
   return (
-    <form className="w-full flex flex-col items-center pb-10 md:pb-3" onSubmit={handleSubmit}>
+    <form
+      className="w-full flex flex-col items-center pb-10 md:pb-3"
+      onSubmit={handleSubmit}
+    >
       <div className="bg-light2 bg-opacity-60 bg-white/50 rounded-md lg:p-5 p-3 max-w-md">
         <div className="flex p-3 text-black bg-white/50 rounded-md text-left items-center">
           <div className="mr-3 flex-grow">

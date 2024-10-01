@@ -1,4 +1,4 @@
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from "framer-motion";
 
 interface SlideFromBottomProps {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ interface SlideFromBottomProps {
 
 const slideVariants: Variants = {
   initial: { y: 50, opacity: 0 },
-  animate: { y: 0, opacity: 1 }
+  animate: { y: 0, opacity: 1 },
 };
 
 const SlideFromBottom: React.FC<SlideFromBottomProps> = ({ children }) => (

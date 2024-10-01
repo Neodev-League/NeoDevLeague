@@ -128,11 +128,15 @@ const DashboardHome: React.FC = () => {
                 </div>
                 <div className="flex items-center">
                   <Users className="text-white mr-2" />
-                  <span className="md:text-xl sm:text-lg text-md text-white">? Members</span>
+                  <span className="md:text-xl sm:text-lg text-md text-white">
+                    ? Members
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Award className="text-white mr-2" />
-                  <span className="md:text-xl sm:text-lg text-md text-white">Rank: Coming Soon!</span>
+                  <span className="md:text-xl sm:text-lg text-md text-white">
+                    Rank: Coming Soon!
+                  </span>
                 </div>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -220,12 +224,12 @@ const DashboardHome: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <Users className="text-[#34D399] mr-2 h-6 w-6" />
-                  <span className="text-lg">
-                    Participants{" "}
-                    <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
-                      100+ developers region-wide
-                    </span>
+                <span className="text-lg">
+                  Participants{" "}
+                  <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
+                    100+ developers region-wide
                   </span>
+                </span>
               </motion.li>
             </ul>
           </div>

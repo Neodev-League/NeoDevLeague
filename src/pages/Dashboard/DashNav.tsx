@@ -15,7 +15,7 @@ const BottomBar: React.FC = () => {
         className={`fixed bottom-5 w-screen z-50 cursor-pointer text-white md:hidden flex items-center justify-center pt-2`}
         onClick={toggleNav}
       >
-        {navOpen ? "" : <ArrowUp/>}
+        {navOpen ? "" : <ArrowUp />}
       </div>
 
       <motion.div
@@ -32,7 +32,7 @@ const BottomBar: React.FC = () => {
           bottom-5 w-screen z-50 cursor-pointer text-white md:hidden flex items-center justify-center pt-2`}
           onClick={toggleNav}
         >
-          {navOpen ? <ArrowDown/> : ""}
+          {navOpen ? <ArrowDown /> : ""}
         </div>
         <Link
           to="/dashboard"

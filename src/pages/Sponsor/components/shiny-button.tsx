@@ -32,9 +32,7 @@ const ShinyButton = ({ text = "shiny-button" }) => {
         border: "1px solid #044f3b",
       }}
     >
-      <span
-        className="relative text-ms md:text-lg font-semibold tracking-wide text-white"
-      >
+      <span className="relative text-ms md:text-lg font-semibold tracking-wide text-white">
         {text}
       </span>
     </motion.button>

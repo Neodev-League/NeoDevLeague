@@ -9,7 +9,6 @@ import DashboardAccount from "./pages/Dashboard/Account/Account";
 import DashboardTimeline from "./pages/Dashboard/Timeline/Timeline";
 import DashboardLeaderboard from "./pages/Dashboard/Leaderboard/Leaderboard";
 
-
 const App: React.FC = () => {
   return (
     <Routes>
@@ -18,10 +17,38 @@ const App: React.FC = () => {
       <Route path="/team" element={<Team />} />
       <Route path="/sponsor" element={<Sponsor />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<StatusContext><DashboardHome /></StatusContext>} />
-      <Route path="/account" element={<StatusContext><DashboardAccount /></StatusContext>} />
-      <Route path="/leaderboard" element={<StatusContext><DashboardLeaderboard /></StatusContext>} />
-      <Route path="/timeline" element={<StatusContext><DashboardTimeline /></StatusContext>} />
+      <Route
+        path="/dashboard"
+        element={
+          <StatusContext>
+            <DashboardHome />
+          </StatusContext>
+        }
+      />
+      <Route
+        path="/account"
+        element={
+          <StatusContext>
+            <DashboardAccount />
+          </StatusContext>
+        }
+      />
+      <Route
+        path="/leaderboard"
+        element={
+          <StatusContext>
+            <DashboardLeaderboard />
+          </StatusContext>
+        }
+      />
+      <Route
+        path="/timeline"
+        element={
+          <StatusContext>
+            <DashboardTimeline />
+          </StatusContext>
+        }
+      />
     </Routes>
   );
 };

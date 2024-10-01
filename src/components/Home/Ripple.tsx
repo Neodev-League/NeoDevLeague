@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 
 const MAIN_CIRCLE_SIZE = 5;
-const MAIN_CIRCLE_OPACITY = 0.30  ;
+const MAIN_CIRCLE_OPACITY = 0.3;
 const NUM_CIRCLES = 8;
 const CIRCLE_INCREMENT = 80;
 
@@ -18,7 +18,7 @@ const Ripple = React.memo(() => {
               height: MAIN_CIRCLE_SIZE + i * CIRCLE_INCREMENT,
               opacity: MAIN_CIRCLE_OPACITY - i * 0.03,
               animationDelay: `${i * 0.03}s`,
-              backgroundColor: 'rgba(0, 20, 0, 0.5)', 
+              backgroundColor: "rgba(0, 20, 0, 0.5)",
             } as CSSProperties
           }
         ></div>

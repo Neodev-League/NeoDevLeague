@@ -1,16 +1,16 @@
-import {
-  PropsWithChildren,
-  useState,
-  useEffect,
-} from "react";
+import { PropsWithChildren, useState, useEffect } from "react";
 import { AuthContext } from "./AuthProvider";
 import { supabaseClient } from "../supabase/supabaseClient";
 import { AuthUser } from "@supabase/supabase-js";
 
 // bind to supabase defaults
 const signUp = supabaseClient.auth.signUp.bind(supabaseClient.auth),
-  signInWithPassword = supabaseClient.auth.signInWithPassword.bind(supabaseClient.auth),
-  signInWithIdToken = supabaseClient.auth.signInWithIdToken.bind(supabaseClient.auth),
+  signInWithPassword = supabaseClient.auth.signInWithPassword.bind(
+    supabaseClient.auth,
+  ),
+  signInWithIdToken = supabaseClient.auth.signInWithIdToken.bind(
+    supabaseClient.auth,
+  ),
   signOut = supabaseClient.auth.signOut.bind(supabaseClient.auth),
   updateUser = supabaseClient.auth.updateUser.bind(supabaseClient.auth);
 
@@ -24,7 +24,7 @@ export interface AuthProviderValue {
   user: AuthUser | null;
 }
 
-export default function AuthProvider({ children }: PropsWithChildren<{}>){
+export default function AuthProvider({ children }: PropsWithChildren<{}>) {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -63,4 +63,4 @@ export default function AuthProvider({ children }: PropsWithChildren<{}>){
       {!loading && children}
     </AuthContext.Provider>
   );
-};
+}

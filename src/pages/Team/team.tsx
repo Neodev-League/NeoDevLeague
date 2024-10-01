@@ -31,8 +31,8 @@ const Team: React.FC = () => {
             member.alignment == "left"
               ? ""
               : member.alignment == "center"
-              ? "sm:flex-col sm:items-center"
-              : "sm:flex-col sm:items-end"
+                ? "sm:flex-col sm:items-center"
+                : "sm:flex-col sm:items-end"
           }`}
         >
           <img
@@ -41,9 +41,7 @@ const Team: React.FC = () => {
             className="w-24 h-24 object-cover rounded-md shadow-lg border border-lighterGreen"
           />
           <div className="block sm:hidden flex justify-center ml-2 gap-1 py-5 px-2 rounded-lg bg-white/80 border border-lighterGreen backdrop-blur-sm ">
-            <p className="text-lg signature">
-              {member.position}
-            </p>
+            <p className="text-lg signature">{member.position}</p>
             {/* <a href={`mailto:${member.email}`}>
                   <img src={gmail} alt="Email" className="w-8 h-8" />
                 </a> */}
@@ -106,13 +104,21 @@ const Team: React.FC = () => {
             <img
               src={Neo2}
               className={`flex h-[100%] absolute bottom-0 ${
-                member.alignment === "right" ? "left-40" : member.alignment === "left" ? "right-40" : "left-0"
+                member.alignment === "right"
+                  ? "left-40"
+                  : member.alignment === "left"
+                    ? "right-40"
+                    : "left-0"
               }`}
             />
             <img
               src={Neo3}
               className={`flex h-[100%] absolute bottom-0 ${
-                member.alignment === "right" ? "left-60" : member.alignment === "left" ? "right-60" : "right-0"
+                member.alignment === "right"
+                  ? "left-60"
+                  : member.alignment === "left"
+                    ? "right-60"
+                    : "right-0"
               }`}
             />
             {member.alignment === "center" && (

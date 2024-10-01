@@ -32,7 +32,7 @@ export const DockDivider = () => {
       drag: {
         axis: "y",
       },
-    }
+    },
   );
 
   if (!zoomLevel) {

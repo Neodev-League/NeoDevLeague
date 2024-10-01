@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @keyframes fadeIn {
-  from { opacity: 0.2; }
-  to { opacity: 1; }
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -21,13 +25,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/src/assets/Neo-bg.jpg');
+  background-image: url("/src/assets/Neo-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;  
+  background-position: center;
   animation: fadeIn 1s ease-in-out;
 }
-
 
 .gradient-text {
   background: linear-gradient(to right, #ffffff, #ffffff);
@@ -35,14 +38,14 @@
   -webkit-text-fill-color: transparent;
 }
 
-.signature{
+.signature {
   font-family: "Style Script", cursive;
 }
 
 /* these get overwritten */
 ::-webkit-scrollbar {
   width: 5px;
-  height: 12px; 
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -70,30 +73,26 @@
 }
 
 /* tailwind does not support clipping */
-#login-container h1{
+#login-container h1 {
   font-weight: bold;
-  background: linear-gradient(
-    50deg,
-    rgb(4, 83, 33) 30%,
-    rgb(4, 123, 54) 100%
-  );
+  background: linear-gradient(50deg, rgb(4, 83, 33) 30%, rgb(4, 123, 54) 100%);
   background-clip: text;
   color: transparent;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-#login-body{
+#login-body {
   border-width: 4px;
-  border-image: 
-    linear-gradient(
-      to bottom, 
+  border-image: linear-gradient(
+      to bottom,
       rgba(0, 0, 0, 0),
       rgb(209, 250, 229, 0.8),
       rgba(0, 0, 0, 0)
-    ) 1 100%;
+    )
+    1 100%;
 }
 
-.gradient2{
+.gradient2 {
   font-weight: bold;
   background: linear-gradient(
     50deg,
@@ -105,12 +104,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.gradient{
-  background: linear-gradient(
-    40deg,
-    rgb(4, 123, 54) 50%,
-    rgb(4, 83, 33) 80%
-  );
+.gradient {
+  background: linear-gradient(40deg, rgb(4, 123, 54) 50%, rgb(4, 83, 33) 80%);
   background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
@@ -118,15 +113,15 @@
 
 #email:focus,
 #password:focus,
-#otpCode:focus{
-  outline: none; 
+#otpCode:focus {
+  outline: none;
 }
 
 #submit:hover,
-#otpCode:hover{
+#otpCode:hover {
   transform: scale(1.005);
 }
 
-.text-shadow{
+.text-shadow {
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }

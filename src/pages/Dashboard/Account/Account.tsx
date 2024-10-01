@@ -91,16 +91,22 @@ const DashboardAccount: React.FC = () => {
             >
               <div className="md:mt-10 mt-2 w-full flex items-center justify-center flex-col">
                 <h1 className="sm:text-2xl text-ml text-auto p-5">
-                  <span className="text-darkerGreen">Email:{" "}</span>
-                  <span className="text-lighterGreen font-bold sm:text-xl text-md">{email}</span>
+                  <span className="text-darkerGreen">Email: </span>
+                  <span className="text-lighterGreen font-bold sm:text-xl text-md">
+                    {email}
+                  </span>
                 </h1>
                 <h1 className="sm:text-2xl text-ml text-auto p-5">
-                <span className="text-darkerGreen">Name:{" "}</span>
-                  <span className="text-lighterGreen font-bold sm:text-xl text-md">{name}</span>
+                  <span className="text-darkerGreen">Name: </span>
+                  <span className="text-lighterGreen font-bold sm:text-xl text-md">
+                    {name}
+                  </span>
                 </h1>
                 <h1 className="sm:text-2xl text-ml text-auto p-5">
-                <span className="text-darkerGreen">School:{" "}</span>
-                  <span className="text-lighterGreen font-bold sm:text-xl text-md">{school}</span>
+                  <span className="text-darkerGreen">School: </span>
+                  <span className="text-lighterGreen font-bold sm:text-xl text-md">
+                    {school}
+                  </span>
                 </h1>
                 {profileProps.map((row, index) =>
                   row.editable ? (
@@ -108,7 +114,9 @@ const DashboardAccount: React.FC = () => {
                       <div className="w-full flex items-center justify-center">
                         {editing ? (
                           <div className="sm:text-xl text-md text-auto md:p-5 p-1">
-                            <label><span className="text-darkerGreen">{`${row.name}:`}</span></label>
+                            <label>
+                              <span className="text-darkerGreen">{`${row.name}:`}</span>
+                            </label>
                             <input
                               type="text"
                               autoFocus
@@ -116,14 +124,14 @@ const DashboardAccount: React.FC = () => {
                                 row.name === "Github"
                                   ? Github
                                   : row.name === "Linkedin"
-                                  ? Linkedin
-                                  : row.name === "Website"
-                                  ? Website
-                                  : row.name === "Discord"
-                                  ? Discord
-                                  : row.name === "Quote"
-                                  ? Quote
-                                  : ""
+                                    ? Linkedin
+                                    : row.name === "Website"
+                                      ? Website
+                                      : row.name === "Discord"
+                                        ? Discord
+                                        : row.name === "Quote"
+                                          ? Quote
+                                          : ""
                               }
                               onChange={(e) => {
                                 switch (row.name) {
@@ -154,20 +162,20 @@ const DashboardAccount: React.FC = () => {
                               {row.name === "Github"
                                 ? Github
                                 : row.name === "Linkedin"
-                                ? Linkedin
-                                : row.name === "Website"
-                                ? Website
-                                : row.name === "Discord"
-                                ? Discord
-                                : row.name === "Quote"
-                                ? Quote
-                                : "-"}
+                                  ? Linkedin
+                                  : row.name === "Website"
+                                    ? Website
+                                    : row.name === "Discord"
+                                      ? Discord
+                                      : row.name === "Quote"
+                                        ? Quote
+                                        : "-"}
                             </span>
                           </h1>
                         )}
                       </div>
                     </div>
-                  ) : null
+                  ) : null,
                 )}
                 <button
                   className="text-lighterGreen font-bold underline mt-10"

@@ -1,7 +1,7 @@
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 interface CardProps {
-  src: string
+  src: string;
 }
 
 export const Card = ({ src }: CardProps) => (
@@ -9,4 +9,4 @@ export const Card = ({ src }: CardProps) => (
     <img className={styles.card__blur} src={src} alt="" />
     <img className={styles.card__img} src={src} alt="" />
   </span>
-)
+);

@@ -1,12 +1,12 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-    readonly VITE_APP_TITLE: string;
-    // Add other environment variables here...
-  }
-  
-  interface ImportMeta {
-    readonly env: ImportMetaEnv;
-  }
+  readonly VITE_APP_TITLE: string;
+  // Add other environment variables here...
+}
 
-declare module '*.png';
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
+declare module "*.png";

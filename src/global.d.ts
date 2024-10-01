@@ -1,3 +1,3 @@
 interface Window {
-    handleSignInWithGoogle: (response: any) => void;
-  }
+  handleSignInWithGoogle: (response: any) => void;
+}
