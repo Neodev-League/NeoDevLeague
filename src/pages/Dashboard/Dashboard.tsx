@@ -7,19 +7,19 @@ import {
   School,
   Award,
   Rocket,
-  Code,
+  // Code,
   Trophy,
   LockKeyhole,
 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import SparklesText from "../../components/Dashboard/sparkles-text";
 import { motion } from "framer-motion";
 import BottomBar from "./DashNav";
+import { useNavigate } from "react-router-dom";
 
 const DashboardHome: React.FC = () => {
+  const navigate = useNavigate();
   const eventDate = new Date("2024-10-26T07:00:00");
   const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
-  const location = useLocation();
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -61,8 +61,8 @@ const DashboardHome: React.FC = () => {
 
   return (
     <div className="relative min-h-screen pb-20">
-      <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0" />
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+      <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0 " />
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
       <main className="relative z-20 p-8">
         <motion.div
           className="text-center pb-12 pt-6"
@@ -70,7 +70,7 @@ const DashboardHome: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="pt-8 text-4xl font-extrabold text-[#D1FAE5]">
+          <h1 className="pt-8 text-xl md:text-4xl font-extrabold text-[#D1FAE5]">
             Welcome to the NeoDev League
           </h1>
           <SparklesText text="Dashboard" />
@@ -85,7 +85,7 @@ const DashboardHome: React.FC = () => {
           <h2 className="text-4xl font-bold pt-24 text-[#D1FAE5] mb-4">
             WE ARE
           </h2>
-          <div className="flex justify-center space-x-8">
+          <div className="flex justify-center md:space-x-10 md:flex-row flex-col">
             {Object.entries(timeLeft).map(([unit, value]) => (
               <motion.div
                 key={unit}
@@ -95,7 +95,9 @@ const DashboardHome: React.FC = () => {
                 transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <span className="text-6xl font-bold text-white">{value}</span>
+                <span className="md:text-6xl text-4xl font-bold text-white">
+                  {value}
+                </span>
                 <p className="text-2xl text-white">{unit}</p>
               </motion.div>
             ))}
@@ -106,7 +108,7 @@ const DashboardHome: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-        <div className="absolute inset-0 bg-opacity-10 backdrop-blur-sm z-50 mt-10" />
+          <div className="absolute inset-0 bg-opacity-10 backdrop-blur-sm z-50 mt-10" />
           <motion.div
             className="mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -114,23 +116,23 @@ const DashboardHome: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             <h2 className="text-3xl font-bold text-[#D1FAE5]  mb-6 text-center">
-              Team: Coming Soon!
+              <span className="text-white">Team: </span>Coming Soon!
             </h2>
             <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
                   <School className="text-white mr-2" />
-                  <span className="text-xl text-white">
+                  <span className="md:text-xl sm:text-lg text-mdtext-white">
                     School: Coming Soon!
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Users className="text-white mr-2" />
-                  <span className="text-xl text-white">? Members</span>
+                  <span className="md:text-xl sm:text-lg text-md text-white">? Members</span>
                 </div>
                 <div className="flex items-center">
                   <Award className="text-white mr-2" />
-                  <span className="text-xl text-white">Rank: Coming Soon!</span>
+                  <span className="md:text-xl sm:text-lg text-md text-white">Rank: Coming Soon!</span>
                 </div>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -174,11 +176,14 @@ const DashboardHome: React.FC = () => {
                 <MessageCircle className="mr-2 h-6 w-6" /> Join Discord
               </a>
             </Button>
-            <Button className="w-full mb-4 bg-gradient-to-r from-[#34D399] to-green-500 hover:from-[#34D399] hover:to-green-600 text-white text-lg py-6 transition-all duration-300 transform">
-              <Rocket className="mr-2 h-6 w-6" /> Launch Challenges
+            <Button
+              className="w-full mb-4 bg-gradient-to-r from-[#34D399] to-green-500 hover:from-[#34D399] hover:to-green-600 text-white text-lg py-6 transition-all duration-300 transform"
+              onClick={() => navigate("/")}
+            >
+              <Rocket className="mr-2 h-6 w-6" /> Navigate To NeoDev Home
             </Button>
-            <Button className="w-full bg-gradient-to-r from-[#34D399] to-green-500 hover:from-[#34D399] hover:to-green-600 text-white text-lg py-6 transition-all duration-300 transform">
-              <Code className="mr-2 h-6 w-6" /> Submissions
+            <Button className="w-full bg-darkerGreen text-white text-lg py-6 transition-all duration-300 transform pointer-events-none">
+              <LockKeyhole className="mr-2 h-6 w-6" /> Submissions
             </Button>
           </div>
           <div>
@@ -187,88 +192,46 @@ const DashboardHome: React.FC = () => {
             </h3>
             <ul className="space-y-4 text-white">
               <motion.li
-                className="flex items-center"
+                className="items-center flex"
                 whileHover={{ scale: 1.05 }}
               >
                 <Trophy className="text-[#34D399] mr-2 h-6 w-6" />
                 <span className="text-lg">
-                  Prize Pool:{" "}
-                  <span className="text-[#34D399] font-semibold">
+                  Prize Pool{" "}
+                  <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
                     $1,000,000
                   </span>
                 </span>
               </motion.li>
               <motion.li
-                className="flex items-center"
+                className="items-center flex"
                 whileHover={{ scale: 1.05 }}
               >
                 <Clock className="text-[#34D399] mr-2 h-6 w-6" />
                 <span className="text-lg">
-                  Duration:{" "}
-                  <span className="text-[#34D399] font-semibold">
+                  Duration{" "}
+                  <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
                     15 hours of intense coding
                   </span>
                 </span>
               </motion.li>
               <motion.li
-                className="flex items-center"
+                className="items-center flex"
                 whileHover={{ scale: 1.05 }}
               >
                 <Users className="text-[#34D399] mr-2 h-6 w-6" />
-                <span className="text-lg">
-                  Participants:{" "}
-                  <span className="text-[#34D399] font-semibold">
-                    100+ developers region-wide
+                  <span className="text-lg">
+                    Participants{" "}
+                    <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
+                      100+ developers region-wide
+                    </span>
                   </span>
-                </span>
               </motion.li>
             </ul>
           </div>
         </motion.div>
       </main>
-
-      <BottomBar>
-        <Link
-          to="/dashboard"
-          className={`text-white hover:text-white transition-colors ${
-            location.pathname === "/dashboard" ? "font-bold" : ""
-          }`}
-        >
-          Dashboard
-        </Link>
-        <Link
-          to="/leaderboard"
-          className={`text-white hover:text-white transition-colors pointer-events-none ${
-            location.pathname === "/leaderboard" ? "font-bold" : ""
-          }`}
-        >
-          <div className="flex flex-row gap-1">
-            {" "}
-            <LockKeyhole />
-            Leaderboard
-          </div>
-        </Link>
-        <Link
-          to="/account"
-          className={`text-white hover:text-white transition-colors ${
-            location.pathname === "/account" ? "font-bold" : ""
-          }`}
-        >
-          Account
-        </Link>
-        <Link
-          to="/timeline"
-          className={`text-white hover:text-white transition-colors pointer-events-none ${
-            location.pathname === "/timeline" ? "font-bold" : ""
-          }`}
-        >
-          <div className="flex flex-row gap-1">
-            {" "}
-            <LockKeyhole />
-            Timeline
-          </div>
-        </Link>
-      </BottomBar>
+      <BottomBar />
     </div>
   );
 };
