@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CircleCheck, SendHorizontal } from "lucide-react";
 import { useAuth } from "../../contexts/AuthProvider";
-
 import SlideAnimation from "../../components/Login/Animation/slide-animation";
 import Modal from "../../components/Login/Modal/Modal";
 import { MagicCard } from "../../components/Login/magicCard";
-import Button from "../../components/Login/button";
 import ClientTweetCard from "../../components/Login/tweet";
 import logo from "../../assets/blackLogo.png";
 import logo180 from "../../assets/blackLogo180.png";
@@ -264,9 +262,9 @@ function Login() {
                     required
                   />
                 </div>
-                <Button
+                <button
                   id="submit"
-                  className="bg-darkerGreen h-[5vh] border border-lighterGreen shadow-button-green bg-white/70 transition duration-300 ease-in md:mt-0 mt-[5vh]"
+                  className="bg-darkerGreen h-[5vh] border border-lighterGreen shadow-button-green bg-white/70 transition duration-300 ease-in px-10 md:mt-0 mt-[5vh] flex items-center"
                   disabled={loading === 1}
                   type="submit"
                 >
@@ -276,9 +274,9 @@ function Login() {
                       : signupDialogs[loading]}
                   </span>
                   <SendHorizontal style={{ color: "#34D399" }} />
-                </Button>
+                </button>
 
-                <Button
+                <button
                   className="underline text-lighterGreen"
                   type="button"
                   onClick={
@@ -290,7 +288,7 @@ function Login() {
                       ? "No Account? Sign Up"
                       : "Existing Account? Log In"}
                   </span>
-                </Button>
+                </button>
               </form>
             </div>
           </div>
@@ -307,15 +305,15 @@ function Login() {
               }
             />
             <div className="flex items-center flex-col">
-              <Button
-                className="mb-[1vh] bg-darkerGreen h-[5vh] border border-lighterGreen shadow-button-green bg-white/70 ease-in"
+              <button
+                className="mb-[1vh] bg-darkerGreen h-[5vh] border p-1 px-5 border-lighterGreen shadow-button-green bg-white/70 ease-in"
                 onClick={() => setHelpModalState(true)}
                 type="submit"
               >
                 <span className="gradient2 whitespace-pre-wrap text-center text-md font-medium leading-none tracking-tight">
                   Need Help?
                 </span>
-              </Button>
+              </button>
 
               <Modal
                 isOpened={helpModalState}
