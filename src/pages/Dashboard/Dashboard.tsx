@@ -203,7 +203,7 @@ const DashboardHome: React.FC = () => {
                 <span className="text-lg">
                   Prize Pool{" "}
                   <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
-                    $1,000,000
+                    $TBD
                   </span>
                 </span>
               </motion.li>
@@ -215,7 +215,7 @@ const DashboardHome: React.FC = () => {
                 <span className="text-lg">
                   Duration{" "}
                   <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
-                    15 hours of intense coding
+                    10 hours of coding
                   </span>
                 </span>
               </motion.li>

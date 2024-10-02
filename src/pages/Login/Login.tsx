@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { CircleCheck, SendHorizontal } from "lucide-react";
 import { useAuth } from "../../contexts/AuthProvider";
-import SlideAnimation from "../../components/Login/Animation/slide-animation";
+import MacNavbar from "../../components/macNavbar";
 import Modal from "../../components/Login/Modal/Modal";
 import { MagicCard } from "../../components/Login/magicCard";
 import ClientTweetCard from "../../components/Login/tweet";
+import { motion } from "framer-motion";
+import { CircleCheck, SendHorizontal } from "lucide-react";
 import logo from "../../assets/blackLogo.png";
 import logo180 from "../../assets/blackLogo180.png";
 
@@ -166,18 +167,22 @@ function Login() {
   ];
 
   return (
-    <SlideAnimation>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div
         id="login"
-        className="h-screen md:overflow-hidden flex items-center justify-center bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center overflow-auto md:overflow-hidden"
+        className="h-screen md:overflow-hidden flex items-center justify-center bg-[url('../../assets/Neo-bg.jpg')] bg-cover bg-center overflow-auto md:overflow-hidden landscape:overflow-auto"
       >
         <div
           id="login-body"
-          className="rounded-lg w-[97vw] md:w-[75vw] sm:mt-0 mt-auto"
+          className="rounded-lg w-[97vw] md:w-[75vw] sm:mt-0 mt-auto landscape:mt-auto"
         >
           <MagicCard
-            className="rounded-t-lg cursor-pointer items-center justify-center shadow-black-shadow2 bg-white/70 mt-[5vh] md:mt-0"
-            gradientColor={"#ffffff30"}
+            className="rounded-t-lg cursor-pointer items-center justify-center shadow-black-shadow2 bg-white/70 mt-[5vh] lg:mt-0 md:mt-[3vh] hover:cursor-default"
+            gradientColor={"#ffffff50"}
           >
             <div
               id="login-container"
@@ -276,7 +281,7 @@ function Login() {
                 </button>
 
                 <button
-                  className="underline text-lighterGreen"
+                  className="underline text-lighterGreen pt-3"
                   type="button"
                   onClick={
                     pageState == "Login" ? handleSignUpPage : handleLoginPage
@@ -332,8 +337,9 @@ function Login() {
             </div>
           </div>
         </div>
+        <MacNavbar />
       </div>
-    </SlideAnimation>
+    </motion.div>
   );
 }
 

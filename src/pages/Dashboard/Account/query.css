@@ -1,0 +1,15 @@
+@media (max-height: 400px) and (min-width: 800px) {
+    .landscape {
+      height: 200vh;
+    }
+}
+@media (max-height: 620px) and (min-width: 800px) {
+    .landscape {
+      height: 160vh;
+    }
+}
+@media (max-height: 800px) and (min-width: 800px) {
+    .landscape {
+      height: 140vh;
+    }
+}

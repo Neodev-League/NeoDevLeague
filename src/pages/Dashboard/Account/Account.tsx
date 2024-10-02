@@ -3,6 +3,8 @@ import { useAuth } from "../../../contexts/AuthProvider";
 import BottomBar from "../DashNav";
 import { motion } from "framer-motion";
 
+import "./query.css";
+
 interface ProfileRow {
   name: string;
   editable: boolean;
@@ -66,8 +68,8 @@ const DashboardAccount: React.FC = () => {
   }, [supabase, user]);
 
   return (
-    <div className="relative min-h-screen md:pb-20 pb-10 md:overflow-hidden">
-      <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0" />
+    <div className="relative landscape md:min-h-screen md:pb-20 pb-10 md:overflow-hidden overflow-auto landscape:overflow-auto">
+      <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] z-0" />
       <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
       <main className="relative z-20 w-full">
         <div className="absolute w-[100%] top-0">
