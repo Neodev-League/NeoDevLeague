@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
 import MinimalSocialsFooter from "../../components/Home/footer";
@@ -6,16 +8,19 @@ import Logo from "../../assets/logo";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
-import AccordionUsage from "../../components/Home/accordion";
+import FAQ from "../../components/Home/FAQ";
 import google from "../../assets/Sponsors/google.png";
+import convictional from "../../assets/Sponsors/convictional.png";
 import googlelcn from "../../assets/Misc/GoogleLcn.png";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { FaQuestionCircle, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 
 import "../../style.css";
 import "./glitch.css";
 
-const Home: React.FC = () => {
+const AnimatedSection: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+}> = ({ children, className }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -27,6 +32,61 @@ const Home: React.FC = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+      }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const SponsorBox: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5} },
+        hidden: { opacity: 0, scale: 0.8 },
+      }}
+      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+      className="bg-white rounded-2xl p-10 shadow-2xl transform transition-transform duration-300 hover:shadow-neon"
+    >
+      <img src={src} alt={alt} className="h-32 object-contain" />
+    </motion.div>
+  );
+};
+
+const Home: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="relative h-[500vh] min-h-screen overflow-x-hidden border">
@@ -42,7 +102,7 @@ const Home: React.FC = () => {
         </a>
       </div>
 
-      <div className="relative flex items-center justify-center min-h-screen">
+      <AnimatedSection className="relative flex items-center justify-center min-h-screen">
         <div className="text-center relative z-10 mt-24 mb-6">
           <TextGlitch />
           <div className="mt-10">
@@ -66,119 +126,199 @@ const Home: React.FC = () => {
           </div>
         </div>
         <Ripple />
-      </div>
+      </AnimatedSection>
 
-      <div className="absolute top-0 mt-[80vh] w-full text-center">
+      <AnimatedSection className="absolute top-0 mt-[80vh] w-full text-center">
         <div className="m-0 mailchimp-wrapper">
           <MailchimpFormContainer />
         </div>
-      </div>
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 50 },
-        }}
-        transition={{ duration: 0.8 }}
-        className="absolute h-[60vh] w-full mt-[45vh] flex items-center justify-center flex-col overflow-visible"
-      >
+      </AnimatedSection>
+
+      <AnimatedSection className="pt-[30rem] flex flex-col items-center justify-center mt-24 md:mt-32 px-4 md:px-0">
         <motion.div
-          className="text-shadow absolute top-0 flex flex-col items-center justify-center w-full h-full z-20"
-          initial={{ scale: 1.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
+          className="text-shadow flex flex-col items-center justify-center w-full z-20"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { scale: 1, opacity: 1 },
+            hidden: { scale: 1.2, opacity: 0 },
+          }}
+          transition={{ delay: 1.2, duration: 1, ease: "easeOut" }} // Increased delay by 1 second
         >
           <motion.span
-            className="text-6xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#34D399] to-[#76C675]"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#34D399] to-[#76C675]"
+            variants={{
+              visible: { y: 0, opacity: 1 },
+              hidden: { y: 50, opacity: 0 },
+            }}
+            transition={{ delay: 1.30, duration: 0.5 }} // Increased delay by 1 second
           >
             OCT 26th
           </motion.span>
           <motion.span
-            className="text-4xl md:text-6xl font-bold text-white mt-4"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+            className="text-2xl md:text-4xl lg:text-6xl font-bold text-white mt-4"
+            variants={{
+              visible: { y: 0, opacity: 1 },
+              hidden: { y: 50, opacity: 0 },
+            }}
+            transition={{ delay: 1.55, duration: 0.5 }} // Increased delay by 1 second
           >
             AT
           </motion.span>
         </motion.div>
         <motion.div
-          className="absolute w-full h-full flex items-center justify-center z-10 mt-80 p-20"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+          className="w-full flex items-center justify-center z-10 mt-8 md:mt-16"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { scale: 1, opacity: 1 },
+            hidden: { scale: 1.30, opacity: 0 },
+          }}
+          transition={{ delay: 1.67, duration: 0.8, ease: "easeOut" }} // Increased delay by 1 second
         >
           <motion.img
             src={google}
             alt="Google"
-            className="w-[90%] max-w-3xl"
-            initial={{ rotate: -5 }}
+            className="w-[80%] md:w-[90%] max-w-3xl"
             animate={{ rotate: 5 }}
+            initial={{ rotate: -5 }}
             transition={{
               repeat: Infinity,
               duration: 5,
               repeatType: "reverse",
               ease: "easeInOut",
+              delay: 1 // Increased delay by 1 second
             }}
           />
         </motion.div>
-        <motion.div
-          className="absolute w-full h-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white rounded-full"
-              initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-                scale: 0,
-              }}
-              animate={{
-                y: [null, Math.random() * -500],
-                scale: [0, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 2 + 1,
-                repeat: Infinity,
-                repeatType: "loop",
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
+      </AnimatedSection>
 
-      <div className="absolute h-[50vh] w-screen mt-[130vh] flex flex-col">
+      <AnimatedSection className="flex flex-col md:flex-row items-center justify-center mt-24 md:mt-32 px-4 md:px-8">
         <img
           src={googlelcn}
           alt="Google"
-          className="absolute w-[50%] left-[5%]"
+          className="w-full md:w-[50%] mb-8 md:mb-0"
         />
-        <div className="flex w-[30%] absolute right-[5%]">
-          <AccordionUsage />
+        <div className="w-full md:w-[40%] mt-8 md:mt-0">
+          <FAQ />
         </div>
-      </div>
+      </AnimatedSection>
 
-      <div>
-        <div className="absolute h-[50vh] w-screen mt-[200vh] flex items-center justify-center flex-col">
-          <h1 className="text-7xl font-bold text-white text-shadow">
-            SPONSORS
-          </h1>
+      <AnimatedSection className="w-full py-24 md:py-32 px-4 md:px-8 mt-24 md:mt-32 flex flex-col items-center justify-center">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-shadow mb-8 md:mb-16 text-center">
+          OUR SPONSORS
+        </h1>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+                ease: "easeOut",
+                when: "beforeChildren",
+                staggerChildren: 0.2,
+                delay: 1 // Increased delay by 1 second
+              },
+            },
+            hidden: { opacity: 0, y: 50 },
+          }}
+          className="w-full max-w-4xl"
+        >
+          <motion.h2
+            variants={{
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 1 } }, // Increased delay by 1 second
+              hidden: { opacity: 0, y: 20 },
+            }}
+            className="text-3xl md:text-4xl lg:text-6xl font-extrabold mb-6 md:mb-12 text-center"
+          >
+            {["V", "i", "s", "i", "o", "n", "a", "r", "y"].map(
+              (letter, index) => (
+                <motion.span
+                  key={index}
+                  variants={{
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                      transition: { duration: 0.5, delay: (index + 1) * 0.1 }, // Increased delay by 1 second
+                    },
+                    hidden: { opacity: 0, x: -20 },
+                  }}
+                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-dark1 to-dark1"
+                >
+                  {letter}
+                </motion.span>
+              )
+            )}
+          </motion.h2>
+          <motion.div
+            variants={{
+              visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 1 } }, // Increased delay by 1 second
+              hidden: { opacity: 0, scale: 0.8 },
+            }}
+            className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6"
+          >
+            <SponsorBox src={google} alt="Google" />
+            <SponsorBox src={convictional} alt="Convictional" />
+          </motion.div>
+        </motion.div>
+      </AnimatedSection>
+
+      <footer className="absolute w-full bottom-0 pb-12 backdrop-blur-md">
+        <div className="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-md">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-wrap justify-between items-start">
+              <div className="w-full md:w-1/3 mb-6 md:mb-0">
+                <h4 className="text-2xl font-bold mb-4 text-white">
+                  NeoDev League
+                </h4>
+                <p className="text-gray-300">
+                  Empowering the next generation of developers
+                </p>
+              </div>
+              <div className="w-full md:w-1/3 mb-6 md:mb-0">
+                <h5 className="text-xl font-semibold mb-4 text-white">
+                  Quick Links
+                </h5>
+                <ul className="space-y-2">
+                  <li>
+                    <button
+                      onClick={() => scrollTo("event")}
+                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                    >
+                      <FaMapMarkerAlt className="mr-2" /> Event Details
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollTo("faq")}
+                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                    >
+                      <FaQuestionCircle className="mr-2" /> FAQ
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollTo("sponsors")}
+                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                    >
+                      <FaUsers className="mr-2" /> Sponsors
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full md:w-1/3">
+                <h5 className="text-xl font-semibold mb-4 text-white">
+                  Connect With Us
+                </h5>
+                <MinimalSocialsFooter />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="absolute w-full bottom-0 flex items-center justify-center">
-        <MinimalSocialsFooter />
-      </div>
+      </footer>
     </div>
   );
 };

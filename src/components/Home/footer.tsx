@@ -45,19 +45,19 @@ const SocialLink = ({
   return (
     <a href={href} target="_blank" rel="noreferrer" className="group">
       <span className="sr-only">{children}</span>
-      <Icon className="h-5 w-5 fill-dark2 transition group-hover:fill-gray-100 dark:group-hover:fill-gray-200" />
+      <Icon className="h-5 w-5 fill-white transition group-hover:fill-white dark:group-hover:fill-white" />
     </a>
   );
 };
 
 const MinimalSocialsFooter = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-between gap-5 bg-light1 py-2 sm:flex-row">
-      <p className="text-dark3 text-ms pl-3">
+    <div className="flex w-full flex-col items-center justify-between gap-5  py-2 sm:flex-row">
+      <p className="text-white text-ms pl-3">
         Copyright © {new Date().getFullYear()}{" "}
         <a
           href="https://neoleague.dev/"
-          className=" text-dark2 underline pl-2"
+          className=" text-white underline pl-2"
         >
           Neo Developer League
         </a>{" "}
