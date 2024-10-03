@@ -159,7 +159,7 @@ const Home: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="pt-[30rem] flex flex-col items-center justify-center mt-24 md:mt-32 px-4 md:px-0">
+      <AnimatedSection className="pt-[10rem] pb-[13rem] flex flex-col items-center justify-center mt-24 md:mt-32 px-4 md:px-0">
         <motion.div
           className="text-shadow flex flex-col items-center justify-center w-full z-20"
           initial="hidden"
