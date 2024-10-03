@@ -229,7 +229,7 @@ const Home: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="w-full py-24 md:py-32 px-4 md:px-8 mt-24 md:mt-32 flex flex-col items-center justify-center">
+      <AnimatedSection className="w-full py-8 md:py-8 px-4 md:px-8 mt-8 md:mt-8 flex flex-col items-center justify-center">
         <h2 className="text-5xl md:text-5xl lg:text-6xl font-bold text-white text-shadow mb-12 text-center">
           The NeoDev Experience
         </h2>
@@ -252,8 +252,8 @@ const Home: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="w-full py-12 md:py-12 px-4 md:px-8 mt-24 md:mt-32 flex flex-col items-center justify-center">
-        <h1 className="text-4xl md:text-6xl pb-6 lg:text-8xl font-bold text-white text-shadow mb-8 md:mb-16 text-center">
+      <AnimatedSection className="w-full py-4 pt-8 md:py-4 px-4 md:px-8 mt-8 md:mt-8 flex flex-col items-center justify-center">
+        <h1 className="text-4xl md:text-6xl  lg:text-8xl font-bold text-white text-shadow mb-8 md:mb-16 text-center">
           OUR SPONSORS
         </h1>
         <motion.div
@@ -332,7 +332,7 @@ const Home: React.FC = () => {
         </motion.div>
       </AnimatedSection>
 
-      <footer className="absolute w-full bottom-0 pb-12 backdrop-blur-md">
+      <footer className="absolute w-full bottom-0 backdrop-blur-md">
         <div className="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-md">
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-wrap justify-between items-start">
