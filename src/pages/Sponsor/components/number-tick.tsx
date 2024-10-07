@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 export default function NumberTicker({
   value,
@@ -36,7 +36,7 @@ export default function NumberTicker({
     springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat("en-US").format(
-          Number(latest.toFixed(0))
+          Number(latest.toFixed(0)),
         );
       }
     });
@@ -46,7 +46,7 @@ export default function NumberTicker({
     <span
       className={cn(
         "inline-block tabular-nums bg-clip-text text-transparent bg-gradient-to-r from-green-800 via-green-400 to-green-300 tracking-wider",
-        className
+        className,
       )}
       ref={ref}
     />

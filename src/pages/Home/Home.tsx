@@ -13,6 +13,7 @@ import google from "../../assets/Sponsors/google.png";
 import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
 import googlelcn from "../../assets/Misc/GoogleLcn.png";
+import { RainbowButton } from "../../components/Home/rainbowbtn";
 import {
   FaQuestionCircle,
   FaMapMarkerAlt,
@@ -130,12 +131,25 @@ const Home: React.FC = () => {
       <AnimatedSection className="relative flex items-center justify-center min-h-screen">
         <div className="text-center relative z-10 mt-24 mb-6">
           <TextGlitch />
-          <div className="mt-10">
-            <span className="!text-2xl md:text-6xl font-bold">
+
+          <div className="mt-4">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSccJuqk0_9JndOaOGPfvFndQUSqnN6Nh4ycb7IZh6CC14iGdg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-4 mb-8" // Added vertical padding here
+            >
+              <RainbowButton>APPLY NOW</RainbowButton>
+            </a>
+          </div>
+
+          {/* Slightly reduced text size */}
+          <div className="mt-4">
+            <span className="!text-xl md:text-5xl font-bold">
               The Future of
             </span>
             <br />
-            <span className="text-2xl md:text-4xl font-bold">
+            <span className="text-xl md:text-3xl font-bold">
               <WordRotate
                 className="font-bold"
                 words={[
@@ -150,6 +164,7 @@ const Home: React.FC = () => {
             </span>
           </div>
         </div>
+
         <Ripple />
       </AnimatedSection>
 

@@ -3,7 +3,7 @@
 import { FC, ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface TextRevealByWordProps {
   text: string;
@@ -38,9 +38,9 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             const start = i / words.length;
             const end = start + 1 / words.length;
             return (
-              <Word 
-                key={i} 
-                progress={scrollYProgress} 
+              <Word
+                key={i}
+                progress={scrollYProgress}
                 range={[start, end]}
                 isLastWord={i === words.length - 1}
               >

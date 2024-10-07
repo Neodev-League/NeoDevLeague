@@ -11,7 +11,7 @@ import {
   useVelocity,
 } from "framer-motion";
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface VelocityScrollProps {
   text: string;
@@ -76,7 +76,7 @@ export function VelocityScroll({
 
     const directionFactor = React.useRef<number>(1);
     useAnimationFrame((t, delta) => {
-      console.log(t)
+      console.log(t);
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -90,7 +90,7 @@ export function VelocityScroll({
       baseX.set(baseX.get() + moveBy);
     });
 
-    const words = children.split(' ');
+    const words = children.split(" ");
     const lastWord = words.pop();
 
     return (
@@ -101,7 +101,8 @@ export function VelocityScroll({
         <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
             <span key={i} ref={i === 0 ? textRef : null}>
-              {words.join(' ')} <span style={{ color: '#41CF77' }}>{lastWord}</span>{" "}
+              {words.join(" ")}{" "}
+              <span style={{ color: "#41CF77" }}>{lastWord}</span>{" "}
             </span>
           ))}
         </motion.div>

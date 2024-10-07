@@ -1,12 +1,11 @@
 // why does this file have to be lower case for build to work... lol
 import React from "react";
 import logo from "../../assets/Neo-logo.png";
-import Neo1 from "../../assets/neobuilding1.png";
-import Neo2 from "../../assets/neobuilding2.png";
-import Neo3 from "../../assets/neobuilding3.png";
-import Vine1 from "../../assets/vines.png";
-import Vine2 from "../../assets/vines2.png";
-// import gmail from "../../assets/Png/gmail.png";
+import Neo1 from "../../assets/Design/neobuilding1.png";
+import Neo2 from "../../assets/Design/neobuilding2.png";
+import Neo3 from "../../assets/Design/neobuilding3.png";
+import Vine1 from "../../assets/Design/vines.png";
+import Vine2 from "../../assets/Design/vines2.png";
 import linkedin from "../../assets/Png/linkedin.png";
 import MacNavbar from "../../components/macNavbar.tsx";
 import { leads, Row2, Row3 } from "./members.ts";
@@ -32,8 +31,8 @@ const Team: React.FC = () => {
             member.alignment == "left"
               ? ""
               : member.alignment == "center"
-              ? "sm:flex-col sm:items-center"
-              : "sm:flex-col sm:items-end"
+                ? "sm:flex-col sm:items-center"
+                : "sm:flex-col sm:items-end"
           }`}
         >
           <img
@@ -42,9 +41,7 @@ const Team: React.FC = () => {
             className="w-24 h-24 object-cover rounded-md shadow-lg border border-lighterGreen"
           />
           <div className="block sm:hidden flex justify-center ml-2 gap-1 py-5 px-2 rounded-lg bg-white/80 border border-lighterGreen backdrop-blur-sm ">
-            <p className="text-lg signature">
-              {member.position}
-            </p>
+            <p className="text-lg signature">{member.position}</p>
             {/* <a href={`mailto:${member.email}`}>
                   <img src={gmail} alt="Email" className="w-8 h-8" />
                 </a> */}
@@ -107,13 +104,21 @@ const Team: React.FC = () => {
             <img
               src={Neo2}
               className={`flex h-[100%] absolute bottom-0 ${
-                member.alignment === "right" ? "left-40" : member.alignment === "left" ? "right-40" : "left-0"
+                member.alignment === "right"
+                  ? "left-40"
+                  : member.alignment === "left"
+                    ? "right-40"
+                    : "left-0"
               }`}
             />
             <img
               src={Neo3}
               className={`flex h-[100%] absolute bottom-0 ${
-                member.alignment === "right" ? "left-60" : member.alignment === "left" ? "right-60" : "right-0"
+                member.alignment === "right"
+                  ? "left-60"
+                  : member.alignment === "left"
+                    ? "right-60"
+                    : "right-0"
               }`}
             />
             {member.alignment === "center" && (

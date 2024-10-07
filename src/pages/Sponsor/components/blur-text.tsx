@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface BlurIntProps {
   word: string;
@@ -28,7 +28,7 @@ const BlurIn = ({ word, className, variant, duration = 3 }: BlurIntProps) => {
       variants={combinedVariants}
       className={cn(
         className,
-        "font-display text-center text-5xl font- tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
+        "font-display text-center text-5xl font- tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]",
       )}
     >
       {word}

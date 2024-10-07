@@ -1,4 +1,3 @@
-
 const TextGlitch = () => {
   return (
     <div className="relative">
