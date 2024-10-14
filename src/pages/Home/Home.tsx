@@ -5,6 +5,7 @@ import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
 import MinimalSocialsFooter from "../../components/Home/footer";
 import Logo from "../../assets/logo";
+import {RainbowButton} from "../../components/Home/rainbowbtn";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
@@ -13,7 +14,6 @@ import google from "../../assets/Sponsors/google.png";
 import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
 import googlelcn from "../../assets/Misc/GoogleLcn.png";
-import { RainbowButton } from "../../components/Home/rainbowbtn";
 import {
   FaQuestionCircle,
   FaMapMarkerAlt,
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="relative mini:h-[520vh] md:h-[500vh] min-h-screen overflow-x-hidden border">
+    <div className="relative h-[500vh] min-h-screen overflow-x-hidden border">
       <div className="absolute w-full h-full bg-[url('../../assets/neo-citys.jpg')] bg-cover animate-fadeIn z-[-1]" />
       <MacNavbar />
       <div className="fixed top-0 left-0 w-full z-50">
@@ -131,25 +131,23 @@ const Home: React.FC = () => {
       <AnimatedSection className="relative flex items-center justify-center min-h-screen">
         <div className="text-center relative z-10 mt-24 mb-6">
           <TextGlitch />
-
           <div className="mt-4">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSccJuqk0_9JndOaOGPfvFndQUSqnN6Nh4ycb7IZh6CC14iGdg/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-4 mb-8"
+              className="py-4 mb-8" // Added vertical padding here
             >
               <RainbowButton>APPLY NOW</RainbowButton>
             </a>
           </div>
 
-          {/* Slightly reduced text size */}
-          <div className="mt-4">
-            <span className="!text-xl md:text-5xl font-bold">
+          <div className="mt-10">
+            <span className="!text-2xl md:text-6xl font-bold">
               The Future of
             </span>
             <br />
-            <span className="text-xl md:text-3xl font-bold">
+            <span className="text-2xl md:text-4xl font-bold">
               <WordRotate
                 className="font-bold"
                 words={[
@@ -164,7 +162,6 @@ const Home: React.FC = () => {
             </span>
           </div>
         </div>
-
         <Ripple />
       </AnimatedSection>
 
@@ -174,7 +171,7 @@ const Home: React.FC = () => {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="md:pt-[20rem] lg:pt-[27rem] pt-[10rem] pb-[10rem] flex flex-col items-center justify-center mt-25 md:mt-40 lg:mt-70 px-4 md:px-0">
+      <AnimatedSection className="pt-[10rem] pb-[13rem] flex flex-col items-center justify-center mt-24 md:mt-32 px-4 md:px-0">
         <motion.div
           className="text-shadow flex flex-col items-center justify-center w-full z-20"
           initial="hidden"
@@ -186,7 +183,7 @@ const Home: React.FC = () => {
           transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
         >
           <motion.span
-            className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#34D399] to-[#76C675]"
+            className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#34D399] to-[#76C675]"
             variants={{
               visible: { y: 0, opacity: 1 },
               hidden: { y: 50, opacity: 0 },
@@ -196,7 +193,7 @@ const Home: React.FC = () => {
             OCT 26th
           </motion.span>
           <motion.span
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mt-4"
+            className="text-2xl md:text-4xl lg:text-6xl font-bold text-white mt-4"
             variants={{
               visible: { y: 0, opacity: 1 },
               hidden: { y: 50, opacity: 0 },
@@ -237,10 +234,9 @@ const Home: React.FC = () => {
         <img
           src={googlelcn}
           alt="Google"
-          className="w-full md:w-[50%] mb-8 md:mb-0 rounded-md"
+          className="w-full md:w-[50%] mb-8 md:mb-0"
         />
-        <div className="w-full md:w-[40%] mt-8 md:mt-0 ml-5">
-        <div className="absolute inset-0 bg-black bg-opacity-5 z-10" />
+        <div className="w-full md:w-[40%] mt-8 md:mt-0">
           <FAQ />
         </div>
       </AnimatedSection>
