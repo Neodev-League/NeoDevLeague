@@ -1,3 +1,8 @@
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
@@ -45,7 +50,7 @@ export default {
         gray: "#E0E0E0", //Gray-300
 
         textlight: "#83c5af", // Light version for text, lighter than lighterGreen
-        light1: "#E6FAF2", // Very Light Green
+        light1: "#6ee7b7", // green-300
         light2: "#C4EDE0", // Between veryLightGreen and light1
         light3: "rgba(196, 237, 224, 0.25)", //light2 but opacity change
         light4: "#e8fef9", //The light color of the logos George made
@@ -97,5 +102,16 @@ export default {
       DEFAULT: "300ms",
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
