@@ -13,7 +13,9 @@ import FAQ from "../../components/Home/FAQ";
 import google from "../../assets/Sponsors/google.png";
 import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
+import den from "../../assets/Sponsors/den1880.png";
 import googlelcn from "../../assets/Misc/GoogleLcn.png";
+import dencn from "../../assets/Misc/denCNN.png";
 import {
   FaQuestionCircle,
   FaMapMarkerAlt,
@@ -214,9 +216,9 @@ const Home: React.FC = () => {
           transition={{ delay: 1.67, duration: 0.8, ease: "easeOut" }}
         >
           <motion.img
-            src={google}
-            alt="Google"
-            className="w-[80%] md:w-[90%] max-w-3xl"
+            src={den}
+            alt="Den1880"
+            className="w-[80%] md:w-[90%] max-w-3xl pb-[20rem]"
             animate={{ rotate: 5 }}
             initial={{ rotate: -5 }}
             transition={{
@@ -232,8 +234,8 @@ const Home: React.FC = () => {
 
       <AnimatedSection className="flex flex-col md:flex-row items-center justify-center mt-24 md:mt-32 px-4 md:px-8">
         <img
-          src={googlelcn}
-          alt="Google"
+          src={dencn}
+          alt="dencn"
           className="w-full md:w-[50%] mb-8 md:mb-0"
         />
         <div className="w-full md:w-[40%] mt-8 md:mt-0">
@@ -311,7 +313,7 @@ const Home: React.FC = () => {
             }}
             className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6"
           >
-            <SponsorBox src={google} alt="Google" />
+            <SponsorBox src={den} alt="Google" />
             <SponsorBox src={convictional} alt="Convictional" />
           </motion.div>
         </motion.div>
