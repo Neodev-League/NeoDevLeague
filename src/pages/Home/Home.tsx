@@ -115,7 +115,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="relative h-[500vh] min-h-screen overflow-x-hidden border">
+    <div className="relative h-[575vh] md:h-[500vh] lg:h-[475vh] min-h-screen overflow-x-hidden border">
       <div className="absolute w-full h-full bg-[url('../../assets/neo-citys.jpg')] bg-cover animate-fadeIn z-[-1]" />
       <MacNavbar />
       <div className="fixed top-0 left-0 w-full z-50">
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
         <img
           src={dencn}
           alt="dencn"
-          className="w-full md:w-[50%] mb-8 md:mb-0"
+          className="w-full md:w-[50%] mb-8 md:mb-0 md:mr-10"
         />
         <div className="w-full md:w-[40%] mt-8 md:mt-0">
           <FAQ />
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
           <NeoDev3DBox
             icon={<FaRocket />}
             title="Innovation Hub"
-            description="Launch your ideas into reality with our 10+ hour programming period @ the Google building."
+            description="Launch your ideas into reality with our 10+ hour programming period @ the Den1880 coworking space."
           />
         </div>
       </AnimatedSection>
@@ -311,7 +311,7 @@ const Home: React.FC = () => {
             }}
             className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6"
           >
-            <SponsorBox src={den} alt="Google" />
+            <SponsorBox src={den} alt="Den" />
             <SponsorBox src={convictional} alt="Convictional" />
           </motion.div>
         </motion.div>
@@ -349,22 +349,22 @@ const Home: React.FC = () => {
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-wrap justify-between items-start">
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                <h4 className="text-2xl font-bold mb-4 text-white">
+                <h4 className="text-2xl font-bold mb-4 text-lighterGreen text-bold">
                   NeoDev League
                 </h4>
-                <p className="text-gray-300">
+                <p className="text-white">
                   Empowering the next generation of developers
                 </p>
               </div>
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                <h5 className="text-xl font-semibold mb-4 text-white">
+                <h5 className="text-xl font-semibold mb-4 text-lighterGreen">
                   Quick Links
                 </h5>
                 <ul className="space-y-2">
                   <li>
                     <button
                       onClick={() => scrollTo("event")}
-                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                      className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
                       <FaMapMarkerAlt className="mr-2" /> Event Details
                     </button>
@@ -372,7 +372,7 @@ const Home: React.FC = () => {
                   <li>
                     <button
                       onClick={() => scrollTo("faq")}
-                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                      className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
                       <FaQuestionCircle className="mr-2" /> FAQ
                     </button>
@@ -380,7 +380,7 @@ const Home: React.FC = () => {
                   <li>
                     <button
                       onClick={() => scrollTo("sponsors")}
-                      className="flex items-center text-gray-300 hover:text-green-400 transition-colors"
+                      className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
                       <FaUsers className="mr-2" /> Sponsors
                     </button>
@@ -388,7 +388,7 @@ const Home: React.FC = () => {
                 </ul>
               </div>
               <div className="w-full md:w-1/3">
-                <h5 className="text-xl font-semibold mb-4 text-white">
+                <h5 className="text-xl font-semibold mb-4 text-lighterGreen">
                   Connect With Us
                 </h5>
                 <MinimalSocialsFooter />
