@@ -51,7 +51,7 @@ const MacNavbar: React.FC = () => {
   };
 
   return (
-    <div className="relative sm:top-0 mini:top-0">
+    <div className="relative top-0">
       <div className="invisible md:visible">
         <Dock>
           {Pages.map((path) => (

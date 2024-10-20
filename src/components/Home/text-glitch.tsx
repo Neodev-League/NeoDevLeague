@@ -1,4 +1,4 @@
-const Texttt = () => {
+const TextGlitch = () => {
   return (
     <div className="relative">
       <h1
@@ -32,4 +32,4 @@ const Texttt = () => {
   );
 };
 
-export default Texttt;
+export default TextGlitch;

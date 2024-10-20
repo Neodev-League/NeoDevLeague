@@ -26,7 +26,6 @@ const BottomBar: React.FC = () => {
         animate={{ y: navOpen ? 0 : 100 }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        {/* cooked ahh implementation but allow it */}
         <div
           className={`fixed 
           bottom-5 w-screen z-50 cursor-pointer text-white md:hidden flex items-center justify-center pt-2`}
@@ -44,14 +43,11 @@ const BottomBar: React.FC = () => {
         </Link>
         <Link
           to="/leaderboard"
-          className={`text-white hover:text-white transition-colors pointer-events-none ${
+          className={`text-white hover:text-white transition-colors text-center md:text-left ${
             location.pathname === "/leaderboard" ? "font-bold" : ""
           }`}
         >
-          <div className="flex flex-row gap-1 justify-center md:justify-start">
-            <LockKeyhole />
-            Leaderboard
-          </div>
+          Leaderboard
         </Link>
         <Link
           to="/account"
