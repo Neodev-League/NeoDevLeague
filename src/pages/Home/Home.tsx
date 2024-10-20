@@ -10,11 +10,9 @@ import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
 import FAQ from "../../components/Home/FAQ";
-import google from "../../assets/Sponsors/google.png";
 import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
 import den from "../../assets/Sponsors/den1880.png";
-import googlelcn from "../../assets/Misc/GoogleLcn.png";
 import dencn from "../../assets/Misc/denCNN.png";
 import {
   FaQuestionCircle,
