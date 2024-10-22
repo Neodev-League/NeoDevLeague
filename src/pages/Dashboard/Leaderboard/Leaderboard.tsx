@@ -1,12 +1,9 @@
-"use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Trophy,
   Award,
   Lightbulb,
-  ArrowUpDown,
   Users,
   School,
   MessageCircle,
@@ -29,21 +26,57 @@ const leaderboardData = [
 ];
 
 export default function NeoLeaderboard() {
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [selectedSchool, setSelectedSchool] = useState<number | null>(null);
 
-  const sortedData = [...leaderboardData].sort((a, b) =>
-    sortOrder === "desc" ? b.score - a.score : a.score - b.score
-  );
+  const sortedData = [...leaderboardData].sort((a, b) => b.score - a.score);
 
-  const toggleSortOrder = () => {
-    setSortOrder(sortOrder === "desc" ? "asc" : "desc");
-  };
+  const TopThree = () => (
+    <div className="flex justify-center items-end mb-16 space-x-4">
+      {[1, 0, 2].map((index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 * index }}
+          className="text-center"
+        >
+          <div
+            className={`flex flex-col items-center justify-center rounded-lg overflow-hidden ${
+              index === 0
+                ? "bg-gradient-to-b from-[#FFD700] to-[#FFA500] h-80 w-64"
+                : index === 1
+                ? "bg-gradient-to-b from-[#C0C0C0] to-[#A9A9A9] h-72 w-56"
+                : "bg-gradient-to-b from-[#CD7F32] to-[#8B4513] h-64 w-48"
+            }`}
+          >
+            <Trophy
+              className={`text-gray-800 ${
+                index === 0
+                  ? "h-24 w-24"
+                  : index === 1
+                  ? "h-20 w-20"
+                  : "h-16 w-16"
+              } mb-4`}
+            />
+            <div className="bg-gray-800 bg-opacity-80 p-4 w-full">
+              <p className="font-bold text-[#34D399] text-lg">
+                {sortedData[index].school}
+              </p>
+              <p className="text-white text-2xl font-bold mt-2">
+                {sortedData[index].score}
+              </p>
+              <p className="text-[#D1FAE5] mt-1">Rank #{index + 1}</p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
 
   return (
     <div className="relative min-h-screen pb-20 flex justify-center items-center">
       <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0" />
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
+      <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
       <main className="relative z-20 p-8 w-full max-w-6xl">
         <motion.div
           className="text-center pb-12 pt-6"
@@ -57,44 +90,7 @@ export default function NeoLeaderboard() {
           <SparklesText text="Leaderboard" />
         </motion.div>
 
-        {/* Victory Podium */}
-        <div className="flex justify-center items-end mb-16">
-          {[1, 0, 2].map((index, podiumIndex) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 * podiumIndex }}
-              className={`text-center mx-4 ${
-                podiumIndex === 1 ? "mb-8" : podiumIndex === 0 ? "mb-4" : "mb-12"
-              }`}
-            >
-              <div
-                className={`bg-gradient-to-b ${
-                  index === 0
-                    ? "from-[#FFD700] to-[#FFA500]"
-                    : index === 1
-                    ? "from-[#C0C0C0] to-[#A9A9A9]"
-                    : "from-[#CD7F32] to-[#8B4513]"
-                } ${
-                  podiumIndex === 1 ? "h-40 w-40" : "h-32 w-32"
-                } flex items-center justify-center rounded-t-lg`}
-              >
-                <Trophy
-                  className={`text-gray-800 ${
-                    podiumIndex === 1 ? "h-20 w-20" : "h-16 w-16"
-                  }`}
-                />
-              </div>
-              <div className="bg-gray-800 bg-opacity-80 p-4 rounded-b-lg">
-                <p className="font-bold text-[#34D399]">
-                  {sortedData[index].school}
-                </p>
-                <p className="text-white">{sortedData[index].score}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <TopThree />
 
         {/* Full Leaderboard */}
         <motion.div
@@ -107,17 +103,8 @@ export default function NeoLeaderboard() {
             <h3 className="text-2xl font-bold text-[#D1FAE5]">
               Full Leaderboard
             </h3>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleSortOrder}
-              className="text-[#34D399] border-[#34D399] hover:bg-[#34D399] hover:text-white"
-            >
-              Sort {sortOrder === "desc" ? "Ascending" : "Descending"}
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
           </div>
-          <div className="overflow-x-auto">
+          <div>
             <table className="w-full">
               <thead>
                 <tr className="text-[#D1FAE5] border-b border-[#34D399]">
@@ -140,11 +127,7 @@ export default function NeoLeaderboard() {
                       setSelectedSchool(selectedSchool === index ? null : index)
                     }
                   >
-                    <td className="p-2">
-                      {sortOrder === "desc"
-                        ? index + 1
-                        : sortedData.length - index}
-                    </td>
+                    <td className="p-2">{index + 1}</td>
                     <td className="p-2">{school.school}</td>
                     <td className="p-2">{school.score}</td>
                     <td className="p-2">{school.members}</td>
@@ -171,10 +154,7 @@ export default function NeoLeaderboard() {
                 <div className="flex items-center">
                   <School className="text-[#34D399] mr-2" />
                   <span className="text-white">
-                    Rank:{" "}
-                    {sortOrder === "desc"
-                      ? selectedSchool + 1
-                      : sortedData.length - selectedSchool}
+                    Rank: {selectedSchool + 1}
                   </span>
                 </div>
                 <div className="flex items-center">

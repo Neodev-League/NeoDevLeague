@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LockKeyhole, ArrowUp, ArrowDown } from "lucide-react";
+import { ArrowUp, ArrowDown } from "lucide-react";
 
 const BottomBar: React.FC = () => {
   const location = useLocation();
@@ -59,14 +59,11 @@ const BottomBar: React.FC = () => {
         </Link>
         <Link
           to="/timeline"
-          className={`text-white hover:text-white transition-colors pointer-events-none ${
+          className={`text-white hover:text-white transition-colors text-center md:text-left ${
             location.pathname === "/timeline" ? "font-bold" : ""
           }`}
         >
-          <div className="flex flex-row gap-1 justify-center md:justify-start">
-            <LockKeyhole />
-            Timeline
-          </div>
+          Timeline
         </Link>
       </motion.div>
     </div>

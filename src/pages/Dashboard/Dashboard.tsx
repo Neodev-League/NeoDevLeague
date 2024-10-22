@@ -62,7 +62,7 @@ const DashboardHome: React.FC = () => {
   return (
     <div className="relative min-h-screen pb-20">
       <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0 " />
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+      <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
       <main className="relative z-20 p-8">
         <motion.div
           className="text-center pb-12 pt-6"
