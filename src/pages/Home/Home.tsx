@@ -5,7 +5,7 @@ import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
 import MinimalSocialsFooter from "../../components/Home/footer";
 import Logo from "../../assets/logo";
-import {RainbowButton} from "../../components/Home/rainbowbtn";
+// import {RainbowButton} from "../../components/Home/rainbowbtn";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
@@ -13,6 +13,7 @@ import FAQ from "../../components/Home/FAQ";
 import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
 import den from "../../assets/Sponsors/den1880.png";
+import warp from "../../assets/Sponsors/warp.png";
 import dencn from "../../assets/Misc/denCNN.png";
 import {
   FaQuestionCircle,
@@ -138,7 +139,7 @@ const Home: React.FC = () => {
               rel="noopener noreferrer"
               className="py-4 mb-8" // Added vertical padding here
             >
-              <RainbowButton>APPLY NOW</RainbowButton>
+              {/* <RainbowButton>APPLY NOW</RainbowButton> */}
             </a>
           </div>
 
@@ -216,7 +217,7 @@ const Home: React.FC = () => {
           <motion.img
             src={den}
             alt="Den1880"
-            className="w-[80%] md:w-[90%] max-w-3xl pb-[20rem]"
+            className="w-[80%] md:w-[90%] max-w-3xl pb-[10rem]"
             animate={{ rotate: 5 }}
             initial={{ rotate: -5 }}
             transition={{
@@ -234,9 +235,9 @@ const Home: React.FC = () => {
         <img
           src={dencn}
           alt="dencn"
-          className="w-full md:w-[50%] mb-8 md:mb-0 md:mr-10"
+          className="w-full md:w-[50%] md:mb-0 md:mr-10"
         />
-        <div className="w-full md:w-[40%] mt-8 md:mt-0">
+        <div className="w-full md:w-[40%] md:mt-0">
           <FAQ />
         </div>
       </AnimatedSection>
@@ -327,7 +328,7 @@ const Home: React.FC = () => {
           }}
           className="text-3xl md:text-4xl lg:text-6xl font-extrabold my-8 text-center text-shadow text-transparent bg-clip-text bg-gradient-to-r from-[rgb(21,237,158)] to-[#007b37]"
         >
-          Pathfinder
+          Catalyst & Pathfinder
         </motion.h2>
         <motion.div
           variants={{
@@ -341,6 +342,7 @@ const Home: React.FC = () => {
           className="flex justify-center"
         >
           <SponsorBox src={bestbuy} alt="Best Buy" />
+          <SponsorBox src={warp} alt="Best Buy" />
         </motion.div>
       </AnimatedSection>
 
