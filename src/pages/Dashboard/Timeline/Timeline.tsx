@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import BottomBar from "../DashNav";
 import { motion } from "framer-motion";
-import { Clock, Users, Award, Utensils } from "lucide-react";
-
+import { Clock, Users, Award, Utensils, Dices } from "lucide-react";
 import SparklesText from "../../../components/sparkles-text";
+
 interface Event {
   id: string;
   title: string;
@@ -13,6 +14,7 @@ interface Event {
   type:
     | "Main Event"
     | "Activity"
+    | "Game"
     | "Special";
 }
 
@@ -46,6 +48,24 @@ const events: Event[] = [
   },
   {
     id: "4",
+    title: "Mini Game 1",
+    start: "10am",
+    end: "",
+    description: "Each Team sends a participant onto the stage. Winner wins 1 point towards their final point total after judging.",
+    icon: <Dices className="w-5 h-5" />,
+    type: "Game",
+  },
+  {
+    id: "5",
+    title: "Mini Game 2",
+    start: "12am",
+    end: "",
+    description: "Each Team sends a participant onto the stage. Winner wins 1 point towards their final point total after judging.",
+    icon: <Dices className="w-5 h-5" />,
+    type: "Game",
+  },
+  {
+    id: "6",
     title: "Lunch Time",
     start: "12:30pm",
     end: "",
@@ -55,7 +75,34 @@ const events: Event[] = [
     type: "Activity",
   },
   {
-    id: "5",
+    id: "7",
+    title: "Mini Game 3",
+    start: "2pm",
+    end: "",
+    description: "Each Team sends a participant onto the stage. Winner wins 1 point towards their final point total after judging.",
+    icon: <Dices className="w-5 h-5" />,
+    type: "Game",
+  },
+  {
+    id: "8",
+    title: "Mini Game 4",
+    start: "4pm",
+    end: "",
+    description: "Each Team sends a participant onto the stage. Winner wins 1 point towards their final point total after judging.",
+    icon: <Dices className="w-5 h-5" />,
+    type: "Game",
+  },
+  {
+    id: "9",
+    title: "Mini Game 5",
+    start: "6pm",
+    end: "",
+    description: "Each Team sends a participant onto the stage. Winner wins 1 point towards their final point total after judging.",
+    icon: <Dices className="w-5 h-5" />,
+    type: "Game",
+  },
+  {
+    id: "10",
     title: "Dinner Time",
     start: "6:30pm",
     end: "",
@@ -65,7 +112,7 @@ const events: Event[] = [
     type: "Activity",
   },
   {
-    id: "6",
+    id: "11",
     title: "Judging",
     start: "8:00pm",
     end: "9:00pm",
@@ -74,7 +121,7 @@ const events: Event[] = [
     type: "Main Event",
   },
   {
-    id: "7",
+    id: "12",
     title: "Closing Ceremony + Prizes & Awards",
     start: "9:30pm",
     end: "10:30pm",
@@ -108,11 +155,11 @@ const TimelineEvent: React.FC<{
         </div>
         <h3 className="text-lg font-semibold text-white">{event.title}</h3>
       </div>
-      <p className="text-sm text-gray-300 mb-1">
+      <p className="text-ms text-white mb-1">
         {event.start} {event.end && `- ${event.end}`}
       </p>
       {isSelected && (
-        <p className="text-sm text-gray-400">{event.description}</p>
+        <p className="text-ms text-white">{event.description}</p>
       )}
     </motion.div>
   );
@@ -129,7 +176,7 @@ const getEventTypeColor = (type: Event["type"]) => {
     case "Special":
       return "bg-red-500";
     default:
-      return "bg-gray-500";
+      return "bg-green-500";
   }
 };
 
@@ -154,14 +201,14 @@ const TimelinePage: React.FC = () => {
             Check out what we have planned for the event! 🎉
           </p>
           <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {["Main Event", "Activity", "Special"].map((type) => (
+            {["Main Event","Mini Game", "Activity", "Special"].map((type) => (
               <div key={type} className="flex items-center">
                 <div
                   className={`w-3 h-3 rounded-full ${getEventTypeColor(
                     type as Event["type"]
                   )} mr-1`}
                 ></div>
-                <span className="text-sm text-white">{type}</span>
+                <span className="text-md text-white">{type}</span>
               </div>
             ))}
           </div>
@@ -179,6 +226,7 @@ const TimelinePage: React.FC = () => {
           </div>
         </div>
       </div>
+      <BottomBar />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Trophy,
@@ -9,6 +9,7 @@ import {
   MessageCircle,
   LockKeyhole,
 } from "lucide-react";
+import BottomBar from "../DashNav";
 import { Button } from "../../../components/Dashboard/button";
 import SparklesText from "../../../components/Dashboard/sparkles-text";
 
@@ -241,6 +242,7 @@ export default function NeoLeaderboard() {
           </div>
         </motion.div>
       </main>
+      <BottomBar />
     </div>
   );
 }
