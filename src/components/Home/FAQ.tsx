@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
         component="h2"
         gutterBottom
         sx={{
-          color: "white",
+          color: isMobile ? "dimgray" : "white",
           textAlign: "center",
           marginBottom: isMobile ? "2rem" : "3rem",
           fontWeight: "bold",
@@ -74,8 +74,8 @@ const FAQ: React.FC = () => {
           <Accordion
             key={index}
             sx={{
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
-              color: "white",
+              backgroundColor: "rgba(105, 105, 105, 0.1)",
+              color: isMobile ? "dimgray" : "white",
               marginBottom: isMobile ? "2rem" : "1rem",
               borderRadius: "8px",
               "&:before": {
@@ -85,7 +85,9 @@ const FAQ: React.FC = () => {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+              expandIcon={
+                <ExpandMoreIcon sx={{ color: isMobile ? "dimgray" : "white" }} />
+              }
               aria-controls={`panel${index + 1}-content`}
               id={`panel${index + 1}-header`}
               sx={{
@@ -98,13 +100,19 @@ const FAQ: React.FC = () => {
                 sx={{
                   fontWeight: "bold",
                   fontSize: isMobile ? "1rem" : "1.1rem",
+                  color: isMobile ? "dimgray" : "white",
                 }}
               >
                 {item.question}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography sx={{ fontSize: isMobile ? "0.9rem" : "1rem" }}>
+              <Typography
+                sx={{
+                  fontSize: isMobile ? "0.9rem" : "1rem",
+                  color: isMobile ? "dimgray" : "white",
+                }}
+              >
                 {item.answer}
               </Typography>
             </AccordionDetails>

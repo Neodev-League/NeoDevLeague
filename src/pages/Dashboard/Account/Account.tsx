@@ -18,7 +18,6 @@ const profileProps: ProfileRow[] = [
   { name: "Linkedin", editable: true },
   { name: "Website", editable: true },
   { name: "Discord", editable: true },
-  { name: "Quote", editable: true },
 ];
 
 const DashboardAccount: React.FC = () => {
@@ -30,7 +29,6 @@ const DashboardAccount: React.FC = () => {
   const [Linkedin, setLinkedin] = useState("");
   const [Website, setWebsite] = useState("");
   const [Discord, setDiscord] = useState("");
-  const [Quote, setQuote] = useState("");
   const [editing, setEditing] = useState<boolean>(false);
 
   const updateData = async (row: string, value: string) => {
@@ -47,7 +45,7 @@ const DashboardAccount: React.FC = () => {
     const fetchEssentials = async () => {
       const { data, error } = await supabase
         .from("users")
-        .select(`email,fullname,School,Github,Linkedin,Website,Discord,Quote`)
+        .select(`email,fullname,School,Github,Linkedin,Website,Discord`)
         .eq("id", user!.id);
       console.log(data);
 
@@ -60,7 +58,6 @@ const DashboardAccount: React.FC = () => {
         setLinkedin(data[0]?.Linkedin);
         setWebsite(data[0]?.Website);
         setDiscord(data[0]?.Discord);
-        setQuote(data[0]?.Quote);
         setSchool(data[0]?.School || "Coming Soon!");
       }
     };
@@ -131,8 +128,6 @@ const DashboardAccount: React.FC = () => {
                                       ? Website
                                       : row.name === "Discord"
                                         ? Discord
-                                        : row.name === "Quote"
-                                          ? Quote
                                           : ""
                               }
                               onChange={(e) => {
@@ -148,9 +143,6 @@ const DashboardAccount: React.FC = () => {
                                     break;
                                   case "Discord":
                                     setDiscord(e.target.value);
-                                    break;
-                                  case "Quote":
-                                    setQuote(e.target.value);
                                     break;
                                 }
                               }}
@@ -169,8 +161,6 @@ const DashboardAccount: React.FC = () => {
                                     ? Website
                                     : row.name === "Discord"
                                       ? Discord
-                                      : row.name === "Quote"
-                                        ? Quote
                                         : "-"}
                             </span>
                           </h1>
@@ -189,7 +179,6 @@ const DashboardAccount: React.FC = () => {
                           updateData("Linkedin", Linkedin);
                           updateData("Website", Website);
                           updateData("Discord", Discord);
-                          updateData("Quote", Quote);
                         }
                       }
                     }

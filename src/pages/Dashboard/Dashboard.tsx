@@ -4,11 +4,12 @@ import {
   Clock,
   MessageCircle,
   Users,
-  School,
-  Award,
+  // School,
+  // Award,
   Rocket,
   // Code,
-  Trophy,
+  // Trophy,
+  CircleUserRound,
   LockKeyhole,
 } from "lucide-react";
 import SparklesText from "../../components/Dashboard/sparkles-text";
@@ -48,21 +49,12 @@ const DashboardHome: React.FC = () => {
     return timeLeft;
   }
 
-  const teamMembers = [
-    { name: "Member", role: "Frontend Dev", avatar: "🧑‍💻" },
-    { name: "Member", role: "Backend Dev", avatar: "👩🏼‍💻" },
-    { name: "Member", role: "UI/UX Designer", avatar: "🎨" },
-    { name: "Member", role: "Backend Dev", avatar: "🧑🏾‍💻" },
-    { name: "Member", role: "Frontend Dev", avatar: "👩🏽‍💻" },
-    { name: "Member", role: "Backend Dev", avatar: "🧑🏿‍💻" },
-    { name: "Member", role: "Team Leader", avatar: "👨🏻‍💻" },
-    { name: "Member", role: "Pitch Specialist", avatar: "🗣️" },
-  ];
+  const rulebookURL = 'https://docs.google.com/document/d/1qoSGdZYr7kTudDL1gKB1rxv1xctbXGhCMbqw9yvPbLA/edit?tab=t.0';
 
   return (
     <div className="relative min-h-screen pb-20">
       <div className="absolute inset-0 bg-[url('../../assets/Neo-city.png')] bg-cover bg-center z-0 " />
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+      <div className="absolute inset-0 bg-black bg-opacity-30 z-10" />
       <main className="relative z-20 p-8">
         <motion.div
           className="text-center pb-12 pt-6"
@@ -107,60 +99,6 @@ const DashboardHome: React.FC = () => {
           </h2>
         </motion.div>
 
-        <div className="relative">
-          <div className="absolute inset-0 bg-opacity-10 backdrop-blur-sm z-50 mt-10" />
-          <motion.div
-            className="mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold text-[#D1FAE5]  mb-6 text-center">
-              <span className="text-white">Team: </span>Coming Soon!
-            </h2>
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-lg">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center">
-                  <School className="text-white mr-2" />
-                  <span className="md:text-xl sm:text-lg text-mdtext-white">
-                    School: Coming Soon!
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Users className="text-white mr-2" />
-                  <span className="md:text-xl sm:text-lg text-md text-white">
-                    ? Members
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Award className="text-white mr-2" />
-                  <span className="md:text-xl sm:text-lg text-md text-white">
-                    Rank: Coming Soon!
-                  </span>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {teamMembers.map((member, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-800 bg-opacity-50 rounded-lg p-4 text-center"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.1 * index }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="text-4xl mb-2">{member.avatar}</div>
-                    <h3 className="text-lg font-semibold text-[#34D399]">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-white">{member.role}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           initial={{ opacity: 0, y: 20 }}
@@ -190,6 +128,7 @@ const DashboardHome: React.FC = () => {
               <LockKeyhole className="mr-2 h-6 w-6" /> Submissions
             </Button>
           </div>
+
           <div>
             <h3 className="text-2xl font-bold text-[#D1FAE5] mb-4">
               Coming Soon
@@ -199,23 +138,11 @@ const DashboardHome: React.FC = () => {
                 className="items-center flex"
                 whileHover={{ scale: 1.05 }}
               >
-                <Trophy className="text-[#34D399] mr-2 h-6 w-6" />
-                <span className="text-lg">
-                  Prize Pool{" "}
-                  <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
-                    $TBD
-                  </span>
-                </span>
-              </motion.li>
-              <motion.li
-                className="items-center flex"
-                whileHover={{ scale: 1.05 }}
-              >
                 <Clock className="text-[#34D399] mr-2 h-6 w-6" />
                 <span className="text-lg">
                   Duration{" "}
                   <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
-                    10 hours of coding
+                    10 hours of development
                   </span>
                 </span>
               </motion.li>
@@ -224,6 +151,18 @@ const DashboardHome: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <Users className="text-[#34D399] mr-2 h-6 w-6" />
+                <span className="text-lg">
+                  Teams{" "}
+                  <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
+                    10
+                  </span>
+                </span>
+              </motion.li>
+              <motion.li
+                className="items-center flex"
+                whileHover={{ scale: 1.05 }}
+              >
+                <CircleUserRound className="text-[#34D399] mr-2 h-6 w-6" />
                 <span className="text-lg">
                   Participants{" "}
                   <span className="text-[#34D399] font-semibold md:text-lg text-md flex">
@@ -234,6 +173,10 @@ const DashboardHome: React.FC = () => {
             </ul>
           </div>
         </motion.div>
+        
+        <div className="mt-20 flex items-center justify-center">
+            <iframe src={rulebookURL} width={1200} height={1000} className="rounded-md" />
+        </div>
       </main>
       <BottomBar />
     </div>
