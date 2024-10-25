@@ -5,7 +5,6 @@ import Ripple from "../../components/Home/Ripple";
 import TextGlitch from "../../components/Home/text-glitch";
 import MinimalSocialsFooter from "../../components/Home/footer";
 import Logo from "../../assets/logo";
-// import {RainbowButton} from "../../components/Home/rainbowbtn";
 import WordRotate from "../../components/Home/text-reveal";
 import MailchimpFormContainer from "../../components/Home/MailchimpFormContainer";
 import MacNavbar from "../../components/macNavbar";
