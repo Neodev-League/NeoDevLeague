@@ -131,17 +131,6 @@ const Home: React.FC = () => {
       <AnimatedSection className="relative flex items-center justify-center min-h-screen">
         <div className="text-center relative z-10 mt-24 mb-6">
           <TextGlitch />
-          <div className="mt-4">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSccJuqk0_9JndOaOGPfvFndQUSqnN6Nh4ycb7IZh6CC14iGdg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-4 mb-8" // Added vertical padding here
-            >
-              {/* <RainbowButton>APPLY NOW</RainbowButton> */}
-            </a>
-          </div>
-
           <div className="mt-10">
             <span className="!text-2xl md:text-6xl font-bold">
               The Future of
