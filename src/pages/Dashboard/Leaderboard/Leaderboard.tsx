@@ -14,16 +14,16 @@ import { Button } from "../../../components/Dashboard/button";
 import SparklesText from "../../../components/Dashboard/sparkles-text";
 
 const leaderboardData = [
-  { rank: 1, school: "Tech University", score: 1000, members: 8 },
-  { rank: 2, school: "Innovation College", score: 950, members: 7 },
-  { rank: 3, school: "Digital Institute", score: 900, members: 8 },
-  { rank: 4, school: "Code Academy", score: 850, members: 6 },
-  { rank: 5, school: "Data Science School", score: 800, members: 7 },
-  { rank: 6, school: "AI University", score: 750, members: 8 },
-  { rank: 7, school: "Cyber Security College", score: 700, members: 6 },
-  { rank: 8, school: "Web Dev Institute", score: 650, members: 7 },
-  { rank: 9, school: "Mobile App Academy", score: 600, members: 8 },
-  { rank: 10, school: "Cloud Computing School", score: 550, members: 7 },
+  { rank: 0, school: "Laurel Heights #1", score: 0, members: 10 },
+  { rank: 0, school: "Laurel Heights #2", score: 0, members: 10 },
+  { rank: 0, school: "Waterloo Collegiate Institute", score: 0, members: 10 },
+  { rank: 0, school: "Kitchener Collegiate Institute", score: 0, members: 10 },
+  { rank: 0, school: "Grand River Collegiate Institute", score: 0, members:10 },
+  { rank: 0, school: "Forest Heights Collegiate Institute", score: 0, members: 10 },
+  { rank: 0, school: "Bluevale Collegiate Institute", score: 0, members: 10 },
+  { rank: 0, school: "Cameroon Heights Collegiate Institute", score: 0, members: 10 },
+  { rank: 0, school: "Mixed Schools #1", score: 0, members: 10 },
+  { rank: 0, school: "Mixed Schools #2", score: 0, members: 10 },
 ];
 
 export default function NeoLeaderboard() {
@@ -61,7 +61,8 @@ export default function NeoLeaderboard() {
             />
             <div className="bg-gray-800 bg-opacity-80 p-4 w-full">
               <p className="font-bold text-[#34D399] text-lg">
-                {sortedData[index].school}
+                {/* {sortedData[index].school} */}
+                TBD
               </p>
               <p className="text-white text-2xl font-bold mt-2">
                 {sortedData[index].score}
@@ -128,7 +129,7 @@ export default function NeoLeaderboard() {
                       setSelectedSchool(selectedSchool === index ? null : index)
                     }
                   >
-                    <td className="p-2">{index + 1}</td>
+                    <td className="p-2">{0}</td>
                     <td className="p-2">{school.school}</td>
                     <td className="p-2">{school.score}</td>
                     <td className="p-2">{school.members}</td>
@@ -187,10 +188,10 @@ export default function NeoLeaderboard() {
               <Award className="mr-2 text-[#34D399]" /> MVP of the League
             </h3>
             <div>
-              <h4 className="text-xl font-bold text-white">Jane Doe</h4>
-              <p className="text-[#34D399]">Tech University</p>
+              <h4 className="text-xl font-bold text-white">TBD</h4>
+              <p className="text-[#34D399]">School</p>
               <p className="mt-2 text-white">
-                Outstanding performance across all challenges
+                Description...
               </p>
             </div>
           </motion.div>
@@ -206,10 +207,10 @@ export default function NeoLeaderboard() {
               Solution
             </h3>
             <div>
-              <h4 className="text-xl font-bold text-white">Team Innovators</h4>
-              <p className="text-[#34D399]">Innovation College</p>
+              <h4 className="text-xl font-bold text-white">School TBD</h4>
+              <p className="text-[#34D399]">Project Name</p>
               <p className="mt-2 text-white">
-                Revolutionizing AI-driven sustainable energy solutions
+                Description ...
               </p>
             </div>
           </motion.div>
