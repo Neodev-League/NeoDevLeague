@@ -115,7 +115,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="relative h-[575vh] md:h-[500vh] lg:h-[475vh] min-h-screen overflow-x-hidden border">
+    <div className="relative h-auto min-h-screen overflow-x-hidden border">
       <div className="absolute w-full h-full bg-[url('../../assets/neo-citys.jpg')] bg-cover animate-fadeIn z-[-1]" />
       <MacNavbar />
       <div className="fixed top-0 left-0 w-full z-50">
@@ -333,6 +333,9 @@ const Home: React.FC = () => {
           <SponsorBox src={warp} alt="Best Buy" />
         </motion.div>
       </AnimatedSection>
+
+      <div className="pb-80 md:mb-40"></div>
+      <div className="mini:visible md:hidden pb-40"></div>
 
       <footer className="absolute w-full bottom-0 backdrop-blur-md">
         <div className="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-md">
