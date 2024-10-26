@@ -77,7 +77,7 @@ const events: Event[] = [
   {
     id: "7",
     title: "Snack Bar 1",
-    start: "2-2:30pm",
+    start: "3pm",
     end: "",
     description:
       "Come over to the kitchen one team at a time to get a bag of chips!",
@@ -96,7 +96,7 @@ const events: Event[] = [
   {
     id: "9",
     title: "Snack Bar 2",
-    start: "4-4:30pm",
+    start: "5pm",
     end: "",
     description:
       "We will hand out cookies. Wait at your developing areas.",
