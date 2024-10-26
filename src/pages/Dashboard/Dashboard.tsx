@@ -55,6 +55,10 @@ const DashboardHome: React.FC = () => {
     "https://docs.google.com/document/d/17nrrC5Hospwt_M9PuCG6DgIzg8mZqz0xJYJxCbC2qoc/edit?usp=sharing";
   const mapURL =
     "https://app.mappedin.com/map/65df8081789fb8fd13e8c533?floor=m_b0bc1b38eb33d3ee";
+  const promptURL =
+    "https://docs.google.com/document/d/1YYwNGcs0A8VL_SUg1C1rr4Qq06L8PXYzjyL3TUp83GI/edit?tab=t.0";
+  const criteriaURL =
+    "https://docs.google.com/spreadsheets/d/1_s8Vyiu1tidrbpmkq99aGuich9gVy4WXIf8e3w-EQyc/edit?gid=0#gid=0";
 
   return (
     <div className="relative min-h-screen pb-20">
@@ -203,6 +207,26 @@ const DashboardHome: React.FC = () => {
           <h1 className="text-white font-bold">venue map</h1>
           <iframe
             src={mapURL}
+            width={1200}
+            height={1000}
+            className="rounded-md"
+          />
+        </div>
+
+        <div className="mt-20 flex items-center justify-center flex-col">
+          <h1 className="text-white font-bold">prompt</h1>
+          <iframe
+            src={promptURL}
+            width={1200}
+            height={1000}
+            className="rounded-md"
+          />
+        </div>
+
+        <div className="mt-20 flex items-center justify-center flex-col">
+          <h1 className="text-white font-bold">judging criteria</h1>
+          <iframe
+            src={criteriaURL}
             width={1200}
             height={1000}
             className="rounded-md"
