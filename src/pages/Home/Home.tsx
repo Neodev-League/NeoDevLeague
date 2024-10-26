@@ -15,13 +15,12 @@ import den from "../../assets/Sponsors/den1880.png";
 import warp from "../../assets/Sponsors/warp.png";
 import dencn from "../../assets/Misc/denCNN.png";
 import {
-  FaQuestionCircle,
-  FaMapMarkerAlt,
-  FaUsers,
+  FaLinkedin,
   FaCode,
   FaLaptopCode,
   FaRocket,
 } from "react-icons/fa";
+import { IoMdCode,IoMdLogIn } from "react-icons/io";
 
 import "../../style.css";
 import "./glitch.css";
@@ -107,13 +106,6 @@ const NeoDev3DBox: React.FC<{
 };
 
 const Home: React.FC = () => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="relative h-auto min-h-screen overflow-x-hidden border">
       <div className="absolute w-full h-full bg-[url('../../assets/neo-citys.jpg')] bg-cover animate-fadeIn z-[-1]" />
@@ -355,28 +347,28 @@ const Home: React.FC = () => {
                 </h5>
                 <ul className="space-y-2">
                   <li>
-                    <button
-                      onClick={() => scrollTo("event")}
+                    <a
+                      href="https://neoleague.dev/login"
                       className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
-                      <FaMapMarkerAlt className="mr-2" /> Event Details
-                    </button>
+                      <IoMdLogIn className="mr-2" /> Login
+                    </a>
                   </li>
                   <li>
-                    <button
-                      onClick={() => scrollTo("faq")}
+                    <a
+                      href="https://www.linkedin.com/company/neo-developer-league/posts/?feedView=all"
                       className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
-                      <FaQuestionCircle className="mr-2" /> FAQ
-                    </button>
+                      <FaLinkedin className="mr-2" /> Linkedin
+                    </a>
                   </li>
                   <li>
-                    <button
-                      onClick={() => scrollTo("sponsors")}
+                    <a
+                      href="https://github.com/Neodev-League"
                       className="flex items-center text-white hover:text-green-400 transition-colors"
                     >
-                      <FaUsers className="mr-2" /> Sponsors
-                    </button>
+                      <IoMdCode className="mr-2" /> Repository
+                    </a>
                   </li>
                 </ul>
               </div>
