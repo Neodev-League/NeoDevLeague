@@ -51,7 +51,7 @@ const events: Event[] = [
     title: "Mini Game 1",
     start: "11am",
     end: "",
-    description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging.",
+    description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging. (Geoguessr)",
     icon: <Dices className="w-5 h-5" />,
     type: "Game",
   },
@@ -70,12 +70,22 @@ const events: Event[] = [
     start: "12:30pm",
     end: "",
     description:
-      "It's lunch time! Come over to the kitchen one team at a time to get some good food!",
+      "We will hand out chips. Wait at your developing areas.",
     icon: <Utensils className="w-5 h-5" />,
     type: "Activity",
   },
   {
     id: "7",
+    title: "Snack Bar 1",
+    start: "2-2:30pm",
+    end: "",
+    description:
+      "Come over to the kitchen one team at a time to get a bag of chips!",
+    icon: <Utensils className="w-5 h-5" />,
+    type: "Activity",
+  },
+  {
+    id: "8",
     title: "Mini Game 3",
     start: "3pm",
     end: "",
@@ -84,7 +94,17 @@ const events: Event[] = [
     type: "Game",
   },
   {
-    id: "8",
+    id: "9",
+    title: "Snack Bar 2",
+    start: "4-4:30pm",
+    end: "",
+    description:
+      "We will hand out cookies. Wait at your developing areas.",
+    icon: <Utensils className="w-5 h-5" />,
+    type: "Activity",
+  },
+  {
+    id: "10",
     title: "Mini Game 4",
     start: "5pm",
     end: "",
@@ -93,7 +113,17 @@ const events: Event[] = [
     type: "Game",
   },
   {
-    id: "9",
+    id: "11",
+    title: "Dinner Time",
+    start: "6:30pm",
+    end: "",
+    description:
+      "It's dinner time! Come over to the kitchen one team at a time to get some amazing eats! We will call over teams one by one.",
+    icon: <Utensils className="w-5 h-5" />,
+    type: "Activity",
+  },
+  {
+    id: "12",
     title: "Mini Game 5",
     start: "7pm",
     end: "",
@@ -102,17 +132,7 @@ const events: Event[] = [
     type: "Game",
   },
   {
-    id: "10",
-    title: "Dinner Time",
-    start: "6:30pm",
-    end: "",
-    description:
-      "It's dinner time! Come over to the kitchen one team at a time to get some amazing eats!",
-    icon: <Utensils className="w-5 h-5" />,
-    type: "Activity",
-  },
-  {
-    id: "11",
+    id: "13",
     title: "Judging",
     start: "8:00pm",
     end: "9:00pm",
@@ -121,7 +141,7 @@ const events: Event[] = [
     type: "Main Event",
   },
   {
-    id: "12",
+    id: "14",
     title: "Closing Ceremony + Prizes & Awards",
     start: "9:30pm",
     end: "10:30pm",

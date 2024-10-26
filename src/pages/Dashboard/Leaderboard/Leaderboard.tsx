@@ -4,7 +4,6 @@ import {
   Trophy,
   Award,
   Lightbulb,
-  Users,
   School,
   MessageCircle,
   LockKeyhole,
@@ -14,16 +13,15 @@ import { Button } from "../../../components/Dashboard/button";
 import SparklesText from "../../../components/Dashboard/sparkles-text";
 
 const leaderboardData = [
-  { rank: 0, school: "Laurel Heights #1", score: 0, members: 10 },
-  { rank: 0, school: "Laurel Heights #2", score: 0, members: 10 },
-  { rank: 0, school: "Waterloo Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Kitchener Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Grand River Collegiate Institute", score: 0, members:10 },
-  { rank: 0, school: "Forest Heights Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Bluevale Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Cameron Heights Collegiate Institute", score: 0, members: 8 },
-  { rank: 0, school: "Mixed Schools #1", score: 0, members: 8 },
-  { rank: 0, school: "Mixed Schools #2", score: 0, members: 8 },
+  { rank: 1, school: "Laurel Heights (1)", score: 2 },
+  { rank: 4, school: "Laurel Heights (2)", score: 0 },
+  { rank: 4, school: "Waterloo CI", score: 0 },
+  { rank: 2, school: "Kitchener CI", score: 1 },
+  { rank: 4, school: "Grand River CI", score: 0 },
+  { rank: 4, school: "Forest Heights CI", score: 0 },
+  { rank: 4, school: "Bluevale CI", score: 0 },
+  { rank: 4, school: "Cameron Heights CI", score: 0 },
+  { rank: 3, school: "Mixed SS", score: 0.5 },
 ];
 
 export default function NeoLeaderboard() {
@@ -61,11 +59,10 @@ export default function NeoLeaderboard() {
             />
             <div className="bg-gray-800 bg-opacity-80 p-4 w-full">
               <p className="font-bold text-[#34D399] text-lg">
-                {/* {sortedData[index].school} */}
-                TBD
+                {sortedData[index].school}
               </p>
               <p className="text-white text-2xl font-bold mt-2">
-                {sortedData[index].score}
+                {`${sortedData[index].score} pts`}
               </p>
               <p className="text-[#D1FAE5] mt-1">Rank #{index + 1}</p>
             </div>
@@ -113,7 +110,6 @@ export default function NeoLeaderboard() {
                   <th className="text-left p-2">Rank</th>
                   <th className="text-left p-2">School</th>
                   <th className="text-left p-2">Score</th>
-                  <th className="text-left p-2">Members</th>
                 </tr>
               </thead>
               <tbody>
@@ -129,10 +125,9 @@ export default function NeoLeaderboard() {
                       setSelectedSchool(selectedSchool === index ? null : index)
                     }
                   >
-                    <td className="p-2">{0}</td>
+                    <td className="p-2">{school.rank}</td>
                     <td className="p-2">{school.school}</td>
                     <td className="p-2">{school.score}</td>
-                    <td className="p-2">{school.members}</td>
                   </motion.tr>
                 ))}
               </tbody>
@@ -155,20 +150,12 @@ export default function NeoLeaderboard() {
               <div className="grid grid-cols-3 gap-4">
                 <div className="flex items-center">
                   <School className="text-[#34D399] mr-2" />
-                  <span className="text-white">
-                    Rank: {selectedSchool + 1}
-                  </span>
+                  <span className="text-white">Rank: {selectedSchool + 1}</span>
                 </div>
                 <div className="flex items-center">
                   <Trophy className="text-[#34D399] mr-2" />
                   <span className="text-white">
                     Score: {sortedData[selectedSchool].score}
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Users className="text-[#34D399] mr-2" />
-                  <span className="text-white">
-                    Members: {sortedData[selectedSchool].members}
                   </span>
                 </div>
               </div>
@@ -190,9 +177,7 @@ export default function NeoLeaderboard() {
             <div>
               <h4 className="text-xl font-bold text-white">TBD</h4>
               <p className="text-[#34D399]">School</p>
-              <p className="mt-2 text-white">
-                Description...
-              </p>
+              <p className="mt-2 text-white">Description...</p>
             </div>
           </motion.div>
 
@@ -209,9 +194,7 @@ export default function NeoLeaderboard() {
             <div>
               <h4 className="text-xl font-bold text-white">School TBD</h4>
               <p className="text-[#34D399]">Project Name</p>
-              <p className="mt-2 text-white">
-                Description ...
-              </p>
+              <p className="mt-2 text-white">Description ...</p>
             </div>
           </motion.div>
         </div>
