@@ -58,7 +58,7 @@ const events: Event[] = [
   {
     id: "5",
     title: "Mini Game 2",
-    start: "1pm",
+    start: "1:30pm",
     end: "",
     description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging.",
     icon: <Dices className="w-5 h-5" />,
@@ -87,7 +87,7 @@ const events: Event[] = [
   {
     id: "8",
     title: "Mini Game 3",
-    start: "3pm",
+    start: "3:30pm",
     end: "",
     description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging.",
     icon: <Dices className="w-5 h-5" />,
@@ -106,7 +106,7 @@ const events: Event[] = [
   {
     id: "10",
     title: "Mini Game 4",
-    start: "5pm",
+    start: "5:30pm",
     end: "",
     description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging.",
     icon: <Dices className="w-5 h-5" />,
@@ -125,7 +125,7 @@ const events: Event[] = [
   {
     id: "12",
     title: "Mini Game 5",
-    start: "7pm",
+    start: "7:30pm",
     end: "",
     description: "Each Team sends a participant onto the stage. Winner wins 2 points towards their final point total after judging.",
     icon: <Dices className="w-5 h-5" />,
