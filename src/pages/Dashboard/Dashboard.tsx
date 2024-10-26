@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 
 const DashboardHome: React.FC = () => {
   const navigate = useNavigate();
-  const eventDate = new Date("2024-10-26T07:00:00");
+  const eventDate = new Date("2024-10-26T12:00:00");
   const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
 
   React.useEffect(() => {
