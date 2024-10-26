@@ -21,9 +21,9 @@ const leaderboardData = [
   { rank: 0, school: "Grand River Collegiate Institute", score: 0, members:10 },
   { rank: 0, school: "Forest Heights Collegiate Institute", score: 0, members: 10 },
   { rank: 0, school: "Bluevale Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Cameroon Heights Collegiate Institute", score: 0, members: 10 },
-  { rank: 0, school: "Mixed Schools #1", score: 0, members: 10 },
-  { rank: 0, school: "Mixed Schools #2", score: 0, members: 10 },
+  { rank: 0, school: "Cameron Heights Collegiate Institute", score: 0, members: 8 },
+  { rank: 0, school: "Mixed Schools #1", score: 0, members: 8 },
+  { rank: 0, school: "Mixed Schools #2", score: 0, members: 8 },
 ];
 
 export default function NeoLeaderboard() {

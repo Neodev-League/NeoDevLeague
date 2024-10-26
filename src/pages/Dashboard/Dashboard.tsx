@@ -49,7 +49,12 @@ const DashboardHome: React.FC = () => {
     return timeLeft;
   }
 
-  const rulebookURL = 'https://docs.google.com/document/d/1qoSGdZYr7kTudDL1gKB1rxv1xctbXGhCMbqw9yvPbLA/edit?tab=t.0';
+  const rulebookURL =
+    "https://docs.google.com/document/d/1qoSGdZYr7kTudDL1gKB1rxv1xctbXGhCMbqw9yvPbLA/edit?tab=t.0";
+  const teamURL =
+    "https://docs.google.com/document/d/17nrrC5Hospwt_M9PuCG6DgIzg8mZqz0xJYJxCbC2qoc/edit?usp=sharing";
+  const mapURL =
+    "https://app.mappedin.com/map/65df8081789fb8fd13e8c533?floor=m_b0bc1b38eb33d3ee";
 
   return (
     <div className="relative min-h-screen pb-20">
@@ -173,9 +178,35 @@ const DashboardHome: React.FC = () => {
             </ul>
           </div>
         </motion.div>
-        
-        <div className="mt-20 flex items-center justify-center">
-            <iframe src={rulebookURL} width={1200} height={1000} className="rounded-md" />
+
+        <div className="mt-20 flex items-center justify-center flex-col">
+          <h1 className="text-white font-bold">rulebook</h1>
+          <iframe
+            src={rulebookURL}
+            width={1200}
+            height={1000}
+            className="rounded-md"
+          />
+        </div>
+
+        <div className="mt-20 flex items-center justify-center flex-col">
+          <h1 className="text-white font-bold">team lists</h1>
+          <iframe
+            src={teamURL}
+            width={1200}
+            height={1000}
+            className="rounded-md"
+          />
+        </div>
+
+        <div className="mt-20 flex items-center justify-center flex-col">
+          <h1 className="text-white font-bold">venue map</h1>
+          <iframe
+            src={mapURL}
+            width={1200}
+            height={1000}
+            className="rounded-md"
+          />
         </div>
       </main>
       <BottomBar />

@@ -49,14 +49,14 @@ const BottomBar: React.FC = () => {
         >
           Leaderboard
         </Link>
-        <Link
+        {/* <Link
           to="/account"
           className={`text-white hover:text-white transition-colors text-center md:text-left ${
             location.pathname === "/account" ? "font-bold" : ""
           }`}
         >
           Account
-        </Link>
+        </Link> */}
         <Link
           to="/timeline"
           className={`text-white hover:text-white transition-colors text-center md:text-left ${
