@@ -13,6 +13,7 @@ import convictional from "../../assets/Sponsors/convictional.png";
 import bestbuy from "../../assets/Sponsors/bestbuy.svg";
 import den from "../../assets/Sponsors/den1880.png";
 import warp from "../../assets/Sponsors/warp.png";
+import dominoes from "../../assets/Sponsors/dominoes.jpg";
 import dencn from "../../assets/Misc/denCNN.png";
 import {
   FaLinkedin,
@@ -322,7 +323,8 @@ const Home: React.FC = () => {
           className="flex justify-center"
         >
           <SponsorBox src={bestbuy} alt="Best Buy" />
-          <SponsorBox src={warp} alt="Best Buy" />
+          <SponsorBox src={warp} alt="Warp" />
+          <SponsorBox src={dominoes} alt="Dominoes" />
         </motion.div>
       </AnimatedSection>
 
