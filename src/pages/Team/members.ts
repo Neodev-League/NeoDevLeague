@@ -5,7 +5,7 @@ import Brian from "../../assets/Headshots/Brian.jpg";
 import George from "../../assets/Headshots/George.jpg";
 import Hamza from "../../assets/Headshots/Hamza.jpg";
 import Thomas from "../../assets/Headshots/Thomas.jpg";
-import Alex from "../../assets/Headshots/Alex.jpeg";
+import Stephen from "../../assets/Headshots/Stephen.jpg";
 import Jerry from "../../assets/Headshots/Jerry.png";
 
 interface Member {
@@ -80,10 +80,10 @@ export const Row3: Member[] = [
     alignment: "left",
   },
   {
-    imgUrl: Alex,
-    name: "Alex Rusu",
+    imgUrl: Stephen,
+    name: "Stephen Chen",
     position: "Logistics",
-    email: "alex.rusu0720@gmail.com",
+    email: "stephen@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
     row: 3,
     alignment: "center",
