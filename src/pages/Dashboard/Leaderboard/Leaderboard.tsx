@@ -14,14 +14,14 @@ import SparklesText from "../../../components/Dashboard/sparkles-text";
 
 const leaderboardData = [
   { rank: 1, school: "Waterloo CI", score: 92.5 },
-  { rank: 2, school: "Laurel Heights SS (1)", score: 83 },
-  { rank: 3, school: "Kitchener CI", score: 75 },
+  { rank: 2, school: "Laurel Heights SS (1)", score: 82 },
+  { rank: 3, school: "Kitchener CI", score: 72 },
   { rank: 4, school: "Laurel Heights SS (2)", score: 69.5 },
   { rank: 5, school: "Bluevale CI", score: 68.5 },
-  { rank: 6, school: "Mixed", score: 67.5 },
-  { rank: 8, school: "Cameron Heights CI", score: 65 },
-  { rank: 7, school: "Grand River CI", score: 64 },
-  { rank: 9, school: "Forest Heights CI", score: 59.5 },  
+  { rank: 6, school: "Cameron Heights CI", score: 65 },
+  { rank: 7, school: "Mixed", score: 64.5 },
+  { rank: 8, school: "Grand River CI", score: 63 },
+  { rank: 9, school: "Forest Heights CI", score: 55.5 },  
 ];
 
 export default function NeoLeaderboard() {
