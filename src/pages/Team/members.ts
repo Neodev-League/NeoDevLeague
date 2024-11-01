@@ -6,7 +6,7 @@ import George from "../../assets/Headshots/George.jpg";
 import Hamza from "../../assets/Headshots/Hamza.jpg";
 import Thomas from "../../assets/Headshots/Thomas.jpg";
 import Stephen from "../../assets/Headshots/Stephen.jpg";
-import Jerry from "../../assets/Headshots/Jerry.png";
+import Jerry from "../../assets/Headshots/Jerry.jpg";
 
 interface Member {
   imgUrl: string;
@@ -23,7 +23,7 @@ export const leads: Member[] = [
     imgUrl: Matthew,
     name: "Matthew Singer",
     position: "Head Tech",
-    email: "matthewsxnger@gmail.com",
+    email: "matthew@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/matthewsingerr/",
     row: 1,
     alignment: "left",
@@ -32,7 +32,7 @@ export const leads: Member[] = [
     imgUrl: James,
     name: "James Li",
     position: "Head Tech",
-    email: "lijames9532@gmail.com",
+    email: "james@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/james-li-a81004275/",
     row: 1,
     alignment: "right",
@@ -44,7 +44,7 @@ export const Row2: Member[] = [
     imgUrl: Andy,
     name: "Andy Duong",
     position: "Finance",
-    email: "theandelope16@gmail.com",
+    email: "andy@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/andy-duong-380521300/",
     row: 2,
     alignment: "left",
@@ -53,7 +53,7 @@ export const Row2: Member[] = [
     imgUrl: Thomas,
     name: "Thomas Lenh",
     position: "Finance",
-    email: "thomaslenh@gmail.com",
+    email: "thomas@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/thomas-lenh-38216a248/",
     row: 2,
     alignment: "center",
@@ -62,7 +62,7 @@ export const Row2: Member[] = [
     imgUrl: George,
     name: "George Woo",
     position: "Design",
-    email: "g.woo1187@gmail.com",
+    email: "george@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/george-woo-a72bb62b2/",
     row: 2,
     alignment: "right",
@@ -74,7 +74,7 @@ export const Row3: Member[] = [
     imgUrl: Hamza,
     name: "Hamza Ammar",
     position: "Tech",
-    email: "hamza.k.ammar@gmail.com",
+    email: "hamza@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/hamza-ammar-341531240/",
     row: 3,
     alignment: "left",
@@ -84,7 +84,7 @@ export const Row3: Member[] = [
     name: "Stephen Chen",
     position: "Logistics",
     email: "stephen@neoleague.dev",
-    linkedin: "https://www.linkedin.com/in/alexandru-rusu-b8518527b/",
+    linkedin: "https://www.linkedin.com/in/stephen-chen-0431b7297/",
     row: 3,
     alignment: "center",
   },
@@ -92,7 +92,7 @@ export const Row3: Member[] = [
     imgUrl: Jerry,
     name: "Jerry Liu",
     position: "Logistics",
-    email: "jerryliu2678@gmail.com",
+    email: "jerry@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/jerry-liu-28464b268/",
     row: 3,
     alignment: "center",
@@ -101,7 +101,7 @@ export const Row3: Member[] = [
     imgUrl: Brian,
     name: "Brian Tram",
     position: "Logistics",
-    email: "brian.q.tram@gmail.com",
+    email: "brian@neoleague.dev",
     linkedin: "https://www.linkedin.com/in/brian-tram-bb8312276/",
     row: 3,
     alignment: "right",
